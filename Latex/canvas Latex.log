@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.12.9)  22 DEC 2022 13:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.12.9)  22 DEC 2022 14:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -198,11 +198,11 @@ L/cmm/m/it/12 ; \OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 5)$and$(\OMS/cmsy/m/n/12 ^^
  []
 
 
-Overfull \hbox (74.06392pt too wide) in paragraph at lines 39--40
+Overfull \hbox (92.57542pt too wide) in paragraph at lines 39--40
 []\OT1/cmr/m/n/12 Find the val-ues of y for which the dis-tance be-tween the po
-ints $\OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (2\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 ^
-^@\OT1/cmr/m/n/12 3)\OML/cmm/m/it/12 andQ\OT1/cmr/m/n/12 (10\OML/cmm/m/it/12 ; 
-y\OT1/cmr/m/n/12 )$is10
+ints $[]\OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (2\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12
+ ^^@\OT1/cmr/m/n/12 3)\OML/cmm/m/it/12 and[]Q\OT1/cmr/m/n/12 (10\OML/cmm/m/it/1
+2 ; y\OT1/cmr/m/n/12 )$is10
  []
 
 
@@ -227,7 +227,7 @@ Here is how much of TeX's memory you used:
 s/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on "canvas Latex.pdf" (2 pages, 115345 bytes).
+Output written on "canvas Latex.pdf" (2 pages, 115565 bytes).
 PDF statistics:
  28 PDF objects out of 1000 (max. 8388607)
  18 compressed objects within 1 object stream
