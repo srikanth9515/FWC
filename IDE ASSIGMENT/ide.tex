@@ -40,6 +40,8 @@
 \usepackage{amsmath}
 %PseudoCode
 \usepackage{algorithm2e}
+\usepackage{circuitikz}
+\usetikzlibrary{calc}
 
 \titlespacing{\subsection}{0pt}{\parskip}{-3pt}
 \titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
@@ -75,22 +77,36 @@ columns=fullflexible
      %Replace the lipsum command with actual text 
   This document shows how to find the boolean function of the output for the logic which is in given truth table by using karnaugh map. 
  \end{abstract}
-    
- \begin{figure}[ht!]
-          \centering
-          \includegraphics[scale=0.2]{nand.jpg}
-          \caption{}
-          \label{}
-      \end{figure}
-\begin{center}
-    
-\end{center}
+   
+ 
+\begin{tikzpicture}
+ 
 
  
-    
-    
-    
+% Logic ports
+\node[nand port] (a) at (2,1){};
+\node[nand port] (b) at (2,4){};
+\node[nand port] (c) at (4,0){};
+\node[nand port] (d) at (6,3){};
+
  
+% Connection
+
+ 
+\draw (a.in 2) -| (b.in 2);
+\draw (b.out) -| (d.in 1);
+ 
+\draw (a.out) -|  (c.in 1);
+\draw (c.out) -| (d.in 2);
+\draw (d.out) -- ++(1,0) node[near end,above]{F};
+ 
+\draw (b.in 1) -- ++(-1.5,0)node[left](In1){X};
+\draw (b.in 2) -- ++(-1.5,0)node[left](In3){Y};
+\draw (c.in 2) -- ++(-1.5,0)node[left](In3){Z};
+% Jump crossing element
+1
+\end{tikzpicture}
+     
  \section{Components}
  
        \begin{tabularx}{0.4\textwidth} { 

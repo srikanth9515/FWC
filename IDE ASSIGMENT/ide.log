@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.12.9)  15 DEC 2022 11:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.12.9)  27 DEC 2022 15:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -819,24 +819,24 @@ Package: relsize 2013/03/29 ver 4.1
 ) (./ide.aux)
 \openout1 = `ide.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
 LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
-72.
+74.
 
 (/usr/share/texmf/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -899,7 +899,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box75
-Package hyperref Info: Link coloring ON on input line 72.
+Package hyperref Info: Link coloring ON on input line 74.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -912,9 +912,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count322
 )
-LaTeX Info: Redefining \ref on input line 72.
-LaTeX Info: Redefining \pageref on input line 72.
-LaTeX Info: Redefining \nameref on input line 72.
+LaTeX Info: Redefining \ref on input line 74.
+LaTeX Info: Redefining \pageref on input line 74.
+LaTeX Info: Redefining \nameref on input line 74.
 
 (./ide.out) (./ide.out)
 \@outlinefile=\write4
@@ -922,129 +922,124 @@ LaTeX Info: Redefining \nameref on input line 72.
 
 \c@lstlisting=\count323
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 7
-4.
+6.
  (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 7
-4.
+6.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-74.
+76.
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-74.
+76.
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 74.
+(Font)              <12> on input line 76.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 74.
+(Font)              <8> on input line 76.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 74.
-<nand.jpg, id=27, 568.1225pt x 208.78pt>
-File: nand.jpg Graphic file (type jpg)
-<use nand.jpg>
-Package pdftex.def Info: nand.jpg  used on input line 81.
-(pdftex.def)             Requested size: 113.62248pt x 41.75525pt.
+(Font)              <6> on input line 76.
+Missing character: There is no 1 in font nullfont!
 
-Overfull \hbox (1.47163pt too wide) in paragraph at lines 112--112
+Overfull \hbox (21.41821pt too wide) in paragraph at lines 108--109
+[][] 
+ []
+
+
+Overfull \hbox (1.47163pt too wide) in paragraph at lines 128--128
  []|\OT1/lmss/bx/n/10 Components| 
  []
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 150.
+(Font)              <9> on input line 166.
 \@karnaughmap@local@northwest@=\count324
 \@karnaughmap@local@southeast@=\count325
 \@karnaughmap@local@northwest@=\count326
 \@karnaughmap@local@southeast@=\count327
 
-Underfull \hbox (badness 10000) in paragraph at lines 145--158
+Underfull \hbox (badness 10000) in paragraph at lines 161--174
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 145--158
+Underfull \hbox (badness 10000) in paragraph at lines 161--174
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 179--186
+Underfull \hbox (badness 10000) in paragraph at lines 195--202
 
  []
 
 
-Underfull \hbox (badness 1540) in paragraph at lines 179--186
+Underfull \hbox (badness 1540) in paragraph at lines 195--202
 \OT1/lmss/m/n/10 For ex-am-ple if the in-puts X,Y,Z are con-nected 0,1,0
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 179--186
+Underfull \hbox (badness 10000) in paragraph at lines 195--202
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 193--197
+Underfull \hbox (badness 10000) in paragraph at lines 209--213
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 193--197
+Underfull \hbox (badness 10000) in paragraph at lines 209--213
 
  []
 
-<IIT_logo.png, id=28, 1284.8pt x 373.395pt>
+<IIT_logo.png, id=27, 1284.8pt x 373.395pt>
 File: IIT_logo.png Graphic file (type png)
 <use IIT_logo.png>
-Package pdftex.def Info: IIT_logo.png  used on input line 218.
+Package pdftex.def Info: IIT_logo.png  used on input line 224.
 (pdftex.def)             Requested size: 128.48752pt x 37.34167pt.
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
-s been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has
+ been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.218 \end{document}
-                    pdfTeX warning (ext4): destination with the same identifier
- (name{table.1}) has been already used, duplicate ignored
+l.224 
+      pdfTeX warning (ext4): destination with the same identifier (name{table.2
+}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.218 \end{document}
-                    pdfTeX warning (ext4): destination with the same identifier
- (name{table.2}) has been already used, duplicate ignored
-
-\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
-                                                  
-l.218 \end{document}
-                     <./IIT_logo.png> <./nand.jpg>] [2
+l.224 
+       <./IIT_logo.png>] [2
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 218.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 218.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 234.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 234.
  (./ide.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 218.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 218.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 234.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 234.
 Package rerunfilecheck Info: File `ide.out' has not changed.
 (rerunfilecheck)             Checksum: C92B58CA88F33B92B3F3F3A3BDAD2054;230.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 218.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 234.
  ) 
 Here is how much of TeX's memory you used:
- 32126 strings out of 481239
- 724858 string characters out of 5920377
- 1254074 words of memory out of 5000000
- 46890 multiletter control sequences out of 15000+600000
+ 32226 strings out of 481239
+ 727706 string characters out of 5920377
+ 1256074 words of memory out of 5000000
+ 46993 multiletter control sequences out of 15000+600000
  576832 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,15n,71p,1192b,1010s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1054,10 +1049,10 @@ hare/texmf/fonts/type1/public/lm/lmmi9.pfb></usr/share/texmf/fonts/type1/public
 /lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/t
 exmf/fonts/type1/public/lm/lmss17.pfb></usr/share/texmf/fonts/type1/public/lm/l
 mssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb>
-Output written on ide.pdf (2 pages, 178458 bytes).
+Output written on ide.pdf (2 pages, 170273 bytes).
 PDF statistics:
- 80 PDF objects out of 1000 (max. 8388607)
- 67 compressed objects within 1 object stream
- 15 named destinations out of 1000 (max. 500000)
- 63 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 78 PDF objects out of 1000 (max. 8388607)
+ 66 compressed objects within 1 object stream
+ 14 named destinations out of 1000 (max. 500000)
+ 58 words of extra memory for PDF output out of 10000 (max. 10000000)
 
