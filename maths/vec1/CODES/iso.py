@@ -21,6 +21,10 @@ import shlex
 A = np.array(([5,-2]))
 B = np.array(([6,4]))
 C = np.array(([7,-2]))
+E=np.array(([6.5,1]))
+F=np.array(([5.5,1]))
+D=np.array(([6,-2]))
+
 
 def line_gen(A,B):
    len =10
@@ -39,18 +43,25 @@ if (C-B)@(C-A) == (A-C)@(A-B):
 x_AB = line_gen(A,B)
 x_BC= line_gen(B,C)
 x_CA = line_gen(C,A)
+x_AE = line_gen(A,E)
+x_BD = line_gen(B,D)
+x_CF =line_gen(C,F)
 #
 #
 #Plotting all lines
 plt.plot(x_AB[0,:],x_AB[1,:],label='$AB=BC$')
 plt.plot(x_BC[0,:],x_BC[1,:])#,label='$Diameter$')
 plt.plot(x_CA[0,:],x_CA[1,:])#,label='$Diameter$')
+plt.plot(x_AE[0,:],x_AE[1,:])#,label='$Diameter$')
+plt.plot(x_BD[0,:],x_BD[1,:])#,label='$Diameter$')
+plt.plot(x_CF[0,:],x_CF[1,:])#,label='$Diameter$')
+
 #
 #
 #Labeling the coordinates
-tri_coords = np.vstack((A,B,C)).T
+tri_coords = np.vstack((A,B,C,D,E,F)).T
 plt.scatter(tri_coords[0,:], tri_coords[1,:])
-vert_labels = ['A','B','C']
+vert_labels = ['A','B','C','D','E','F']
 for i, txt in enumerate(vert_labels):
     plt.annotate(txt, # this is the text
                  (tri_coords[0,i], tri_coords[1,i]), # this is the point to label
@@ -65,7 +76,7 @@ plt.grid() # minor
 plt.axis('equal')
 
 #if using termux
-#plt.savefig('/storage/emulated/0/github/cbse-papers/2020/math/10/solutions/figs/matrix-10-5.pdf')
+#plt.savefig('/home/srikanth/vectore/par.pdf')
 #subprocess.run(shlex.split("termux-open '/storage/emulated/0/github/cbse-papers/2020/math/10/solutions/figs/matrix-10-5.pdf'")) 
 #else
 plt.show()
