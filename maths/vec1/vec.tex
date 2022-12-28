@@ -13,17 +13,12 @@
 \usepackage{tikz}
  \usepackage{physics}
 \usepackage{setspace}
+\usepackage[document]{ragged2e}
 \doublespacing
-%\documentclass{article}
 \usepackage{tabularx}
-%\usepackage{circuitikz}
 \usetikzlibrary{calc}
 \usepackage{amsmath}
 \usepackage{amssymb}
-%\usepackage{mathptmx}
-%\usepackage{mathrsfs}
-%\renewcommand*\failydefault{\sfdefault}
-%\usepackage{watermark}
 \usepackage{lipsum}
 \usepackage{xcolor}
 \usepackage{listings}
@@ -63,17 +58,15 @@ columns=fullflexible
  
    \section{Problem}
   Check whether$(5,-2),(6,4) \text{ and } (7,-2)$ are the vertices of an isosceles triangle.
-   
 Show that the points $\myvec{5, -2}$, $\myvec{6,4}$ and $\myvec{7, -2}$ and vertices of an isosceles  triangle.
  \section{solution} 
  \subsection{method 1}Let the given points be $\vec{A}, \vec{B}, \vec{C}$ respectively. 
 Then, the direction vectors of $AB, BC$ and $CA$ are
 \begin{align}
+\vec{A}-\vec{B}&=\myvec{5\\-2}-\myvec{6\\4}=\myvec{-1\\-6}\\
+\vec{B}-\vec{C}&=\myvec{6\\4}-\myvec{7\\-2}=\myvec{-1\\6}\\
+\vec{C}-\vec{A}&=\myvec{7\\-2}-\myvec{5\\-2}=\myvec{2\\0}\
 \\
-\vec{A} -\vec{B}&= \myvec{5 \\ -2} -\myvec{6 \\ 4} = \myvec{-1 \\ -6}\\
-\vec{B} -\vec{C}&=  -\myvec{6 \\ 4}-\myvec{7 \\ -2} = \myvec{-1 \\ 6}\\
-\vec{C} -\vec{A}&= \myvec{7 \\ -2} -\myvec{5 \\ -2} = \myvec{2 \\ 0}\\
-From the above,  we find that of EFD\\
 \brak{\vec{A} -\vec{B}}^{\top}\brak{\vec{B} -\vec{C}}&=  \myvec{-1 & -6}\myvec{-1 \\ 6}\\
 &=37\\
 \brak{\vec{B} -\vec{C}}^{\top}\brak{\vec{C} -\vec{A}}&=  \myvec{-1 & 6}\myvec{2 \\ 0}\\
@@ -112,5 +105,5 @@ From the above,  we find that midpoints
 \brak{\vec{B} -\vec{D}}\perp \brak{\vec{A} -\vec{C}}\\
 \angle BCA = \angle CAB  
 \end{align}
-      Thus, the triangle is isosceles triangle.
+Thus, the triangle is isosceles triangle.
  \end{document}
