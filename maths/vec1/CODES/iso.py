@@ -61,7 +61,7 @@ plt.plot(x_CF[0,:],x_CF[1,:])#,label='$Diameter$')
 #Labeling the coordinates
 tri_coords = np.vstack((A,B,C,D,E,F)).T
 plt.scatter(tri_coords[0,:], tri_coords[1,:])
-vert_labels = ['A','B','C','D','E','F']
+vert_labels = ['A' '(5,-2)','B''(6,4)','C''(7,-2)','D''(6,-2)','E''(13/2,1)','F''(11/2,1)']
 for i, txt in enumerate(vert_labels):
     plt.annotate(txt, # this is the text
                  (tri_coords[0,i], tri_coords[1,i]), # this is the point to label
@@ -76,8 +76,8 @@ plt.grid() # minor
 plt.axis('equal')
 
 #if using termux
-#plt.savefig('/home/srikanth/vectore/par.pdf')
-#subprocess.run(shlex.split("termux-open '/storage/emulated/0/github/cbse-papers/2020/math/10/solutions/figs/matrix-10-5.pdf'")) 
+plt.savefig('/sdcard/iithfwc/line/par.pdf')
+subprocess.run(shlex.split("termux-open '/storage/emulated/0/github/cbse-papers/2020/math/10/solutions/figs/matrix-10-5.pdf'")) 
 #else
 plt.show()
 
