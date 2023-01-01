@@ -1,0 +1,103 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\graphicspath{{./figs/}}{}
+\usepackage{tabularx}
+\usepackage{lipsum}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{titlesec}
+\usepackage{listings}
+\usepackage{watermark}
+\usepackage{hyperref,xcolor}
+\usepackage[e]{esvect}
+%\newcommand{\myvec}[2][1mu]{\vec{#2\mkern-#1}\mkern#1}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\hypersetup{
+    colorlinks,
+    urlcolor={black}	%black!50!blue
+}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+\let\vec\mathbf
+
+\def\inputGnumericTable{}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{calc}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{ifthen}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\newcommand{\Problem}{\noindent \textbf{Problem: }}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\setlist[enumerate]{font=\small\bfseries}
+\newcommand{\figuremacro}[5]{
+    
+}
+\lstset{
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+
+\title{Assignment: Isosceles triangle}
+\author{\Large S.Srikanth Reddy - FWC220107}
+\date{}
+\maketitle
+\Problem If $(1,2),(4,y),(x,6) \text{ and } (3,5)$ are the vertices of an Parallelogram takenin order,find x \text{ and } y triangle.
+\begin{table}[h!]
+	\small
+	\centering
+	%\subimport{../tables/}{table1.tex}
+     \input{/home/srikanth/vectore/tables/table1.tex}
+	%\caption{}
+	\label{table:12table1}
+	\end{table}
+\solution 1:
+Let the given points be $\vec{A}, \vec{B}, \vec{C}$ respectively. 
+Then, the direction vectors of $AB$ and $DC$ are
+\begin{align}
+\vec{A}=\myvec{1 \\ -2}
+\vec{B}-\vec{C}&=\myvec{\\4}-\myvec{7\\-2}=\myvec{-1\\6}\\
+\vec{C}-\vec{A}&=\myvec{7\\-2}-\myvec{5\\-2}=\myvec{2\\0}\\
+{\vec{A}-\vec{B}}^\brak{\top}{\vec{B}-\vec{C}}&=\myvec{-1 & -6}\myvec{-1 \\ 6}\
+&=37\\
+{\vec{B}-\vec{C}}^\brak{\top}{\vec{C}-\vec{A}}&=\myvec{-1 & 6}\myvec{2 \\ 0}\\
+&=-2\\
+{\vec{C}-\vec{A}}^\brak{\top}{\vec{A}-\vec{B}}&=\myvec{2 & 0}\myvec{-1 \\ -6}\\
+&=-2\\
+From  the above equations
+{\vec{A} -\vec{B}}\perp {\vec{B} -\vec{C}}\\
+\angle BCA = \angle CAB 
+\end{align}
+Thus, the triangle is isosceles triangle.
+\textbf{Method2}: Let the given points be $\vec{E}, \vec{F}, \vec{D}$ respectively. 
+ Then, the direction vectors of  $BD ,CF,AE$ are
+\begin{align}
+\vec{B}-\vec{C}&=\myvec{6 \\ 4}-\myvec{7 \\-2} =\myvec{13/2 \\ 1}\\
+\vec{C}-\vec{A}&=\myvec{7 \\-2}-\myvec{5 \\-2} =\myvec{6 \\-2}\\
+\vec{A}-\vec{B}&=\myvec{5 \\ 2}-\myvec{6 \\ 4} =\myvec{11/2 \\ 1}\\
+%From the above,  we find that midpoints values
+{\vec{E}-\vec{A}}^\brak{\top}{\vec{C}-\vec{B}}&= \myvec{3/2 & 3}\myvec{-1 \\ -6}\\
+&\neq0\\
+	{\vec{F}-\vec{C}}^{\brak{\top}{\vec{B}-\vec{A}}&= \myvec{3/2 & 3}\myvec{1 \\ 6}\\
+&\neq 0\\
+{\vec{D}-\vec{B}}^\brak{\top}{\vec{C}-\vec{A}}&= \myvec{0 & -6}\myvec{2 \\ 0}\\
+&=0 \\
+{\vec{B} -\vec{D}}\perp {\vec{A} -\vec{C}}\\
+\angle BCA = \angle CAB  
+\end{align}
+\pagebreak\section{Figure}
+\begin{figure}[h]
+\includegraphics[width=\columnwidth]{par.pdf}
+\caption{Isosceles triangle}
+		\label{fig:Figure}
+\end{figure}
+\begin{lstlisting}
+https://github.com/srikanth9515/FWC/tree/main/maths/vec1
+\end{lstlisting}
+\end{document}
