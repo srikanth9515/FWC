@@ -76,9 +76,9 @@ If the rank of the matrix has to be 1 , then -k+4=0.
 
 \begin{align}
 \begin{split}
--k+4 &=0
+\implies -k+4 &=0
 \\
-k=4
+\implies k=4 
 \end{split}
 \end{align}
 \begin{figure}[h!]
@@ -97,8 +97,8 @@ k=4
 \vec{C}=\myvec{2 \\ -5}
 \end{align}
 \begin{align}  
- \vec{D} &=\brak{\vec{A}-\vec{B}} = \brak{\myvec{8 \\1 } - \myvec{k \\-4 } } = \myvec{8-k \\ 5 }\\
-\vec{E} &= \brak{\vec{A}-\vec{C}} = \brak{\myvec{8 \\ 1 } - \myvec{2 \\-5 } } = \myvec{6 \\6}
+ \vec{D} &=\brak{\vec{A}-\vec{C}} = \brak{\myvec{8 \\1 } - \myvec{2 \\-5 } } = \myvec{6 \\ 6 }\\
+\vec{E} &= \brak{\vec{A}-\vec{B}} = \brak{\myvec{8 \\ 1 } - \myvec{k \\-4 } } = \myvec{8-k \\5}
 \end{align}
 If points on a line  are  collinear, rank of matrix is " 1 "then the vectors are in linearlydependent.
 For $2\times2$ matrix Rank = 1 means Determinant is 0.
@@ -109,41 +109,32 @@ Through pivoting,we obtain
 \begin{align}
 \begin{split}
 \myvec{
-8-k & 5
- \\
 6 & 6
+ \\
+8-k & 5
 }
 \end{split}
 \end{align}
 \begin{align}
 \label{eq:chem_balance_mat_row}
 \myvec{
+6 & 6
+\\
 8-k & 5
-\\
-6 & 6
 }
- \xleftrightarrow[]{R_1 = 3R_1-3R_2}
+ \xleftrightarrow[]{R_2 = 6R_2-5R_1}
 \myvec{
-24-3k & 15
-\\
 6 & 6
-}
 \\
-\xleftrightarrow[]{R_2 = 5R_2-2R_1}
-\myvec{
-24-3k & 15
-\\
-0 & 0
+18-6k & 0
 }
 \end{align}
-If the rank of the matrix is 1, it means any one of the row must be zero.So, making the first element in the matrix equal to 0.
+If the rank of the matrix has to be 1 , then 18-6k=0.
 \begin{align}
 \begin{split}
- 5(6)-2(24-3k)&=0
+\implies 18-6k &=0
 \\
-30-48+6k&=0
-\\
-k=3
+\implies k=3
 \end{split}
 \end{align}
 
