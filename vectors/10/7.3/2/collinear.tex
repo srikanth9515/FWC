@@ -122,17 +122,25 @@ Through pivoting,we obtain
 \\
 8-k & 5
 }
- \xleftrightarrow[]{R_2 = 6R_2-5R_1}
+ \xleftrightarrow[]{\frac{R_2}{8-k}}
 \myvec{
 6 & 6
 \\
-18-6k & 0
+1 & \frac{5}{8-k}
+}
+\\
+\xleftrightarrow[]{R_2 = 6R_2-R_1}
+\myvec{
+6 & 6
+\\
+0 & \frac{30}{8-k}-6
 }
 \end{align}
-If the rank of the matrix has to be 1 , then 18-6k=0.
+If the rank of the matrix has to be 1 , then 
+$\frac{30}{8-k}-6 =0$
 \begin{align}
 \begin{split}
- 18-6k &=0
+ 8-k &=5
 \\
 \implies k &=3
 \end{split}
