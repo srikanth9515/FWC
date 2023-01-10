@@ -97,8 +97,8 @@ If the rank of the matrix has to be 1 , then -k+4=0.
 \vec{C}=\myvec{2 \\ -5}
 \end{align}
 \begin{align}  
- \vec{D} &=\brak{\vec{A}-\vec{C}} = \brak{\myvec{8 \\1 } - \myvec{2 \\-5 } } = \myvec{6 \\ 6 }\\
-\vec{E} &= \brak{\vec{A}-\vec{B}} = \brak{\myvec{8 \\ 1 } - \myvec{k \\-4 } } = \myvec{8-k \\5}
+ \vec{D} &=\brak{\vec{A}-\vec{B}} = \brak{\myvec{8 \\1 } - \myvec{k \\-4 } } = \myvec{8-k \\ 5 }\\
+\vec{E} &= \brak{\vec{A}-\vec{C}} = \brak{\myvec{8 \\ 1 } - \myvec{2 \\-5 } } = \myvec{6 \\6}
 \end{align}
 If points on a line  are  collinear, rank of matrix is " 1 "then the vectors are in linearlydependent.
 For $2\times2$ matrix Rank = 1 means Determinant is 0.
@@ -109,39 +109,42 @@ Through pivoting,we obtain
 \begin{align}
 \begin{split}
 \myvec{
-6 & 6
- \\
 8-k & 5
+ \\
+6 & 6
 }
 \end{split}
 \end{align}
 \begin{align}
 \label{eq:chem_balance_mat_row}
 \myvec{
-6 & 6
-\\
 8-k & 5
-}
- \xleftrightarrow[]{\frac{R_2}{8-k}}
-\myvec{
-6 & 6
 \\
+6 & 6
+}
+ \xleftrightarrow[]{R_1=\frac{R_1}{8-k}}
+\myvec{
+1& \frac{5}{8-k}
+\\
+6 & 6
+}
+\\
+\xleftrightarrow[]{R_2 = R_2-6R_1}
+\myvec{
 1 & \frac{5}{8-k}
-}
 \\
-\xleftrightarrow[]{R_2 = 6R_2-R_1}
-\myvec{
-6 & 6
 \\
-0 & \frac{30}{8-k}-6
+0 & 6-\frac{30}{8-k}
 }
 \end{align}
 If the rank of the matrix has to be 1 , then
 \begin{align}
-\frac{30}{8-k}-6 &=0
+6-\frac{30}{8-k}&=0
 \end{align}
 \begin{align}
- 8-k &=5
+ 6(8-k) &= 30
+\\
+48-6k &= 30
 \\
 \implies k &=3
 \end{align}
