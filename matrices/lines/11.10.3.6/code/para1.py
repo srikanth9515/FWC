@@ -16,11 +16,11 @@ def line_dir_pt(m,A,k1,k2):
   return x_AB
 
 #Input parameters
-A=  np.array(([0,2]))     
-D=np.array(([0,-2]))
+A=  np.array(([0,1]))     
+D=np.array(([0,-1]))
 
 #Direction vector
-m=np.array(([8,8]))   #use normal vector here                                                           
+m=np.array(([1,1]))   #use normal vector here                                                           
 z=np.array(([0,1],[-1,0]))                           
 n=z@m                                     
 print(n)
@@ -28,8 +28,8 @@ print(m@A)
 print(m@D)
 
 ##Generating the line 
-k1=-0.5
-k2=0.5
+k1=-4
+k2=2
 x_AB = line_dir_pt(m,A,k1,k2)
 x_CD = line_dir_pt(m,D,k1,k2)
 
