@@ -64,14 +64,18 @@ Given line is
 \end{align}
 this equation can be expressed as 
 \begin{align}
-	\vec{n}^{\top}\vec{x}=c	
+	\vec{n}^{\top}\vec{x}=c_1\\	
+	\vec{n}^{\top}\vec{x}=c_2	
 \end{align}
 \begin{align}
-\text{ where }\vec{n} &= \myvec{15 \\8}, c_1=-34, c_2= 31
+\text{ where }
+\vec{n}&=\myvec{15\\8},c_1=-34, c_2= 31\\
+& \myvec{15&8}\vec{x}=-34\\ 
+& \myvec{15&8}\vec{x}=31\\
 \end{align} 
 distance between parallel lines 
 \begin{align}
-\vec{d}&=\frac{\abs{c_1-c_2}}{\norm{n}}\\
+d&=\frac{\abs{c_1-c_2}}{\norm{\vec{n}}}\\
 &=\frac{\abs{-34-31}}{\sqrt{289}}\\
 &=\frac{65}{17}
 \end{align}
@@ -90,18 +94,25 @@ l(x+y)+p=0\text{ and }l(x+y)-r=0
 \end{align}
 this equation can be expressed as 
 \begin{align}
-\vec{n}^{\top}\vec{x}=c
+\vec{n}^{\top}\vec{x}=c_1\\
+\vec{n}^{\top}\vec{x}=c_2
 \end{align}
 \begin{align}
 \text{ where }
-		\vec{n} = \myvec{l\\l},c_1=p,c_2=-r\\		
+\vec{n}& = \myvec{l\\l},c_1=p,c_2=-r\\
+& =\myvec{l&l}\vec{x}=p\\ 
+& =\myvec{l&l}\vec{x}=-r		
 \end{align}
 distance between parallel lines 
 \begin{align}
-\vec{d}&=\frac{\abs{p-(-r)}}{\sqrt{l^{2}}}\\
+d&=\frac{\abs{c_1-c_2}}{\norm{\vec{n}}}\\
 &=\frac{\abs{p+r}}{l\sqrt{2}}
 \end{align}	
-The distance between parallel lines $l(x+y)+p=0$ and $l(x+y)-r=0 $ is shown in figure with normal vector as $\vec{n}=\myvec{8\\8}$ and $c_1=16,c_2=-16$
+The distance between parallel lines 
+is shown in figure 2  with normal vector as 
+\begin{align*}
+\vec{n} =\myvec{1\\1} \text{ and }c_1=1,c_2=-1
+\end{align*}
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[width=\columnwidth]{para1.png}
