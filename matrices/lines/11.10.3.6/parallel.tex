@@ -1,4 +1,5 @@
 \documentclass[12pt]{article}
+\twocolumn
 \usepackage{graphicx}
 %\documentclass[journal,12pt,twocolumn]{IEEEtran}
 \usepackage[none]{hyphenat}
@@ -57,17 +58,11 @@ This is Problem-6 from Exercise 10.3
 (ii) l(x+y)+p=0 and  l(x+y)-r=0
 \	
 \item solution for problem 1
-\\
-Given line is 
-\begin{align}
-	15x+8y-34=0\text{ and }15x+8y+31=0
-\end{align}
-this equation can be expressed as 
 
+where
 \begin{align}
-\text{ where }
-& \myvec{15&8}\vec{x}=-34\\ 
-& \myvec{15&8}\vec{x}=31\\
+&=\myvec{15&8}\vec{x}=-34\\ 
+&=\myvec{15&8}\vec{x}=31\\
 \vec{n}&=\myvec{15\\8},c_1=-34, c_2= 31
 \end{align} 
 distance between parallel lines 
@@ -77,24 +72,19 @@ d&=\frac{\abs{c_1-c_2}}{\norm{\vec{n}}}\\
 &=\frac{65}{17}
 \end{align}
 \begin{figure}[h!]
-\begin{center}
-\includegraphics[width=\columnwidth]{para.png}
-\end{center}
+\centering
+\includegraphics[width=\columnwidth]{../figs/para.png}
 \caption{}
-\label{fig:Fig1}
+\label{fig:para.png}
 \end{figure}
+\
 	\item solution for problem 2
-	\\
-Given line is 
+	
+ where
 \begin{align}
-l(x+y)+p=0\text{ and }l(x+y)-r=0
-\end{align}
-this equation can be expressed as 
-\begin{align}
-\text{ where }
-\vec{n}& =\myvec{1\\1}\\
-& =\myvec{1&1}\vec{x}=\frac{-p}{l}\\ 
-& =\myvec{1&1}\vec{x}=\frac{-r}{l}		
+\vec{n}&=\myvec{1\\1}\\
+&=\myvec{1&1}\vec{x}=\frac{-p}{l}\\ 
+&=\myvec{1&1}\vec{x}=\frac{-r}{l}		
 \end{align}
 distance between parallel lines 
 \begin{align}
@@ -103,14 +93,13 @@ d&=\frac{1}{l\sqrt{2}}(p+r)
 The distance between parallel lines 
 is shown in figure 2  with normal vector as 
 \begin{align*}
-\vec{n} =\myvec{1\\1} \text{ and }c_1=1,c_2=-1
+&=\vec{n} =\myvec{1\\1} \text{ and }c_1=1,c_2=-1
 \end{align*}
 \begin{figure}[h!]
-\begin{center}
-\includegraphics[width=\columnwidth]{para1.png}
-\end{center}
+\centering
+\includegraphics[width=\columnwidth]{../figs/para1.png}
 \caption{}
-\label{fig:Fig2}
+\label{fig:para1.png}
 \end{figure}
 \end{enumerate}
 \end{document}
