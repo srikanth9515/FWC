@@ -59,26 +59,41 @@ Let the x intercept be a and  the y intercept be b ,Then
 \end{align}
 upon simplifying \eqref{1} and \eqref{2}
 \begin{align}
-\myvec{a\\b}&=\myvec{3\\-2},\myvec{-2\\3}
+\vec{a}=\myvec{3\\0},\vec{b}&=\myvec{0\\-2}\\
+\vec{a-b}&=\myvec{3\\0}-\myvec{0\\-2}\\
+&=\myvec{3\\2}
 \end{align}
-Thus,the posiible equations of the line as
+\begin{align}		
+\vec{m}&=\myvec{3\\2}0r \myvec{-2\\3}
+\end{align}
+$\implies$ The normal vector $\vec{n}$ to the line is given as
 \begin{align}
-\vec{n}=\myvec{2\\-3}\\
-\myvec{2,-3}(\vec{x}-\myvec{3\\-2})&=6\\
-\myvec{2,-3}\vec{x}&=6
+\vec{n}&=\myvec{0&-1\\1&0}\myvec{3\\2}\\
+&=\myvec{-2 \\3} 
 \end{align}
-     \hspace{60mm} or
+The equation of a line with normal vector $\vec{n}$ and passing through a point $\vec{A}$ is given by
 \begin{align}
-\vec{n}=\myvec{-3\\2}\\
-\myvec{-3,2}(\vec{x}-\myvec{-2\\3})&=6\\
-\myvec{-3,2}\vec{x}&=6
+	\vec{n}^\top\brak{\vec{x}-\vec{A}} &= 0 \\
+	\myvec { -2 & 3 } \vec{x}  &= 6  
 \end{align}
+\hspace{60mm Or}
+\begin{align}
+\vec{n}&=\myvec{0&-1\\1&0}\myvec{-2\\3}\\
+ &=\myvec{-3 \\-2} 
+\end{align}
+The equation of a line with normal vector $\vec{n}$ and passing through a point $\vec{B}$ is given by
+\hspace{60mm}
+\begin{align}
+	\myvec { -3 & -2 }  \vec{x}  &= 6        
+\end{align}
+ The line segment is as shown in Figure \ref{fig:Fig1}.
 \begin{figure}[h!]
 \centering
 \includegraphics[width=\columnwidth]{./figs/inter.png}
 \caption{}
 \label{fig:inter.png}
 \end{figure}
+
 \end{enumerate}
 
 \end{document}
