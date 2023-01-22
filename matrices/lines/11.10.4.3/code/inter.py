@@ -38,8 +38,8 @@ x_CD = line_dir_pt(m,C,k1,k2)
   
  
 #Plotting all lines 
-plt.plot(x_AB[0,:],x_AB[1,:],label='Line equation') 
-plt.plot(x_CD[0,:],x_CD[1,:],label='Line equation') 
+plt.plot(x_AB[0,:],x_AB[1,:],label='(-2 3)x=6') 
+plt.plot(x_CD[0,:],x_CD[1,:],label='(-3 -2)x=6') 
  
 #Labeling the coordinates 
 tri_coords = np.vstack((B,C)).T 
@@ -65,4 +65,3 @@ plt.axis('equal')
 #subprocess.run(shlex.split("termux-open /sdcard/matrix/code/fig.pdf")) 
 #else 
 plt.show()
-
