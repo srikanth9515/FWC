@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage[none]{hyphenat}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{caption} 
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{amssymb} % for \because
+\usepackage{amsmath}   % for having text in math mode
+\usepackage{extarrows} % for Row operations arrows
+\usepackage{listings}
+\lstset{
+  frame=single,
+  breaklines=true
+}
+\usepackage{hyperref}
+\usepackage{graphicx}
+  
+%Following 2 lines were added to remove the blank page at the beginning
+\usepackage{atbegshi}% http://ctan.org/pkg/atbegshi
+\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
+
+
+%New macro definitions
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\let\vec\mathbf
+
+\begin{document}
+\begin{center}
+\title{\textbf{Properties of vectors}}
+\date{\vspace{-5ex}} %Not to print date automatically
+\maketitle
+\end{center}
+\setcounter{page}{1}
+\section{12$^{th}$ Maths - Chapter 11}
+\textbf{This is Problem-2 from Exercise 11.4}
+
+\begin{enumerate}
+\item If $l_1$,$m_1$,$n_1$ \text{ and } $l_2$,$m_2$,$n_2$ are the direction cosines of two mutually perpendicular lines, show that the direction cosines of the line perpendicular to both these are  $m_1n_2-m_2n_1$, $n_1l_2-n_2l_1$, $l_1m_2-l_2m_1$.
+
+\section{Solution}
+Now,
+\begin{align}
+\text{Let } \vec{A} = \myvec{l_1\\m_1\\n_1} \text{ and } \vec{B} = \myvec{l_2\\ m_2 \\ n_2}\\
+\end{align}
+The cross product or vector product of $\vec{A},\vec{B}$ is defined as
+\begin{align}
+	\vec{A} \times \vec{B} = \myvec{\mydet{\vec{A}_{23}&\vec{B}_{23}\\\vec{A}_{31}&\vec{B}_{31}\\\vec{A}_{12}&\vec{B}_{12}}}
+\end{align}
+Hence
+\begin{align}
+	\mydet{\vec{A}_{23}&\vec{B}_{23}}&=\mydet{m_1&n_1\\n_2&n_2}=\myvec{m_1n_2-m_2n_1}\\
+	\mydet{\vec{A}_{31}&\vec{B}_{31}}&=\mydet{n_1&l_1\\n_2&l_2}=\myvec{n_1l_2-n_2l_1}\\
+	\mydet{\vec{A}_{12}&\vec{B}_{12}}&=\mydet{l_1&m_1\\l_2&m_2}=\myvec{l_1m_2-l_2m_1}
+\end{align}
+
+which can be represented in matrix form as
+\begin{align}
+	\vec{A} \times \vec{B}&=\myvec{m_1n_2-m_2n_1\\n_1l_2-n_2l_1\\l_1m_2-l_2m_1}
+\end{align}
+Hence
+The given quation is that the direction cosines of the line perpendicular to both these are  $m_1n_2-m_2n_1$, $n_1l_2-n_2l_1$, $l_1m_2-l_2m_1$.
+
+
+\end{enumerate}
+\end{document}
