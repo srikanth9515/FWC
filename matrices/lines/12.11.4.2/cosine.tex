@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\setlength{\textwidth}{5cm}
+\paperheight 12in
+\paperwidth 12in
+\usepackage{graphicx}
+\usepackage[margin=0.2in]{geometry}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{listings}
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\usepackage{enumerate}
+\let\vec\mathbf
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\lstset{
+frame=single,
+breaklines=true,
+columns=fullflexible
+}
+\title{\textbf{Line Assignment}}
+\author{Srikanth}
+\date{January 2023}
+\begin{document}
+\maketitle
+\paragraph{\textit{Problem Statement} - If $l_1$,$m_1$,$n_1$ \text{ and } $l_2$,$m_2$,$n_2$ are the direction cosines of two mutually perpendicular lines, show that the direction cosines of the line perpendicular to both these are  $m_1n_2-m_2n_1$, $n_1l_2-n_2l_1$, $l_1m_2-l_2m_1$}
+\section*{Solution}
+\begin{align}
+ l_1l_2+m_1m_2+n_1n_2=0\label{1}
+ \end{align}
+ \begin{align}
+ l_1^2+m_1^2+n_1^2=0\label{2}
+  \end{align}
+  \begin{align}
+  l_2^2+m_2^2+n_2^2=0\label{3}
+  \end{align}
+\\
+In order to proove the vector  $m_1n_2-m_2n_1$, $n_1l_2-n_2l_1$, $l_1m_2-l_2m_1$ is perpendicular to both the vectors $l_1$,$m_1$,$n_1$ \text{ and } $l_2$,$m_2$,$n_2$. Let us consider the matrix \textbf{P}.
+\\
+\\
+\textbf{P}=
+	$\begin{pmatrix}
+l_1&l_2&m_1n_2-m_2n_1\\
+        m_1&m_2&n_1l_2-n_2l_1\\
+        n_1&n_2&l_1m_2-l_2m_1\\
+	\end{pmatrix}$
+	\\
+	\\	
+	\\
+	$\textbf{P}^{\top}$ =
+	$\begin{pmatrix}
+l_1&m_1&n_1\\
+l_2&m_2&n_2\\
+m_1n_2-m_2n_1&m_2&n_1l_2-n_2l_1&n_2&l_1m_2-l_2m_1
+	\end{pmatrix}$ 
+	\\
+	\\
+	\\
+	\\
+	\\
+	\\
+	If the three vectors are mutually perpendicular then
+	\\
+	\begin{align}
+	P^{\top} P=I
+	\end{align}
+	This is prooved from the result of python and from the \eqref{1},\eqref{2} and \eqref{3}.\\	
+	\\
+	\\
+\begin{align}
+\begin{pmatrix}
+l_1^2+m_1^2+n_1^2&l_1l_2+m_1m_2+n_1n_2&l_1(m_1n_2-m_2n_1)+m_1(n_1l_2-n_2l_1)+n_1(l_1m_2-l_2m_1)\\
+l_1l_2+m_1n_2+n_1n_2&l_2^2+m_2^2+n_2^2&l_2(m_1n_2-m_2n_1)+m_2(n_1l_2-n_2l_1)+n_2(l_1m_2-l_2m_1)\\
+l_1(m_1n_2-n_2m_1)+m_1(n_1l_2-n_2l_1)\\+n_1(l_1m_2-l_2m_1)&l_2(m_1n_2-m_2n_1)+m_2(n_1l_2-n_2l_1)+n_2(l_1m_2-l_2m_1)&(l_1m_2-l_2m_1)^2+(n_1l_2-n_2l_1)^2+(m_1n_2-m_2n_1)^2
+\end{pmatrix}
+\end{align}
+\begin{align}
+P^{\top} P&=
+\myvec{
+	         1&0&0\\
+	          0&1&0\\
+	           0&0&1
+	           }
+	\end{align}
+	
+	Hences,The three vectors are mutually perpendicular\\
+	So we prooved that If $l_1$,$m_1$,$n_1$ \text{ and } $l_2$,$m_2$,$n_2$ are the direction cosines of two mutually perpendicular lines, show that the direction cosines of the line perpendicular to both these are  $m_1n_2-m_2n_1$, $n_1l_2-n_2l_1$, $l_1m_2-l_2m_1$.	
+\end{document}
