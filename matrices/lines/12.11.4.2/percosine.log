@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.12.9)  26 JAN 2023 16:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.12.9)  27 JAN 2023 13:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -455,40 +455,92 @@ Overfull \hbox (20.4624pt too wide) in paragraph at lines 47--48
 he line per-pen-dic-u-lar
  []
 
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (28.29149pt too wide) in paragraph at lines 68--71
-\OT1/cmr/m/n/12 Hence The given qua-tion is that the di-rec-tion cosines of the
- line per-pen-dic-u-lar
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--86
+
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 74.
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--86
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--86
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--86
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--86
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--86
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--86
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--86
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--86
+
+ []
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 108--108
+[][]$\OT1/cmtt/m/n/12 https : / / github . com / ahilan22 / fwc-[]2 / tree / ma
+in / probability /
+ []
+
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 103--109
+[] 
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 111.
 [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 74.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 111.
  (./percosine.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 74.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 74.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 111.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 111.
 Package rerunfilecheck Info: File `percosine.out' has not changed.
 (rerunfilecheck)             Checksum: 538B1963BB371A278DA0F6AF8B7A3C94;101.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 74.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 111.
  ) 
 Here is how much of TeX's memory you used:
- 9473 strings out of 481239
- 141927 string characters out of 5920377
- 417083 words of memory out of 5000000
- 24575 multiletter control sequences out of 15000+600000
- 542969 words of font info for 65 fonts, out of 8000000 for 9000
+ 9476 strings out of 481239
+ 141933 string characters out of 5920377
+ 414185 words of memory out of 5000000
+ 24579 multiletter control sequences out of 15000+600000
+ 543138 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,20n,42p,282b,430s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,13n,42p,282b,448s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on percosine.pdf (2 pages, 62398 bytes).
+fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmtt12.pfb>
+Output written on percosine.pdf (2 pages, 74795 bytes).
 PDF statistics:
- 59 PDF objects out of 1000 (max. 8388607)
- 48 compressed objects within 1 object stream
- 12 named destinations out of 1000 (max. 500000)
+ 70 PDF objects out of 1000 (max. 8388607)
+ 57 compressed objects within 1 object stream
+ 10 named destinations out of 1000 (max. 500000)
  17 words of extra memory for PDF output out of 10000 (max. 10000000)
 
