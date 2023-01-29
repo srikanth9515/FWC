@@ -27,31 +27,34 @@ columns=fullflexible
 \date{January 2023}
 \begin{document}
 \maketitle
-\paragraph{\textit{Problem Statement} - If $l_1$,$m_1$,$n_1$ \text{ and } $l_2$,$m_2$,$n_2$ are the direction cosines of two mutually perpendicular lines, show that the direction cosines of the line perpendicular to both these are  $m_1n_2-m_2n_1$, $n_1l_2-n_2l_1$, $l_1m_2-l_2m_1$}
+\paragraph{\textit{Problem Statement} - If $l_1$,$m_1$,$n_1$ \text{ and } $l_2$,$m_2$,$n_2$ are the direction cosines of two mutually perpendicular lines, show that the direction cosines of the line perpendicular to both these are  $m_1n_2-m_2n_1$,$n_1l_2-n_2l_1$,$l_1m_2-l_2m_1$}
 \section*{Solution}
+Let us Consider
 \begin{align}
- l_1l_2+m_1m_2+n_1n_2=0\label{1}
+ \vec{A}=\myvec{l_1\\m_1\\n_1},\vec{B}=\myvec{l_2\\m_2\\n_2}
+ \vec{C}&=\myvec{m_1n_2-m_2n_1\\n_1l_2-n_2l_1\\l_1m_2-l_2m_1}
  \end{align}
- \begin{align}
- l_1^2+m_1^2+n_1^2=0\label{2}
-  \end{align}
-  \begin{align}
-  l_2^2+m_2^2+n_2^2=0\label{3}
-  \end{align}
-\\
-In order to proove the vector  $m_1n_2-m_2n_1$, $n_1l_2-n_2l_1$, $l_1m_2-l_2m_1$ is perpendicular to both the vectors $l_1$,$m_1$,$n_1$ \text{ and } $l_2$,$m_2$,$n_2$. Let us consider the matrix $P$.
-\\
+ \begin{align} 
+ \vec{A}^{\top}\vec{B}&=\vec{0} \\
+  \vec{A}^{\top}\vec{A}&=\vec{1}\\
+   \vec{B}^{\top}\vec{B}&=\vec{1} 
+ \end{align}
+In order to proove the vector  $m_1n_2-m_2n_1$, $n_1l_2-n_2l_1$, $l_1m_2-l_2m_1$ is perpendicular to both the vectors $l_1$,$m_1$,$n_1$ \text{ and } $l_2$,$m_2$,$n_2$. Let us consider the matrix $\vec{P}$.
 \begin{align}
-\vec{p}=
-	\begin{pmatrix}
+\vec{P}&=\myvec{\vec{A} & \vec{B} & \vec{C}}
+\end{align}
+\begin{align}
+&=\begin{pmatrix}
 l_1&l_2&m_1n_2-m_2n_1\\
         m_1&m_2&n_1l_2-n_2l_1\\
         n_1&n_2&l_1m_2-l_2m_1
 	\end{pmatrix}
 	\end{align}
 	\begin{align}	
-	\vec{P}^{\top} =
-\begin{pmatrix}
+	\vec{P}^{\top} &= \myvec{\vec{A}\\\vec{B}\\\vec{C}}
+	\end{align}
+\begin{align}
+=\begin{pmatrix}
 l_1&m_1&n_1\\
 l_2&m_2&n_2\\
 m_1n_2-m_2n_1&m_2&n_1l_2-n_2l_1&n_2&l_1m_2-l_2m_1
@@ -60,10 +63,8 @@ m_1n_2-m_2n_1&m_2&n_1l_2-n_2l_1&n_2&l_1m_2-l_2m_1
 	If the three vectors are mutually perpendicular then
 	
 	\begin{align}
-	P^{\top} P=I
+	\vec{P}^{\top} \vec{P}=\vec{I}
 	\end{align}
-	This is prooved from the result of python and from the \eqref{1},\eqref{2} and \eqref{3}.	
-	
 \begin{align}
 \begin{pmatrix}
 l_1^2+m_1^2+n_1^2&l_1l_2+m_1m_2+n_1n_2&l_1(m_1n_2-m_2n_1)+m_1(n_1l_2-n_2l_1)+n_1(l_1m_2-l_2m_1)\\
@@ -72,7 +73,7 @@ l_1(m_1n_2-n_2m_1)+m_1(n_1l_2-n_2l_1)\\+n_1(l_1m_2-l_2m_1)&l_2(m_1n_2-m_2n_1)+m_
 \end{pmatrix}
 \end{align}
 \begin{align}
-\vec{P}^{\top} \vec{P}&=
+\vec{P}^{\top}\vec{P}&=
 \myvec{
 	         1&0&0\\
 	          0&1&0\\
