@@ -25,10 +25,10 @@ plt.plot(x_circ[0,:],x_circ[1,:],label='$Circle$')
 tri_coords = np.vstack((c))
 plt.scatter(tri_coords[0],tri_coords[1])
 
-vert_labels = []
+vert_labels = ['c']
 for i, txt in enumerate(vert_labels):
-    label = "{}({:.0f},{:.0f})".format(txt, tri_coords[0,i],tri_coords[1,i]) #Form label as A(x,y)
-    plt.annotate(label, # this is the text
+    #label = "{}({:.0f},{:.0f})".format(txt, tri_coords[0,i],tri_coords[1,i]) #Form label as A(x,y)
+    plt.annotate(txt, # this is the text
             (tri_coords[0,i], tri_coords[1,i]), # this is the point to label
                  textcoords="offset points", # how to position the text
                 xytext=(0,10), # distance from text to points (x,y)
