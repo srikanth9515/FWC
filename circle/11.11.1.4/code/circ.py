@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from numpy import linalg as LA
 import math
-
+import sympy as sym
 def circ_gen(O,r):
  len = 50
  theta = np.linspace(0,2*np.pi,len)
@@ -10,11 +10,22 @@ def circ_gen(O,r):
  x_circ[0,:] = r*np.cos(theta)
  x_circ[1,:] = r*np.sin(theta)
  x_circ = (x_circ.T + O).T
- return x_circ
+ return x_circ 
+c=np.array([1,1])
+r=np.sqrt(2)
+#equation of circle
+# circle parameters
+u=-c
+f=u@np.transpose(u)-r**2
+x=sym.Symbol('x')
+y=sym.Symbol('y')
+X=np.array([x,y])
+print("The equation of circle is : ")
+print(" ")
+E=X@np.transpose(X)+2*(u@np.transpose(X))+f
+print("{} = 0".format(E))
  
- 
-c = np.array([1,1])
-r = 0.5
+
 
 ##Generating the circle
 x_circ= circ_gen(c,r)
@@ -27,8 +38,8 @@ plt.scatter(tri_coords[0],tri_coords[1])
 
 vert_labels = ['c']
 for i, txt in enumerate(vert_labels):
-    #label = "{}({:.0f},{:.0f})".format(txt, tri_coords[0,i],tri_coords[1,i]) #Form label as A(x,y)
-    plt.annotate(txt, # this is the text
+    label = "{}".format(txt) #Form label as A(x,y)
+    plt.annotate(label, # this is the text
             (tri_coords[0,i], tri_coords[1,i]), # this is the point to label
                  textcoords="offset points", # how to position the text
                 xytext=(0,10), # distance from text to points (x,y)
