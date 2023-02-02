@@ -1,5 +1,18 @@
-\documentclass[12pt]{article}
+\documentclass[jornel,10pt,twocolumn]{article}
+%\documentclass[12pt%
+			  %,landscape%
+%                    ]{report}
+       \usepackage[latin1]{inputenc}
+       \usepackage{fullpage}
+       \usepackage{color}
+       \usepackage{array}
+       \usepackage{longtable}
+       \usepackage{calc}
+       \usepackage{multirow}
+       \usepackage{hhline}
+       \usepackage{ifthen}
 \usepackage{graphicx}
+\def\inputGnumericTable{}
 \usepackage[none]{hyphenat}
 \usepackage{graphicx}
 \usepackage{listings}
@@ -32,59 +45,56 @@
 \newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
 \providecommand{\abs}[1]{\left\vert#1\right\vert}
 \let\vec\mathbf
-
 \begin{document}
-
 \begin{center}
-\title{\textbf{Equation  of circle}}
+\title{\textbf{Properties of Circle}}
 \date{\vspace{-5ex}} %Not to print date automatically
 \maketitle
 \end{center}
+
 \setcounter{page}{1}
-\section*{Excercise 10.4}
+
+\section{9$^{th}$ Maths - Chapter 10}
+
+This is Problem-2 from Exercise 10.4
+
 \begin{enumerate}
 \item If two equal chords of a circle intersect within the circle, prove that the segments of one chord are equal to corresponding segments of other chord.
-\\
+\end{enumerate}
 \solution
-\\
 Consider the Circle of radius $1$ and length of chord be $1.5$
-\begin{align}
-\vec{c}=\myvec{0\\0},d=1.5,r=1
-\end{align}
-Consider the points on the circle
-\begin{align}
-	\vec{P}&=\myvec{\cos\theta_1\\\sin\theta_1}\\
-	\vec{Q}&=\myvec{\cos\theta_2\\\sin\theta_2}\\
-	\vec{R}&=\myvec{\cos\theta_3\\\sin\theta_3}\\
-	\vec{S}&=\myvec{\cos\theta_4\\\sin\theta_4}
-\end{align}
+%\begin{center}
+\begin{table}[ht!]
+	\input{/home/srikanth/circle/9.10.4.2/table/table.tex}
+\caption{}
+\label{table}	
+\end{table}
+
 So, here
 \begin{align}
-	(\vec{P}-\vec{Q})&=\myvec{\cos\theta_1-\cos\theta_2\\sin\theta_1-\sin\theta_2}
-	\end{align}
-	\begin{align}
+	(\vec{P}-\vec{Q})&=\myvec{{\cos\theta_1}-{\cos\theta_2}\\{sin\theta_1}-{\sin\theta_2}}\\
 	\norm{\vec{P}-\vec{Q}}^2&=d^2
 		\end{align}
 		\begin{align*}
-	&\implies\myvec{(\cos\theta_1-\cos\theta_2)^2}+\myvec{(\sin\theta_1-\sin\theta_2)^2}=d^2\\
+	&\implies\myvec{({\cos\theta_1}-{\cos\theta_2)}^2}+\myvec{({\sin\theta_1}-{\sin\theta_2})^2}=d^2\\
 	&\implies2-2\myvec{\cos(\theta_1-\theta_2)}=d^2\\
-	&\implies2(2\myvec{\sin^2(\frac{\theta_1-\theta_2}{2})}=d^2\\
-	&\implies\myvec{\sin^2\frac{\theta_1-\theta_2}{2}}=\frac{d^2}{4}\\
-	&\implies\myvec{\sin\frac{\theta_1-\theta_2}{2}}=\frac{d}{2}\\
-&\implies\myvec{\frac{\theta_1-\theta_2}{2}}=\myvec{\sin^{-1}(0.75)}\\
+	&\implies2(2\myvec{{\sin^2}(\frac{{\theta_1}-{\theta_2}}{2})}=d^2\\
+	&\implies\myvec{{\sin^2}\frac{{\theta_1}-{\theta_2}}{2}}=\frac{d^2}{4}\\
+	&\implies\myvec{\sin\frac{{\theta_1}-{\theta_2}}{2}}=\frac{d}{2}\\
+&\implies\myvec{\frac{{\theta_1}-{\theta_2}}{2}}=\myvec{{\sin^{-1}}(0.75)}\\
 	\end{align*}
 \begin{align}
-	\myvec{\theta_1-\theta_2}=97.1806 
+	\myvec{{\theta_1}-{\theta_2}}&=97.1806 
 	\end{align}
 Simillary we can say that
 \begin{align}
-	\myvec{\theta_3-\theta_4}=97.1806   		       
+	\myvec{{\theta_3}-{\theta_4}}&=97.1806   		       
 \end{align}	
 Let
 \begin{align}
-\theta_1=30\degree,\theta_3=60\degree
+{\theta_1=30\degree},{\theta_3=60\degree}
 \end{align}
-here
+Here
 \begin{align}
 \vec{P}&=\myvec{\frac{\sqrt{3}}{2}\\[2pt]\frac{1}{2}}\\
 \vec{Q}&=\myvec{0.3878\\-0.9217}\\
@@ -93,10 +103,13 @@ here
 \end{align}
 Obtain the point of intersection of line $\vec{PQ}$,$\vec{RS}$
 \begin{align}
-\vec{n_1^\top\myvec{\vec{X}-\vec{P}}}&=0\label{15}\\
-\vec{n_2^\top\myvec{\vec{X}-\vec{R}}}&=0\label{16}\\
-\vec{n_1}&=\myvec{1.4217\\-0.47822}\\
-\vec{n_2}&=\myvec{1.4703\\0.2967}
+\vec{n_1^{\top}}(\vec{T}-\vec{P})&=0\label{15}\\
+\vec{n_2^{\top}}(\vec{T}-\vec{R})&=0\label{16}\\
+\vec{O}&=\myvec{0&1\\-1&0}\\
+\vec{n_1}&=\vec{O}(\vec{P}-\vec{Q})\\
+&=\myvec{1.4217\\-0.4782}\\
+\vec{n_2}&=\vec{O}(\vec{R}-\vec{S})\\
+&=\myvec{1.4703\\0.2967}
 \end{align}
 From the Result of python code , we got the point of intersection of \eqref{15} \eqref{16}  is given as :
 \begin{align}
@@ -111,15 +124,14 @@ From the Result of python code , we get
 \end{align}
 Hence, we proved that
 \begin{align}
-\norm{\vec{P}-\vec{T}}=\norm{\vec{S}-\vec{T}}\\
-\norm{\vec{Q}-\vec{T}}=\norm{\vec{R}-\vec{T}}
+\norm{\vec{P}-\vec{T}}&=\norm{\vec{S}-\vec{T}}\\
+\norm{\vec{Q}-\vec{T}}&=\norm{\vec{R}-\vec{T}}
 \end{align} 
 \begin{figure}[!h]
 	\begin{center} 
 	  \includegraphics[width=\columnwidth]{/home/srikanth/circle/9.10.4.2/figs/c.png}
 	\end{center}
-\caption{}
+\caption{Two equal chords intersecting in a circle}
 \label{fig:Fig1}
 \end{figure}
-\end{enumerate}
 \end{document}

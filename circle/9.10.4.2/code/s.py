@@ -12,13 +12,19 @@ def line_gen(A,B):
   return x_AB
 
 r=1
-P=np.array([np.sqrt(3)/2,0.5])
-Q=np.array([0.3878,-0.9217])
-R=np.array([0.5,np.sqrt(3)/2])
-S=np.array([0.7967,-0.6043])
+theta1=30*np.pi/180
+theta2=theta1-(97.1806*np.pi)/180
+theta3=60*np.pi/180
+theta4=theta3-(97.1806*np.pi)/180
+P=np.array([np.cos(theta1),np.sin(theta1)])
+Q=np.array([np.cos(theta2),np.sin(theta2)])
+R=np.array([np.cos(theta3),np.sin(theta3)])
+S=np.array([np.cos(theta4),np.sin(theta4)])
 C=np.array([0,0])
 l=math.dist(P,Q)
 l1=math.dist(R,S)
+print(P)
+print(Q)
 print(l)
 print(l1)
 
@@ -32,18 +38,25 @@ def line_intersect(n1,A1,n2,A2):
   P=np.linalg.inv(N)@p
   return P
 def circ_gen(O,r):
-	len = 50
-	theta = np.linspace(0,2*np.pi,len)
-	x_circ = np.zeros((2,len))
-	x_circ[0,:] = r*np.cos(theta)
-	x_circ[1,:] = r*np.sin(theta)
-	x_circ = (x_circ.T + O).T
-	return x_circ
+ len = 50
+ theta = np.linspace(0,2*np.pi,len)
+ x_circ = np.zeros((2,len))
+ x_circ[0,:] = r*np.cos(theta)
+ x_circ[1,:] = r*np.sin(theta)
+ x_circ = (x_circ.T + O).T
+ return x_circ
 
-n1=np.array([1.4217,-0.47822])
-n2=np.array([1.4703,0.2967])
+omat=np.array([[0,1],[-1,0]])
+n1=omat@(P-Q)
+n2=omat@(R-S)
+print(n1)
+print(n2)
+#n1=np.array([1.4217,-0.47822])
+
+#n2=np.array([1.4703,0.2967])
 T=line_intersect(n1,P,n2,R)
 T=np.array(T)
+print(T)
 print(math.dist(P,T))
 print(math.dist(Q,T))
 print(math.dist(R,T))
