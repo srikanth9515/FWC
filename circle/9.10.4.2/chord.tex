@@ -66,9 +66,15 @@ Consider the Circle of radius $1$ and length of chord be $1.5$
 %\begin{center}
 \begin{table}[ht!]
 	\input{/home/srikanth/circle/9.10.4.2/table/table.tex}
-\caption{}
+\caption{Two equal chords intersecting in a circle}
 \label{table}	
 \end{table}
+\begin{align}
+\vec{P}=\myvec{\cos{\theta_1}\\\sin{\theta_1}},
+\vec{Q}&=\myvec{\cos{\theta_2}\\\sin{\theta_2}}\\
+\vec{R}=\myvec{\cos{\theta_3}\\\sin{\theta_3}},
+\vec{S}&=\myvec{\cos{\theta_4}\\\sin{\theta_4}}
+\end{align}
 
 So, here
 \begin{align}
@@ -79,39 +85,34 @@ So, here
 	&\implies\myvec{({\cos\theta_1}-{\cos\theta_2)}^2}+\myvec{({\sin\theta_1}-{\sin\theta_2})^2}=d^2\\
 	&\implies2-2\myvec{\cos(\theta_1-\theta_2)}=d^2\\
 	&\implies2(2\myvec{{\sin^2}(\frac{{\theta_1}-{\theta_2}}{2})}=d^2\\
-	&\implies\myvec{{\sin^2}\frac{{\theta_1}-{\theta_2}}{2}}=\frac{d^2}{4}\\
-	&\implies\myvec{\sin\frac{{\theta_1}-{\theta_2}}{2}}=\frac{d}{2}\\
-&\implies\myvec{\frac{{\theta_1}-{\theta_2}}{2}}=\myvec{{\sin^{-1}}(0.75)}\\
+	&\implies{\sin^2}(\frac{{\theta_1}-{\theta_2}}{2})=\frac{d^2}{4}\\
+	&\implies\sin\frac{{\theta_1}-{\theta_2}}{2}=\frac{d}{2}\\
+&\implies\myvec{\frac{{\theta_1}-{\theta_2}}{2}}=\sin^{-1}(\frac{d}{2})
 	\end{align*}
 \begin{align}
-	\myvec{{\theta_1}-{\theta_2}}&=97.1806 
+	\myvec{{\theta_1}-{\theta_2}}&=97.1806
 	\end{align}
 Simillary we can say that
 \begin{align}
-	\myvec{{\theta_3}-{\theta_4}}&=97.1806   		       
+	\myvec{{\theta_3}-{\theta_4}}&=97.1806 		       
 \end{align}	
 Let
 \begin{align}
-{\theta_1=30\degree},{\theta_3=60\degree}
+{\theta_1=30\degree},{\theta_3=60\degree}\\
+{\theta_2=-67.1806},{\theta_4=-37.1806}
 \end{align}
-Here
-\begin{align}
-\vec{P}&=\myvec{\frac{\sqrt{3}}{2}\\[2pt]\frac{1}{2}}\\
-\vec{Q}&=\myvec{0.3878\\-0.9217}\\
-\vec{R}&=\myvec{\frac{1}{2}\\[2pt]\frac{\sqrt{3}}{2}}\\
-\vec{S}&=\myvec{0.7967\\-0.6043}
-\end{align}
+
 Obtain the point of intersection of line $\vec{PQ}$,$\vec{RS}$
 \begin{align}
-\vec{n_1^{\top}}(\vec{T}-\vec{P})&=0\label{15}\\
-\vec{n_2^{\top}}(\vec{T}-\vec{R})&=0\label{16}\\
-\vec{O}&=\myvec{0&1\\-1&0}\\
-\vec{n_1}&=\vec{O}(\vec{P}-\vec{Q})\\
-&=\myvec{1.4217\\-0.4782}\\
-\vec{n_2}&=\vec{O}(\vec{R}-\vec{S})\\
-&=\myvec{1.4703\\0.2967}
+\vec{n_1^{\top}}(\vec{X}-\vec{P})&=0\label{15}\\
+\vec{n_2^{\top}}(\vec{X}-\vec{R})&=0\label{16}\\
+\vec{Omat}&=\myvec{0&1\\-1&0}\\
+\vec{n_1}&=\myvec{0&1\\-1&0}\myvec{\cos{\theta_1}-\cos{\theta_2}\\\sin{\theta_1}-\sin{\theta_2}}\\
+&=\myvec{\sin{\theta_1}-\sin{\theta_2}\\\cos{\theta_2}-\cos{\theta_1}}\\
+\vec{n_2}&=\myvec{0&1\\-1&0}\myvec{\cos{\theta_3}-\cos{\theta_4}\\\sin{\theta_3}-\sin{\theta_4}}\\
+&=\myvec{\sin{\theta_3}-\sin{\theta_4}\\\cos{\theta_4}-\cos{\theta_3}}
 \end{align}
-From the Result of python code , we got the point of intersection of \eqref{15} \eqref{16}  is given as :
+From the Result of python code by sunstituting $\theta_1,\theta_2,\theta_3,\theta_4$ in point $\vec{T}$ then we got the point of intersection as :
 \begin{align}
 \vec{T}&=\myvec{0.68341409\\-0.04288508}
 \end{align}

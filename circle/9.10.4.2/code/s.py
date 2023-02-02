@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import math
+import sympy as sym
 def line_gen(A,B):
   len =10
   dim = A.shape[0]
@@ -51,9 +52,9 @@ n1=omat@(P-Q)
 n2=omat@(R-S)
 print(n1)
 print(n2)
-#n1=np.array([1.4217,-0.47822])
+n1=np.array([1.4217,-0.47822])
+n2=np.array([1.4703,0.2967])
 
-#n2=np.array([1.4703,0.2967])
 T=line_intersect(n1,P,n2,R)
 T=np.array(T)
 print(T)
