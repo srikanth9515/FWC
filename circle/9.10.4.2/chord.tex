@@ -1,4 +1,4 @@
-\documentclass[jornel,10pt,twocolumn]{article}
+\documentclass[12pt]{article}
 %\documentclass[12pt%
 			  %,landscape%
 %                    ]{report}
@@ -62,20 +62,21 @@ This is Problem-2 from Exercise 10.4
 \item If two equal chords of a circle intersect within the circle, prove that the segments of one chord are equal to corresponding segments of other chord.
 \end{enumerate}
 \solution
+\\
 Consider the Circle of radius $1$ and length of chord be $1.5$
-%\begin{center}
+\begin{center}
 \begin{table}[ht!]
 	\input{/home/srikanth/circle/9.10.4.2/table/table.tex}
-\caption{Two equal chords intersecting in a circle}
-\label{table}	
+\caption{}
+\label{table}
 \end{table}
+\end{center}
 \begin{align}
 \vec{P}=\myvec{\cos{\theta_1}\\\sin{\theta_1}},
 \vec{Q}&=\myvec{\cos{\theta_2}\\\sin{\theta_2}}\\
 \vec{R}=\myvec{\cos{\theta_3}\\\sin{\theta_3}},
 \vec{S}&=\myvec{\cos{\theta_4}\\\sin{\theta_4}}
 \end{align}
-
 So, here
 \begin{align}
 	(\vec{P}-\vec{Q})&=\myvec{{\cos\theta_1}-{\cos\theta_2}\\{sin\theta_1}-{\sin\theta_2}}\\
@@ -101,11 +102,10 @@ Let
 {\theta_1=30\degree},{\theta_3=60\degree}\\
 {\theta_2=-67.1806},{\theta_4=-37.1806}
 \end{align}
-
 Obtain the point of intersection of line $\vec{PQ}$,$\vec{RS}$
 \begin{align}
-\vec{n_1^{\top}}(\vec{X}-\vec{P})&=0\label{15}\\
-\vec{n_2^{\top}}(\vec{X}-\vec{R})&=0\label{16}\\
+\vec{n_1^{\top}}(\vec{X}-\vec{P})&=0\\
+\vec{n_2^{\top}}(\vec{X}-\vec{R})&=0\\
 \vec{Omat}&=\myvec{0&1\\-1&0}\\
 \vec{n_1}&=\myvec{0&1\\-1&0}\myvec{\cos{\theta_1}-\cos{\theta_2}\\\sin{\theta_1}-\sin{\theta_2}}\\
 &=\myvec{\sin{\theta_1}-\sin{\theta_2}\\\cos{\theta_2}-\cos{\theta_1}}\\
@@ -114,7 +114,9 @@ Obtain the point of intersection of line $\vec{PQ}$,$\vec{RS}$
 \end{align}
 From the Result of python code by sunstituting $\theta_1,\theta_2,\theta_3,\theta_4$ in point $\vec{T}$ then we got the point of intersection as :
 \begin{align}
-\vec{T}&=\myvec{0.68341409\\-0.04288508}
+\vec{T}&=\myvec{\sin{\theta_2}-\sin{\theta_1}&\cos{\theta_2}-\cos{\theta_1}\\\sin{\theta_4}-\sin{\theta_3}&\cos{\theta_4}-\cos{\theta_3}}\vec{X}=\myvec{\cos{\theta_1}(\sin{\theta_2}-\sin{\theta_1})-\sin{\theta_1}(\cos{\theta_2}-\cos{\theta_1})\\\cos\theta_3(\sin\theta_4-\sin\theta_3)-\sin\theta_3(\cos\theta_4-\cos\theta_2)}\\
+&=\myvec{\frac{\cos{\theta_4}-\cos{\theta_2}(\sin{\theta2}\cos{\theta_1}-\sin{\theta_1}\cos{\theta_2})}{(\cos{\theta_4}-\cos{\theta_2})(\sin{\theta_2}-\sin{\theta_1})-(\cos{\theta_2}-\cos{\theta_1})(\sin{\theta_4}-\sin{\theta_3})}\\[8pt]\sin{\theta_1}+\frac{\sin{\theta_2}-\sin{\theta_1}}{\cos{\theta_2}-\cos{\theta_1}}(\frac{\cos{\theta_4}-\cos{\theta_2}(\sin{\theta2}\cos{\theta_1}-\sin{\theta_1}\cos{\theta_2})}{(\cos{\theta_4}-\cos{\theta_2})(\sin{\theta_2}-\sin{\theta_1})-(\cos{\theta_2}-\cos{\theta_1})(\sin{\theta_4}-\sin{\theta_3})})-\cos{\theta_1})}\\
+&=\myvec{0.68341409\\-0.04288508}
 \end{align}
 From the Result of python code , we get
 \begin{align}
