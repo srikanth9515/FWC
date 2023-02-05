@@ -1,7 +1,4 @@
-\documentclass[12pt]{article}
-%\documentclass[12pt%
-			  %,landscape%
-%                    ]{report}
+\documentclass[10pt]{article}
        \usepackage[latin1]{inputenc}
        \usepackage{fullpage}
        \usepackage{color}
@@ -31,12 +28,9 @@
   breaklines=true
 }
 \usepackage{hyperref}
-  
 %Following 2 lines were added to remove the blank page at the beginning
 \usepackage{atbegshi}% http://ctan.org/pkg/atbegshi
 \AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
-
-
 %New macro definitions
 \newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
 \providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
@@ -51,76 +45,78 @@
 \date{\vspace{-5ex}} %Not to print date automatically
 \maketitle
 \end{center}
-
 \setcounter{page}{1}
-
 \section{9$^{th}$ Maths - Chapter 10}
-
-This is Problem-2 from Exercise 10.4
-
+       This is Problem-2 from Exercise 10.4
 \begin{enumerate}
 \item If two equal chords of a circle intersect within the circle, prove that the segments of one chord are equal to corresponding segments of other chord.
-\end{enumerate}
-\solution
-\\
-Consider 
-\begin{center}
-\begin{table}[ht!]
+
+\solution:
+\begin{figure}[h!]
+	\begin{center} 
+	  \includegraphics[width=\columnwidth]{/home/srikanth/circle/9.10.4.2/figs/c.png}
+	\end{center}
+\caption{Two equal chords intersecting in a circle}
+\label{fig:Fig1}
+\end{figure} 
+Consider the circle of radius $1$ and length of chord be $1.5$
+\begin{table}[h!]
 	\input{/home/srikanth/circle/9.10.4.2/table/table.tex}
 \caption{}
 \label{table}
 \end{table}
-\end{center}
-\begin{align}
-\vec{P}=\myvec{\cos \theta_1\\\sin \theta_1},
-\vec{Q}&=\myvec{\cos \theta_2\\\sin \theta_2}\\
-\vec{R}=\myvec{\cos \theta_3\\\sin \theta_3},
+\section*{\large Construction}
+Consider
+\begin{eqnarray}
+\vec{P}&=\myvec{\cos \theta_1\\\sin \theta_1}
+\\
+\vec{Q}&=\myvec{\cos \theta_2\\\sin \theta_2}
+\\
+\vec{R}&=\myvec{\cos \theta_3\\\sin \theta_3}
+\\
 \vec{S}&=\myvec{\cos \theta_4\\\sin \theta_4}
-\end{align}
+\end{eqnarray}\label{table1}
 So, here
 \begin{align}
-	\vec{P}-\vec{Q}&=\myvec{\cos\theta_1-\cos\theta_2\\{sin \theta_1}-{\sin \theta_2}}\\
-	\norm{\vec{P}-\vec{Q}}^2&=d^2
-		\end{align}
+	\vec{P}-\vec{Q}&=\myvec{\cos\theta_1-\cos\theta_2\\{sin \theta_1}-{\sin \theta_2}}
+	\\
+\norm{\vec{P}-\vec{Q}}^2&=d^2
+\end{align}
 		\begin{align}
-	&\implies\myvec{({\cos \theta_1}-{\cos \theta_2)}^2}+\myvec{({\sin \theta_1}-{\sin \theta_2})^2}=d^2\\
-	&\implies2-2\myvec{\cos(\theta_1-\theta_2)}=d^2\\
-	&\implies2(2\myvec{{\sin^2}(\frac{\theta_1-\theta_2}{2})}=d^2\\
-	&\implies\sin^2(\frac{\theta_1-\theta_2}{2})=\frac{d^2}{4}\\
-	&\implies\sin\frac{\theta_1-\theta_2}{2}=\frac{d}{2}\\
-&\implies\myvec{\frac{\theta_1-\theta_2}{2}}=\sin^{-1}(\frac{d}{2})
+	\implies\myvec{\cos \theta_1-\cos \theta_2}^2+\myvec{\sin \theta_1-\sin \theta_2}^2&=d^2\\
+	\implies2-2\myvec{\cos(\theta_1-\theta_2)}&=d^2\\
+	\implies2(2\myvec{{\sin^2}(\frac{\theta_1-\theta_2}{2})}&=d^2\\
+	\implies\sin^2(\frac{\theta_1-\theta_2}{2})&=\frac{d^2}{4}\\
+	\implies\sin\frac{\theta_1-\theta_2}{2}&=\frac{d}{2}\\
+\implies\myvec{\frac{\theta_1-\theta_2}{2}}&=\sin^{-1}(\frac{d}{2})\label{12}
 	\end{align}
-\begin{align}
+	Substituing the values from table $\eqref{table}$ in $\eqref{12}$ So we get
+	\begin{align}
 	\myvec{\theta_1-\theta_2}&=97.1806\degree
 	\end{align}
 Simillary we can say that
 \begin{align}
 	\myvec{\theta_3-\theta_4}&=97.1806\degree 		       
-\end{align}	
-Let
-\begin{align}
-{\theta_1=30\degree},{\theta_3=60\degree}\\
-{\theta_2=-67.1806\degree},{\theta_4=-37.1806\degree}
 \end{align}
 Obtain the point of intersection of line $\vec{PQ}$,$\vec{RS}$
 \begin{align}
-\vec{n_1^{\top}}(\vec{X}-\vec{P})&=0\\
-\vec{n_2^{\top}}(\vec{X}-\vec{R})&=0\\
+\vec{{n}_1^{\top}}(\vec{X}-\vec{P})&=0\\
+\vec{{n}_2^{\top}}(\vec{X}-\vec{R})&=0\\
 \vec{Omat}&=\myvec{0&1\\-1&0}\\
-\vec{n_1}&=\myvec{0&1\\-1&0}\myvec{\cos \theta_1-\cos \theta_2\\\sin \theta_1-\sin \theta_2}\\
+\vec{n}_1&=\myvec{0&1\\-1&0}\myvec{\cos \theta_1-\cos \theta_2\\\sin \theta_1-\sin \theta_2}\\
 &=\myvec{\sin \theta_1-\sin \theta_2\\\cos \theta_2-\cos \theta_1}\\
-\vec{n_2}&=\myvec{0&1\\-1&0}\myvec{\cos\theta_3-\cos \theta_4\\\sin \theta_3-\sin \theta_4}\\
+\vec{n}_2&=\myvec{0&1\\-1&0}\myvec{\cos\theta_3-\cos \theta_4\\\sin \theta_3-\sin \theta_4}\\
 &=\myvec{\sin \theta_3-\sin \theta_4\\\cos \theta_4-\cos \theta_3}
 \end{align}
-From the Result of python code by sunstituting $\theta_1,\theta_2,\theta_3,\theta_4$ in point $\vec{T}$ then we got the point of intersection as :
+From the Result of python code by substituting $\theta_1,\theta_2,\theta_3,\theta_4$ in point $\vec{T}$ then we get the point of intersection as :
 \begin{multline}
 \myvec{\sin \theta_2-\sin \theta_1&\cos \theta_2-\cos \theta_1\\\sin \theta_4-\sin \theta_3&\cos \theta_4-\cos \theta_3}\vec{X}=\myvec{\cos \theta_1(\sin \theta_2-\sin \theta_1)-\sin \theta_1(\cos \theta_2-\cos \theta_1)\\\cos \theta_3(\sin \theta_4-\sin \theta_3)-\sin \theta_3(\cos \theta_4-\cos \theta_2)}\\
 \end{multline}
 \begin{multline}
 \vec{T}=\myvec{\frac{\cos \theta_4-\cos \theta_2(\sin \theta2 \cos \theta_1-\sin \theta_1 \cos \theta_2)}{(\cos\theta_4-\cos \theta_2)(\sin \theta_2-\sin \theta_1)-(\cos \theta_2-\cos \theta_1)(\sin \theta_4-\sin \theta_3)}\\[8pt]\sin \theta_1+\frac{\sin \theta_2-\sin \theta_1}{\cos \theta_2-\cos \theta_1}(\frac{\cos \theta_4-\cos \theta_2(\sin \theta2\cos \theta_1-\sin \theta_1\cos \theta_2)}{(\cos \theta_4-\cos \theta_2)(\sin \theta_2-\sin \theta_1)-(\cos \theta_2-\cos \theta_1)(\sin \theta_4-\sin \theta_3)})-\cos \theta_1)}
-\end{multline}
+\end{multline} 	
 \begin{align}
-\vec{T}=\myvec{0.68341409\\-0.04288508}
+=\myvec{0.68341409\\-0.04288508}
 \end{align}
 From the Result of python code , we get
 \begin{align}
@@ -134,11 +130,5 @@ Hence, we proved that
 \norm{\vec{P}-\vec{T}}&=\norm{\vec{S}-\vec{T}}\\
 \norm{\vec{Q}-\vec{T}}&=\norm{\vec{R}-\vec{T}}
 \end{align} 
-\begin{figure}[!h]
-	\begin{center} 
-	  \includegraphics[width=\columnwidth]{/home/srikanth/circle/9.10.4.2/figs/c.png}
-	\end{center}
-\caption{Two equal chords intersecting in a circle}
-\label{fig:Fig1}
-\end{figure}
+\end{enumerate}
 \end{document}
