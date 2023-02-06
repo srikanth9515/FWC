@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.12.9)  5 FEB 2023 12:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.12.9)  6 FEB 2023 10:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -551,7 +551,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} </home/srikanth/circle/9.
 10.4.2/figs/c.png>] [2]
-Underfull \hbox (badness 7030) detected at line 117
+Underfull \hbox (badness 5388) detected at line 117
  []$[]  \OT1/cmr/bx/n/10 T \OT1/cmr/m/n/10 = []$ [][]  
  []
 
@@ -568,11 +568,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 134.
 Here is how much of TeX's memory you used:
  9976 strings out of 481239
  149371 string characters out of 5920377
- 437199 words of memory out of 5000000
+ 436199 words of memory out of 5000000
  25009 multiletter control sequences out of 15000+600000
  542374 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,19n,42p,544b,546s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,19n,42p,598b,546s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texli
@@ -584,7 +584,7 @@ public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
 y7.pfb>
-Output written on chord.pdf (3 pages, 144923 bytes).
+Output written on chord.pdf (3 pages, 145524 bytes).
 PDF statistics:
  117 PDF objects out of 1000 (max. 8388607)
  92 compressed objects within 1 object stream

@@ -88,6 +88,7 @@ for i, txt in enumerate(vert_labels):
 
 plt.xlabel('$x-axis$')
 plt.ylabel('$y-axis$')
+#plt.savefig{}
 plt.legend(loc='best')
 plt.grid() # minor
 plt.axis('equal')
