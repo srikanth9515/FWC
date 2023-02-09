@@ -5,7 +5,7 @@
 
 
 
-double *createMat(int m)
+double *createMat(int m) // function for creating an array
 {
  int i;
  double *a;
@@ -18,7 +18,7 @@ a = (double *)malloc(m * sizeof(double));
 
 
 
-double linalg_norm(double *a, int m)
+double linalg_norm(double *a, int m) //Function for doing norm of array
 {
 int i;
 double norm=0.0;
@@ -34,7 +34,7 @@ return sqrt(norm);
 
 
 
-void pmf(char *str, double *a,int len)
+void pmf(char *str, double *a,int len)  //function for printing matrix in file
 {
 int i;
 FILE *fp;
@@ -53,12 +53,12 @@ int main()
 {
 
 	int m=2;
-	double *a,*b,*c;
+	double *a,*b,*c; //Declaring an array by using malloc
 	double *e,*f,*g;
 	printf("Enter Size : ");
 	a=createMat(m);
 	int j;
-	a[0]=5;
+	a[0]=5; //initialising an array
 	a[1]=-2;
 
 	for(j=0;j<m;j++)
@@ -68,7 +68,7 @@ int main()
 
 
 
-	pmf("a.dat",a,2);
+	pmf("a.dat",a,2);  //printing the array in files
 
 	b=createMat(m);
 	b[0]=6;
@@ -115,7 +115,7 @@ int main()
 
 	double d1,d2,d3,d4;
 	printf("\n");
-	d1=linalg_norm(e,m);
+	d1=linalg_norm(e,m); //doing the norm 
 	printf("%lf",d1);
 	printf("\n");
 	d2=linalg_norm(f,m);
