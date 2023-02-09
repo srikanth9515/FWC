@@ -1,0 +1,134 @@
+\documentclass[10pt]{article}
+       \usepackage[latin1]{inputenc}
+       \usepackage{fullpage}
+       \usepackage{color}
+       \usepackage{array}
+       \usepackage{longtable}
+       \usepackage{calc}
+       \usepackage{multirow}
+       \usepackage{hhline}
+       \usepackage{ifthen}
+\usepackage{graphicx}
+\def\inputGnumericTable{}
+\usepackage[none]{hyphenat}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{caption} 
+\usepackage{booktabs}
+\usepackage{gensymb}
+\usepackage{array}
+\usepackage{amssymb} % for \because
+\usepackage{amsmath}   % for having text in math mode
+\usepackage{extarrows} % for Row operations arrows
+\usepackage{listings}
+\lstset{
+  frame=single,
+  breaklines=true
+}
+\usepackage{hyperref}
+%Following 2 lines were added to remove the blank page at the beginning
+\usepackage{atbegshi}% http://ctan.org/pkg/atbegshi
+\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
+%New macro definitions
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\let\vec\mathbf
+\begin{document}
+\begin{center}
+\title{\textbf{Properties of Circle}}
+\date{\vspace{-5ex}} %Not to print date automatically
+\maketitle
+\end{center}
+\setcounter{page}{1}
+\section{9$^{th}$ Maths - Chapter 10}
+       This is Problem-2 from Exercise 10.4
+\begin{enumerate}
+\item If two equal chords of a circle intersect within the circle, prove that the segments of one chord are equal to corresponding segments of other chord.
+
+\solution:
+\begin{figure}[h!]
+	\begin{center} 
+	  \includegraphics[width=\columnwidth]{/home/srikanth/circle/9.10.4.2/figs/c.png}
+	\end{center}
+\caption{Two equal chords intersecting in a circle}
+\label{fig:Fig1}
+\end{figure} 
+Consider the circle of radius $1$ and length of chord be $1.5$
+\begin{table}[h!]
+	\input{/home/srikanth/circle/9.10.4.2/table/table.tex}
+\caption{}
+\label{table}
+\end{table}
+\section*{\large Construction}
+Consider
+\begin{eqnarray}
+\vec{P}&=\myvec{\cos \theta_1\\\sin \theta_1}
+\\
+\vec{Q}&=\myvec{\cos \theta_2\\\sin \theta_2}
+\\
+\vec{R}&=\myvec{\cos \theta_3\\\sin \theta_3}
+\\
+\vec{S}&=\myvec{\cos \theta_4\\\sin \theta_4}
+\end{eqnarray}\label{table1}
+So, here
+\begin{align}
+	\vec{P}-\vec{Q}&=\myvec{\cos\theta_1-\cos\theta_2 \\ \sin \theta_1-\sin \theta_2}
+	\\
+\norm{\vec{P}-\vec{Q}}^2&=d^2
+\end{align}
+		\begin{align}
+	&\implies\brak{\cos \theta_1-\cos \theta_2}^2+\brak{\sin \theta_1-\sin \theta_2}^2=d^2\\
+	&\implies2-2\brak{\cos\brak{\theta_1-\theta_2}}=d^2\\
+	&\implies2\brak{2\brak{{\sin^2}\brak{\frac{\theta_1-\theta_2}{2}}}}=d^2\\
+	&\implies\sin^2\brak{\frac{\theta_1-\theta_2}{2}}=\frac{d^2}{4}\\
+	&\implies\sin\brak{\frac{\theta_1-\theta_2}{2}}=\frac{d}{2}\\
+&\implies\brak{\frac{\theta_1-\theta_2}{2}}=\sin^{-1}\brak{\frac{d}{2}}\label{12}
+	\end{align}
+	Substituting the values from table $\eqref{table}$ in $\eqref{12}$ So we get
+	\begin{align}
+	\brak{\theta_1-\theta_2}&=97.1806\degree
+	\end{align}
+Simillary we can say that
+\begin{align}
+	\brak{\theta_3-\theta_4}&=97.1806\degree 		       
+\end{align}
+Obtain the point of intersection of line $PQ,RS$
+\begin{align}
+\vec{{n}_1^{\top}}\brak{\vec{X}-\vec{P}}&=0\\
+\vec{{n}_2^{\top}}\brak{\vec{X}-\vec{R}}&=0\\
+\vec{Omat}&=\myvec{0&1\\-1&0}\\
+\vec{n}_1&=\myvec{0&1\\-1&0}\myvec{\cos \theta_1-\cos \theta_2\\\sin \theta_1-\sin \theta_2}\\
+&=\myvec{\sin \theta_1-\sin \theta_2\\\cos \theta_2-\cos \theta_1}\\
+\vec{n}_2&=\myvec{0&1\\-1&0}\myvec{\cos\theta_3-\cos \theta_4\\\sin \theta_3-\sin \theta_4}\\
+&=\myvec{\sin \theta_3-\sin \theta_4\\\cos \theta_4-\cos \theta_3}
+\end{align}
+From the Result of python code by substituting $\theta_1,\theta_2,\theta_3,\theta_4$ in point $\vec{T}$ then we get the point of intersection as :
+\begin{multline}
+\myvec{\sin \theta_2-\sin \theta_1&\cos \theta_2-\cos \theta_1\\\sin \theta_4-\sin \theta_3&\cos \theta_4-\cos \theta_3}\vec{X}=\myvec{\cos \theta_1\brak{\sin \theta_2-\sin \theta_1}-\sin \theta_1\brak{\cos \theta_2-\cos \theta_1}\\\cos \theta_3\brak{\sin \theta_4-\sin \theta_3}-\sin \theta_3\brak{\cos \theta_4-\cos \theta_2}}\\
+\end{multline}
+\begin{multline}
+\vec{T}=\myvec{\frac{\cos \theta_4-\cos \theta_2\brak{\sin \theta_2 \cos \theta_1-\sin \theta_1 \cos \theta_2}}{\brak{\cos\theta_4-\cos \theta_2}\brak{\sin \theta_2-\sin \theta_1}-\brak{\cos \theta_2-\cos \theta_1}\brak{\sin \theta_4-\sin \theta_3}}\\[8pt]\sin \theta_1+\frac{\sin \theta_2-\sin \theta_1}{\cos \theta_2-\cos \theta_1}\brak{\frac{\cos \theta_4-\cos \theta_2\brak{\sin \theta_2\cos \theta_1-\sin \theta_1\cos \theta_2}}{\brak{\cos \theta_4-\cos \theta_2}\brak{\sin \theta_2-\sin \theta_1}-\brak{\cos \theta_2-\cos \theta_1}\brak{\sin \theta_4-\sin \theta_3}}}-\cos \theta_1}
+\end{multline} 	
+\begin{align}
+=\myvec{0.68341409\\-0.04288508}
+\end{align}
+From the Result of python code , we get
+\begin{align}
+\norm{\vec{P}-\vec{T}}&=0.5727\\
+\norm{\vec{R}-\vec{T}}&=0.9272\\
+\norm{\vec{Q}-\vec{T}}&=0.9272\\
+\norm{\vec{S}-\vec{T}}&=0.5727
+\end{align}
+Hence, we proved that
+\begin{align}
+\norm{\vec{P}-\vec{T}}&=\norm{\vec{S}-\vec{T}}\\
+\norm{\vec{Q}-\vec{T}}&=\norm{\vec{R}-\vec{T}}
+\end{align} 
+\end{enumerate}
+\end{document}
