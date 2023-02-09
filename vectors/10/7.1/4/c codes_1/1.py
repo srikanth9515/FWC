@@ -13,7 +13,7 @@ def line_gen(A,B):
    return x_AB
 
 
-A=np.loadtxt('a.dat')
+A=np.loadtxt('a.dat')  #loading the array from the a.dat file
 B=np.loadtxt('b.dat')
 C=np.loadtxt('c.dat')
 
