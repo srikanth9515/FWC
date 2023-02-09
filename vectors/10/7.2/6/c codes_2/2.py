@@ -53,4 +53,5 @@ plt.axis('equal')
 #plt.savefig('/home/srikanth/vectore/par.pdf')
 #subprocess.run(shlex.split("termux-open '/storage/emulated/0/github/cbse-papers/2020/math/10/solutions/figs/matrix-10-5.pdf'")) 
 #else
+plt.savefig("/root/FWC/vectors/10/7.2/6/c codes_2/c.pdf")
 plt.show()
