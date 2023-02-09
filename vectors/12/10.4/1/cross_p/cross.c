@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include<malloc.h>
 #include<math.h>
-double *createMat(int n)
+double *createMat(int n)//Function for creating an arrary
 {
  int i;
  double *a;
@@ -23,7 +23,7 @@ double *cross(double *a,double *b,double *c)
 	return c;
 }
 
-void pmf(char *str, double *a,int len)
+void pmf(char *str, double *a,int len)//function for printing matrix line
 {
 int i;
 FILE *fp;
@@ -36,7 +36,7 @@ fprintf(fp,"%lf\n",a[i]);
 }
 
 
-double linalg_norm(double *a, int m)
+double linalg_norm(double *a, int m)//function for doing morm of arrary
 {
 int i;
 double norm=0.0;
@@ -51,7 +51,7 @@ return sqrt(norm);
 
 int main()
 {
-	double *a,*b,*c,*d;
+	double *a,*b,*c,*d;//Declaring an arrary by using malloc
 	int n=3;
 	int i;
 	a=createMat(n);
