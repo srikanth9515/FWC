@@ -27,7 +27,7 @@ fprintf(fp,"%d\n",a[i]);
 
 int main()
 {
-int a[10]={7,-2};//Declaring an array by using malloc
+int a[10]={7,-2};//initializing an array by using malloc
 int b[10]={5,1};
 char c[10]="3,k";
 int i;
