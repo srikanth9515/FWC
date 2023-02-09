@@ -23,7 +23,7 @@ double *cross(double *a,double *b,double *c)
 	return c;
 }
 
-void pmf(char *str, double *a,int len)//function for printing matrix line
+void pmf(char *str, double *a,int len)//function for printing matrix in file
 {
 int i;
 FILE *fp;
