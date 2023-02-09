@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include<math.h>
 #include<string.h>
-int solve(int a,int b,int c)
+int solve(int a,int b,int c)  //Function for solving algebraic expression of having one variqble.
 {
 
 	return (c-b)/a;
@@ -11,7 +11,7 @@ int solve(int a,int b,int c)
 
 
 
-void pmf(char *str, int *a,int len)
+void pmf(char *str, int *a,int len)   //print matrix in files
 {
 int i;
 FILE *fp;
@@ -40,7 +40,7 @@ printf("\n");
 printf("d=%s",d);
 printf("\n");
 int a1[10]={1,2};
-int b1[10]={4,3};
+int b1[10]={4,3}; //initialising an array
 int c1[10]={3,5};
 int d1[10]={6,6};
 pmf ("a.dat",a1,2);
@@ -54,12 +54,12 @@ int e,f,g;
 e=1;
 f=-3;
 g=3;
-int x=solve(e,f,g);
+int x=solve(e,f,g); //function for solving x
 printf("%d",x);
 printf("\n");
 printf("solve for y : ");
 int l=1,m=-2,n=1;
-int y=solve(l,m,n);
+int y=solve(l,m,n); //function for solving y
 printf("%d",y);
 
 
