@@ -11,7 +11,7 @@ int solve(int a,int b,int c)
 
 
 
-void pmf(char *str, int *a,int len)
+void pmf(char *str, int *a,int len)//function for printing matrix in file
 {
 int i;
 FILE *fp;
@@ -27,7 +27,7 @@ fprintf(fp,"%d\n",a[i]);
 
 int main()
 {
-int a[10]={7,-2};
+int a[10]={7,-2};//Declaring an array by using malloc
 int b[10]={5,1};
 char c[10]="3,k";
 int i;
