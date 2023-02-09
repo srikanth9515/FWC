@@ -14,7 +14,7 @@ def line_gen(A,B):
 
 
 A=np.loadtxt('a.dat')
-B=np.loadtxt('b.dat')
+B=np.loadtxt('b.dat')  //loading a matrix dat file 
 C=np.loadtxt('d.dat')
 D=np.loadtxt('c.dat')
 
