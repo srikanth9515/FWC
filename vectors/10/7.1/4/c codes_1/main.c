@@ -1,22 +1,24 @@
-#include<stdio.h>
+// preprocessor directives 
+
+#include<stdio.h>  // including stdio.h it is used for standard input and output functions.
 #include<stdlib.h>
 #include<math.h>
-#include"gvv.h"
+#include"gvv.h"  // This is the header file which includes all the math functions
 
 
 
-int main()
+int main() // main function
 {
 
 	int m=2;
-	double *a,*b,*c; //Declaring an array by using malloc
+	double *a,*b,*c;   //declarations for creating the 3 points in a triangle. 
 	double *e,*f,*g;
 	printf("Enter Size : ");
-	a=createMat(m);
+	a=createMat(m);  //creating the point on the triangle of size m
 	int j;
 	a[0]=5; //initialising an array
 	a[1]=-2;
-
+\\printing the first coordinate
 	for(j=0;j<m;j++)
 	{
 		printf("%lf\n",a[j]);
@@ -24,9 +26,9 @@ int main()
 
 
 
-	pmf("a.dat",a,2);  //printing the array in files
+	pmf("a.dat",a,2);  //printing the first point  in files in dat format
 
-	b=createMat(m);
+	b=createMat(m);  // creating the second point
 	b[0]=6;
 	b[1]=4;
 
@@ -34,13 +36,16 @@ int main()
 	{
 		printf("%lf\n",b[j]);
 	}
-	c=createMat(m);
+	c=createMat(m);  // creating the third point
 	c[0]=7;
 	c[1]=-2;
 	for(j=0;j<m;j++)
 	{
 		printf("%lf\n",c[j]);
 	}
+	
+	
+	//finding the directional vectors of the three points.
 	e=createMat(m);
 	for(j=0;j<m;j++)
 	{
@@ -68,10 +73,12 @@ int main()
 	{
 		printf("%lf\n",g[j]);
 	}
+	
+	// finding the distance between the two points in triangle
 
 	double d1,d2,d3,d4;
 	printf("\n");
-	d1=linalg_norm(e,m); //doing the norm 
+	d1=linalg_norm(e,m); //function for finding norm of a vector
 	printf("%lf",d1);
 	printf("\n");
 	d2=linalg_norm(f,m);
@@ -80,7 +87,7 @@ int main()
 	d3=linalg_norm(g,m);
 	printf("%lf",d3);
 	printf("\n");
-	pmf("b.dat",b,2);
+	pmf("b.dat",b,2);  //saving the points in file for computing in python
 	pmf("c.dat",c,2);
 
 	printf("Hence the given coordinates are the points of Isoceles triangle :");
