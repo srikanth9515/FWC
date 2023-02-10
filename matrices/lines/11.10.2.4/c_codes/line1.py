@@ -18,7 +18,7 @@ def line_gen(A,B):
 A = np.loadtxt('A.dat');
 O = np.array(([0,0])) 
 B=np.array(([0,-6]))
-omat = np.loadtxt('omat.txt')
+omat = np.loadtxt('omat.dat')
 slope = -2
 m = np.loadtxt('m.dat')
 #directional vector
