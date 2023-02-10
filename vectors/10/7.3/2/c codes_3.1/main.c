@@ -11,10 +11,7 @@ int solve(int a,int b,int c)
 }
 
 
-
-
-
-
+//main function
 int main()
 {
 int a[10]={7,-2};//initializing an array by using malloc
@@ -39,7 +36,7 @@ int d[10];
 
 for(i=0;i<2;i++)
 {
-	d[i]=b[i]-a[i];
+	d[i]=b[i]-a[i];//For finding directional vector
 }
 
 printf("\n");
@@ -53,12 +50,12 @@ int e,f,g;
 e=1;
 f=-1;
 g=3;
-int x=solve(e,f,g);
+int x=solve(e,f,g);//Function for solving k
 printf("%d",x);
 printf("\n");
 int c1[10]={3,4};
 
-pmf("a.dat",a,2);
+pmf("a.dat",a,2);//printing matrix in file
 pmf("b.dat",b,2);
 pmf("c.dat",c1,2);
 

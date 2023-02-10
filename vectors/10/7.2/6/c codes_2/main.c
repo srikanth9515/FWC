@@ -9,19 +9,14 @@ int solve(int a,int b,int c)  //Function for solving algebraic expression of hav
 	return (c-b)/a;
 }
 
-
-
-
-
-
-
+//main function
 int main()
 {
 char a[10]="1,2";
 char b[10]="4,y";
 char c[10]="3,5";
 char d[10]="x,6";
-printf("a=%s",a);
+printf("a=%s",a);//printing values
 printf("\n");
 printf("b=%s",b);
 printf("\n");
@@ -33,7 +28,7 @@ int a1[10]={1,2};
 int b1[10]={4,3}; //initialising an array
 int c1[10]={3,5};
 int d1[10]={6,6};
-pmf ("a.dat",a1,2);
+pmf ("a.dat",a1,2);//printing the matrix in file
 pmf ("b.dat",b1,2);
 pmf ("c.dat",c1,2);
 pmf ("d.dat",d1,2);

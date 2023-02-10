@@ -14,7 +14,7 @@ int solve(int a,int b,int c)
 
 
 
-
+//main function
 
 int main()
 {
@@ -35,12 +35,12 @@ printf("\n");
 printf("c=%s",c);
 printf("\n");
 
-
+//Declaring arrary
 int d[10];
 
 for(i=0;i<2;i++)
 {
-	d[i]=b[i]-a[i];
+	d[i]=b[i]-a[i];//Finding a directional vector
 }
 
 printf("\n");
@@ -49,18 +49,18 @@ for(i=0;i<2;i++)
 {
 	printf("%d\n",d[i]);
 }
-printf("Solve for k :");
+printf("Solve for k :");//printing values
 int e,f,g;
 e=-1;
 f=8;
 g=6;
-int x=solve(e,f,g);
+int x=solve(e,f,g);//function for solving x
 printf("%d",x);
 printf("\n");
 
 int c1[10]={2,-5};
 
-pmf("a.dat",a,2);
+pmf("a.dat",a,2);//printing matrix in file
 pmf("b.dat",b,2);
 pmf("c.dat",c1,2);
 
