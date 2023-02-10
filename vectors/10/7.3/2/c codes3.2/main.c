@@ -3,6 +3,7 @@
 #include<stdlib.h>
 #include<math.h>
 #include<string.h>
+#include"gvv.h"
 int solve(int a,int b,int c)
 {
 
@@ -12,17 +13,6 @@ int solve(int a,int b,int c)
 
 
 
-void pmf(char *str, int *a,int len)//function for printing matrix in file
-{
-int i;
-FILE *fp;
-
-fp = fopen(str,"w");
-for (i = 0; i < len; i++)
-{
-fprintf(fp,"%d\n",a[i]);
-}
-}
 
 
 
