@@ -46,7 +46,7 @@ int main() // main function
 	
 	
 	//finding the directional vectors of the three points.
-	e=createMat(m);
+	e=createMat(m);//directional vectors of the 1st point
 	for(j=0;j<m;j++)
 	{
 		e[j]=a[j]-b[j];
@@ -55,7 +55,7 @@ int main() // main function
 	{
 		printf("%lf\n",e[j]);
 	}
-	f=createMat(m);
+	f=createMat(m);// directional vectors of the 2nd point
 	for(j=0;j<m;j++)
 	{
 		f[j]=b[j]-c[j];
@@ -64,7 +64,7 @@ int main() // main function
 	{
 		printf("%lf\n",f[j]);
 	}
-	g=createMat(m);
+	g=createMat(m);// directional vectors of the 3rd point
 	for(j=0;j<m;j++)
 	{
 		g[j]=c[j]-a[j];
