@@ -14,6 +14,7 @@ double *createMat(int m); // function for creating an array
 //End function declaration
 void pmf(char *str, double *a,int len); //function for printing matrix in file
 void print1(double *a,int len);
+double *d(double *a,double *b,int m);
 
 void print1(double *a,int len)
 {
@@ -24,6 +25,17 @@ void print1(double *a,int len)
 	}
 }
 
+double *d(double*a,double *b,int m){
+double *c;
+int i;
+for(i=0;i<m;i++)
+{
+c[i]=a[i]-b[i];
+
+}
+
+return c;
+}
 
 
 
