@@ -37,13 +37,13 @@ int main()                  // main function
 
 
 	e=createMat(m);               //directional vectors of the 1st point
-	e=d(a,b,2);                   // function for finding directional vector
+	e=dir_vec(a,b,2);                   // function for finding directional vector
 	print1(e,m);
 	f=createMat(m);               // directional vectors of the 2nd point      
-	f=d(b,c,2);
+	f=dir_vec(b,c,2);
 	print1(f,m);
 	g=createMat(m);                        // directional vectors of the 3rd point
-	g=d(c,a,2);
+	g=dir_vec(c,a,2);
 	print1(g,m);
 	
 	                                     // finding the distance between the two points in triangle
