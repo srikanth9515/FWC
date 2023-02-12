@@ -6,10 +6,6 @@ This is code for checking whether the trinagle is isoceles or not
 Code is free any one can use 
 https://github.com/srikanth9515/FWC/blob/main/LICENSE.md
   */
-
-
-
-
 #include<stdio.h>
 #include<stdlib.h>
 #include<math.h>
