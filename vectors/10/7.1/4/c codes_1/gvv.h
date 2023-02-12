@@ -13,6 +13,18 @@ double mean(char *str);
 double *createMat(int m); // function for creating an array
 //End function declaration
 void pmf(char *str, double *a,int len); //function for printing matrix in file
+void print1(double *a,int len);
+
+void print1(double *a,int len)
+{
+	int i;
+	for(i=0;i<len;i++)
+	{
+		printf("%lf ",a[i]);
+	}
+}
+
+
 
 
 //Defining the function for matrix creation
