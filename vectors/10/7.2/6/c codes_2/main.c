@@ -3,11 +3,7 @@
 #include<math.h>
 #include<string.h>
 #include"gvv.h"
-int solve(int a,int b,int c)  //Function for solving algebraic expression of having one variqble.
-{
 
-	return (c-b)/a;
-}
 
 //main function
 int main()

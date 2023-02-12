@@ -13,7 +13,12 @@ double mean(char *str);
 double *createMat(int m); // function for creating an array
 //End function declaration
 void pmf(char *str, int *a,int len); //function for printing matrix in file
+int solve(int a,int b,int c); //Function for solving algebraic expression of having one variqble.
+int solve(int a,int b,int c)  //Function for solving algebraic expression of having one variqble.
+{
 
+	return (c-b)/a;
+}
 
 //Defining the function for matrix creation
 double **createMat1(int m,int n)
