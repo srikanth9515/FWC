@@ -1,4 +1,4 @@
-/* S SRIKANTH REDDY FWC220107
+/* Code by : S SRIKANTH REDDY FWC220107
   Date : Feb 12 2023
 Guide : Dr. G. V. V. Sharma sir
 This is code for checking whether the trinagle is isoceles or not
