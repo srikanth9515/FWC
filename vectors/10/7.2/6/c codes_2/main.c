@@ -10,7 +10,7 @@ https://github.com/srikanth9515/FWC/blob/main/LICENSE.md
 #include<stdlib.h>
 #include<math.h>
 #include<string.h>
-#include"gvv.h"  // This is the header file which includes all the math functions
+#include"sri.h"  // This is the header file which includes all the math functions
 
 
 //main function
