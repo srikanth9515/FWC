@@ -16,11 +16,11 @@ https://github.com/srikanth9515/FWC/blob/main/LICENSE.md
 //main function
 int main()
 {
-char a[10]="1,2";
+char a[10]="1,2";      // creating the points on parallelogram
 char b[10]="4,y";
 char c[10]="3,5";
 char d[10]="x,6";
-printf("a=%s",a);//printing values
+printf("a=%s",a);         //printing points
 printf("\n");
 printf("b=%s",b);
 printf("\n");
@@ -29,7 +29,7 @@ printf("\n");
 printf("d=%s",d);
 printf("\n");
 int a1[10]={1,2};
-int b1[10]={4,3}; //initialising an array
+int b1[10]={4,3};          //initialising an array
 int c1[10]={3,5};
 int d1[10]={6,6};
 pmf ("a.dat",a1,2);//printing the matrix in file
@@ -38,17 +38,17 @@ pmf ("c.dat",c1,2);
 pmf ("d.dat",d1,2);
 
 
-printf("Solve for x :");
-int e,f,g;
+printf("Solve for x :");  
+int e,f,g;    //coefcients of algebraic equations for solving x
 e=1;
 f=-3;
 g=3;
-int x=solve(e,f,g); //function for solving x
+int x=solve(e,f,g); //function for solving x from linear equation
 printf("%d",x);
 printf("\n");
 printf("solve for y : ");
-int l=1,m=-2,n=1;
-int y=solve(l,m,n); //function for solving y
+int l=1,m=-2,n=1;        // //coefcients of algebraic equations for solving y
+int y=solve(l,m,n); //function for solving y from linear equation
 printf("%d",y);
 
 
