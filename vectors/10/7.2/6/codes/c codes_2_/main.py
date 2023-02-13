@@ -15,8 +15,8 @@ def line_gen(A,B):
 
 A=np.loadtxt('a.dat')
 B=np.loadtxt('b.dat')  #loading a matrix dat file 
-C=np.loadtxt('d.dat')
-D=np.loadtxt('c.dat')
+C=np.loadtxt('c.dat')
+D=np.loadtxt('d.dat')
 
 x_AB = line_gen(A,B)
 x_BC= line_gen(B,C)
