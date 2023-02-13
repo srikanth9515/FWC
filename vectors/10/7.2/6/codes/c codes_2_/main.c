@@ -33,8 +33,8 @@ printf("\n");
 printf("solve for x and y");
 int a,b,c,d,e,f;
 printf("Enter the coordinates of parallelogram in the order of A,B,C,D by leaving the variables\n");
-scanf("%d%d%d%d%d%d",&a,&b,&c,&d,&e,&f);
-x=s(a,b,c,d,e,f);
+scanf("%d%d%d%d%d%d",&a,&b,&c,&d,&e,&f);//Readung the values of points of parallogram 
+x=s(a,b,c,d,e,f);//Function for solving x and y
 
 int a1[10]={a,b};
 int b1[10]={c,x[1]};
