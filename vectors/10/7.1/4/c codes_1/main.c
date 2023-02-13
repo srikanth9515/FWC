@@ -10,7 +10,7 @@ https://github.com/srikanth9515/FWC/blob/main/LICENSE.md
 #include<stdio.h>            // including stdio.h it is used for standard input and output functions.
 #include<stdlib.h>
 #include<math.h>
-#include"gvv.h"             // This is the header file which includes all the math functions
+#include"sri.h"             // This is the header file which includes all the math functions
 int main()                  // main function
 {
 
