@@ -1,18 +1,19 @@
 
+/* Code by : S SRIKANTH REDDY FWC220107
+  Date : Feb 12 2023
+Released under : Dr. G. V. V. Sharma sir
+This is code for finding the third coordinte in a straight line
+Code is free any one can use 
+https://github.com/srikanth9515/FWC/blob/main/LICENSE.md
+  */
+
+
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<math.h>
 #include<string.h>
 #include"gvv.h"
-int solve(int a,int b,int c)
-{
-
-	return (c-b)/a;
-}
-
-
-
-
 
 //main function
 
@@ -22,15 +23,9 @@ int a[10]={8,1};//Initializing an arrary by using malloc
 int b[10]={3,-4};
 char c[10]="k,-4";
 int i;
-for(i=0;i<2;i++)
-{
-	printf("%d\n",a[i]);
-}
+print1(a,2);
 printf("\n");
-for(i=0;i<2;i++)
-{
-	printf("%d\n",b[i]);
-}
+print1(b,2);
 printf("\n");
 printf("c=%s",c);
 printf("\n");
@@ -45,10 +40,7 @@ for(i=0;i<2;i++)
 
 printf("\n");
 
-for(i=0;i<2;i++)
-{
-	printf("%d\n",d[i]);
-}
+print1(d,2);
 printf("Solve for k :");//printing values
 int e,f,g;
 e=-1;
