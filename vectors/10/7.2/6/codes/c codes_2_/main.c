@@ -18,17 +18,17 @@ https://github.com/srikanth9515/FWC/blob/main/LICENSE.md
 
 int main()
 {
-	double **A,**B,**C,**D;
-	double a,b,c,d,e,f;
-	double *x;
+	double **A,**B,**C,**D;  // points of parallelogram
+	double a,b,c,d,e,f;   // points of parallelogram excluding x and y
+	double *x; 
 	double **P,**Q;
 	x=createMat(2);       // Creating array for finding x and y
 	A=createMat1(2,1);    //Creating the coordinates of the parallelogram
 	B=createMat1(2,1);
 	C=createMat1(2,1);
 	D=createMat1(2,1);
-	P=createMat1(2,1);
-	Q=createMat1(2,1);
+	P=createMat1(2,1);  // MATRIX for performing subtraction of two matrices A-B
+	Q=createMat1(2,1);   //  MATRIX for performing subtraction of two matrices D-C
 
 	printf("Enter the coordinates of the parallelogram in the order acccording to problem\n");
 	scanf("%lf%lf%lf%lf%lf%lf",&a,&b,&c,&d,&e,&f);
@@ -54,12 +54,12 @@ int main()
 	pmf("d.dat",D,2,1);
 
 	P=linalg_sub(A,B,2,1);  // function for subtraction of matrices
-	Q=linalg_sub(D,C,2,1);
+	Q=linalg_sub(D,C,2,1);  // function for subtraction of matrices
 
 	printf("Directional vector of two sides: \n");
 
 	printMat(P,2,1);       // printing the matrix
-	printMat(Q,2,1);
+	printMat(Q,2,1);       // printing the matrix
 
 	if((P[0][0]==Q[0][0])&&(P[1][0]==Q[1][0]))
 	{
@@ -69,12 +69,7 @@ int main()
 	{
 		printf("The given points are not belongs to parallelogram");
 	}
-
-
-
-
-
-
+	
 	return 0;
 }
 
