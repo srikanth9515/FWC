@@ -6,49 +6,92 @@ This is code for Prooving the properties of parallelogram
 Code is free any one can use 
 https://github.com/srikanth9515/FWC/blob/main/LICENSE.md
   */
+
+
+
 #include<stdio.h>            // including stdio.h it is used for standard input and output functions.
 #include<stdlib.h>
 #include<math.h>
 #include<string.h>
-#include"sri.h"             // This is the header file which includes all the math functions
+#include"sri.h"              // This is the header file which includes all the math functions
 
 
-//main function
 int main()
 {
-	int *x;
-	x=(int *)malloc(sizeof(int));
-char A[10]="1,2";         // creating the points on parallelogram
-char B[10]="4,y";
-char C[10]="3,5";
-char D[10]="x,6";
-printf("a=%s",A);         //printing points
-printf("\n");
-printf("b=%s",B);
-printf("\n");
-printf("c=%s",C);
-printf("\n");
-printf("d=%s",D);
-printf("\n");
-printf("solve for x and y");
-int a,b,c,d,e,f;//Declearing the points of a parallogram
-printf("Enter the coordinates of parallelogram in the order of A,B,C,D by leaving the variables\n");
-scanf("%d%d%d%d%d%d",&a,&b,&c,&d,&e,&f);//Readung the values of points of parallogram 
-x=s(a,b,c,d,e,f);//Function for solving x and y
+	double **A,**B,**C,**D;
+	double a,b,c,d,e,f;
+	double *x;
+	double **P,**Q;
+	x=createMat(2);       // Creating array for finding x and y
+	A=createMat1(2,1);    //Creating the coordinates of the parallelogram
+	B=createMat1(2,1);
+	C=createMat1(2,1);
+	D=createMat1(2,1);
+	P=createMat1(2,1);
+	Q=createMat1(2,1);
 
-int a1[10]={a,b};
-int b1[10]={c,x[1]};
-int c1[10]={x[0],d};
-int d1[10]={e,f};
+	printf("Enter the coordinates of the parallelogram in the order acccording to problem\n");
+	scanf("%lf%lf%lf%lf%lf%lf",&a,&b,&c,&d,&e,&f);
+	x=s(a,b,c,d,e,f);     // function for finding the values of x and y
+	A[0][0]=a;
+	A[1][0]=b;
 
-pmf ("a.dat",a1,2);//printing the matrix in file
-pmf ("b.dat",b1,2);
-pmf ("c.dat",c1,2);
-pmf ("d.dat",d1,2);
+	B[0][0]=c;
+	B[1][0]=x[1];
+
+	C[0][0]=x[0];
+	C[1][0]=d;
+
+	D[0][0]=e;
+	D[1][0]=f;
+	printMat(A,2,1);       // function for printing the matrix
+	printMat(B,2,1);
+	printMat(C,2,1);
+	printMat(D,2,1);
+	pmf("a.dat",A,2,1);   // printing the matrix in file
+	pmf("b.dat",B,2,1);
+	pmf("c.dat",C,2,1);
+	pmf("d.dat",D,2,1);
+
+	P=linalg_sub(A,B,2,1);  // function for subtraction of matrices
+	Q=linalg_sub(D,C,2,1);
+
+	printf("Directional vector of two sides: \n");
+
+	printMat(P,2,1);       // printing the matrix
+	printMat(Q,2,1);
+
+	if((P[0][0]==Q[0][0])&&(P[1][0]==Q[1][0]))
+	{
+		printf("The properties of parallelogram was satisfied");
+	}
+	else
+	{
+		printf("The given points are not belongs to parallelogram");
+	}
 
 
 
 
-return 0;
+
+
+	return 0;
 }
+
+
+
+
+
+	
+
+
+	
+
+
+
+
+
+	
+
+
 

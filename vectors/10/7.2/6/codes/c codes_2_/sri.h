@@ -1,19 +1,73 @@
 double **createMat1(int m,int n);
 double *createMat(int m); // function for creating an array
-void pmf(char *str, int *a,int len); //function for printing matrix in file
-int solve(int a,int b,int c); //Function for solving algebraic expression of having one variqble.
-int *s(int a,int b,int c,int d,int e,int f);
+void pmf(char *str, double **a,int m,int n); //function for printing matrix in file
+void readMat(double **a,int m,int n);
+double *s(int a,int b,int c,int d,int e,int f);
+void printMat(double **p,int m,int n);
+double **linalg_sub(double **a, double **b, int m, int n);
 
-int *s(int a,int b,int c,int d,int e,int f)
+
+double **linalg_sub(double **a, double **b, int m, int n)
 {
-	int *x;
-	x=(int *)malloc(sizeof(int));
+int i, j;
+double **c;
+c = createMat1(m,n);
+
+ for(i=0;i<m;i++)
+ {
+  for(j=0;j<n;j++)
+  {
+c[i][j]= a[i][j]-b[i][j];
+  }
+ }
+return c;
+
+}
+
+
+void printMat(double **p,int m,int n)
+{
+	int i,j;
+	for(i=0;i<m;i++)
+	{
+		for(j=0;j<n;j++)
+		{
+
+			printf("%lf\n",p[i][j]);
+			
+		}
+	}
+}
+
+
+void readMat(double **a,int m,int n)
+{
+
+int i,j;
+
+for(i=0;i<m;i++)
+{
+	for(j=0;j<n;j++)
+	{
+		scanf("%lf",&a[i][j]);
+	}
+
+}
+}
+
+
+double *s(int a,int b,int c,int d,int e,int f)
+{
+	double *x;
+	x=(double *)malloc(sizeof(double));
 	int i;
 	x[0]=c-a+e;
 	x[1]=b+b-a;
 
 	return x;
 }
+
+
 int solve(int a,int b,int c)  //Function for solving algebraic expression of having one variqble.
 {
 
@@ -21,6 +75,9 @@ int solve(int a,int b,int c)  //Function for solving algebraic expression of hav
 }
 
 //Defining the function for matrix creation
+
+
+
 double **createMat1(int m,int n)
 {
  int i;
@@ -44,14 +101,17 @@ double *createMat(int m) // function for creating an array
 a = (double *)malloc(m * sizeof(double));
  return a;
 }
-void pmf(char *str, int *a,int len)  //function for printing matrix in file
+void pmf(char *str, double **a,int m,int n)  //function for printing matrix in file
 {
-int i;
+int i,j;
 FILE *fp;
 
 fp = fopen(str,"w");
-for (i = 0; i < len; i++)
+for (i = 0; i < m; i++)
 {
-fprintf(fp,"%d\n",a[i]);
+for(j=0;j<n;j++)
+{
+fprintf(fp,"%lf\n",a[i][j]);
+}
 }
 }
