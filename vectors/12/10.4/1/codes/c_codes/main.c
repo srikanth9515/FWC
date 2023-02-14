@@ -23,10 +23,11 @@ int main()
 	a=createMat(n);
 	b=createMat(n);
 	c=createMat(n);
-printf("Enter the 1 st vector : ");
-readMat(a,3);
-printf("Enter the 2nd vector : ");
-readMat(b,3);
+
+        printf("Enter the 1 st vector : ");
+        readMat(a,3);
+        printf("Enter the 2nd vector : ");
+        readMat(b,3);
 
 
 	d=cross(a,b,c);             //Function for doing cross product

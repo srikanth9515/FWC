@@ -19,43 +19,49 @@ https://github.com/srikanth9515/FWC/blob/main/LICENSE.md
 
 int main()
 {
-int a[10]={8,1};//Initializing an arrary by using malloc
-int b[10]={3,-4};
-char c[10]="k,-4";
-int i;
-print1(a,2);
-printf("\n");
-print1(b,2);
-printf("\n");
-printf("c=%s",c);
-printf("\n");
 
-//Declaring arrary
-int d[10];
+	double **A,**B,**C;         // Points on a Line
+	double **P,**Q;
+	double a,b,c,d,e;           //points on line based on problem excluding k
+	int x;	
+	A=createMat1(2,1);          //Creating the coordinates of the parallelogram
+	B=createMat1(2,1);
+	C=createMat1(2,1);
+	printf("Enter the coordinates in the order acccording to problem\n");
+	scanf("%lf%lf%lf%lf%lf",&a,&b,&c,&d,&e);
+	x=s(a,b,c,d,e);             // function for finding the values of x and y
+	A[0][0]=a;
+	A[1][0]=b;
 
-for(i=0;i<2;i++)
-{
-	d[i]=b[i]-a[i];//Finding a directional vector
-}
+	B[0][0]=x;
+	B[1][0]=c;
 
-printf("\n");
+	C[0][0]=d;
+	C[1][0]=e;
 
-print1(d,2);
-printf("Solve for k :");//printing values
-int e,f,g;
-e=-1;
-f=8;
-g=6;
-int x=solve(e,f,g);//function for solving x
-printf("%d",x);
-printf("\n");
+	printMat(A,2,1);           // function for printing the matrix
+	printMat(B,2,1);
+	printMat(C,2,1);
+	pmf("a.dat",A,2,1);        // printing the matrix in file
+	pmf("b.dat",B,2,1);
+	pmf("c.dat",C,2,1);
 
-int c1[10]={2,-5};
+	P=linalg_sub(B,A,2,1);     // function for subtraction of matrices
+	Q=linalg_sub(C,B,2,1);     // function for subtraction of matrices
 
-pmf("a.dat",a,2);//printing matrix in file
-pmf("b.dat",b,2);
-pmf("c.dat",c1,2);
+	printf("Directional vector of two sides: \n");
 
+	printMat(P,2,1);           // printing the matrix
+	printMat(Q,2,1);           // printing the matrix
 
-return 0;
+	if((P[0][0]==Q[0][0])&&(P[1][0]==Q[1][0]))
+	{
+		printf("The three points are collinear");
+	}
+	else
+	{
+		printf("The given points are collinear");
+	}
+	
+	return 0;
 }

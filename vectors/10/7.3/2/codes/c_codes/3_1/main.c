@@ -17,48 +17,55 @@ https://github.com/srikanth9515/FWC/blob/main/LICENSE.md
 #include<string.h>
 #include"gvv.h"
 
-
-//main function
 int main()
 {
-int a[10]={7,-2};//initializing an array by using malloc
-int b[10]={5,1};
-char c[10]="3,k";
-int i;
 
+	double **A,**B,**C;         // Points on a Line
+	double **P,**Q;
+	double a,b,c,d,e;           //points on line based on problem excluding k
+	int x;	
+	A=createMat1(2,1);          //Creating the coordinates of the parallelogram
+	B=createMat1(2,1);
+	C=createMat1(2,1);
+	printf("Enter the coordinates in the order acccording to problem\n");
+	scanf("%lf%lf%lf%lf%lf",&a,&b,&c,&d,&e);
+	x=s(a,b,c,d,e);             // function for finding the values of x and y
+	A[0][0]=a;
+	A[1][0]=b;
 
-print1(a,2);
-printf("\n");
-print1(b,2);
-printf("\n");
-printf("c=%s",c);
-printf("\n");
+	B[0][0]=c;
+	B[1][0]=d;
 
+	C[0][0]=e;
+	C[1][0]=x;
 
-int d[10];
+	printMat(A,2,1);           // function for printing the matrix
+	printMat(B,2,1);
+	printMat(C,2,1);
+	pmf("a.dat",A,2,1);        // printing the matrix in file
+	pmf("b.dat",B,2,1);
+	pmf("c.dat",C,2,1);
 
-for(i=0;i<2;i++)
-{
-	d[i]=b[i]-a[i];//For finding directional vector
+	P=linalg_sub(B,A,2,1);     // function for subtraction of matrices
+	Q=linalg_sub(C,B,2,1);     // function for subtraction of matrices
+
+	printf("Directional vector of two sides: \n");
+
+	printMat(P,2,1);           // printing the matrix
+	printMat(Q,2,1);           // printing the matrix
+
+	if((P[0][0]==Q[0][0])&&(P[1][0]==Q[1][0]))
+	{
+		printf("The three points are collinear");
+	}
+	else
+	{
+		printf("The given points are collinear");
+	}
+	
+	return 0;
 }
-
-printf("\n");
-
-print1(d,2);
-printf("Solve for k :");
-int e,f,g;
-e=1;
-f=-1;
-g=3;
-int x=solve(e,f,g);//Function for solving k
-printf("%d",x);
-printf("\n");
-int c1[10]={3,4};
-
-pmf("a.dat",a,2);//printing matrix in file
-pmf("b.dat",b,2);
-pmf("c.dat",c1,2);
+	
 
 
-return 0;
-}
+
