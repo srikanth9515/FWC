@@ -17,7 +17,7 @@ int main()
 {
 
  double **A,**B,**C;         // Points on a Line
- double **P,**Q;             // values of 
+ double **P,**Q;             
  double a,b,c,d,e;           //points on line based on problem excluding k
  int x; 
  A=createMat1(2,1);          //Creating the coordinates of the parallelogram
@@ -38,9 +38,9 @@ int main()
  printMat(A,2,1);           // function for printing the matrix
  printMat(B,2,1);
  printMat(C,2,1);
- pmf("a.dat",A,2,1);        // printing the matrix in file
- pmf("b.dat",B,2,1);
- pmf("c.dat",C,2,1);
+ pmf("a.dat",A,2,1);         // printing the matrix in file
+ pmf("b.dat",B,2,1);        // printing the matrix in file
+ pmf("c.dat",C,2,1);        // printing the matrix in file
 
  P=linalg_sub(B,A,2,1);     // function for subtraction of matrices
  Q=linalg_sub(C,B,2,1);     // function for subtraction of matrices
