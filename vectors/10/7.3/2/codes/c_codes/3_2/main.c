@@ -24,22 +24,22 @@ int main()
 	double **P,**Q;
 	double a,b,c,d,e;           //points on line based on problem excluding k
 	int x;	
-	A=createMat1(2,1);          //Creating the coordinates of the parallelogram
-	B=createMat1(2,1);
-	C=createMat1(2,1);
+	A=createMat1(2,1);          //Creating the coordinates (8,1)of the parallelogram
+	B=createMat1(2,1);          //Creating the coordinates(k=3,-4) of the parallelogram
+	C=createMat1(2,1);          //Creating the coordinates(2,-5) of the parallelogram
 	printf("Enter the coordinates in the order acccording to problem\n");
 	scanf("%lf%lf%lf%lf%lf",&a,&b,&c,&d,&e);
 	x=s(a,b,c,d,e);             // function for finding the values of x and y
-	A[0][0]=a;
+	A[0][0]=a;                // creating point A
 	A[1][0]=b;
 
-	B[0][0]=x;
+	B[0][0]=x;                  // creating point B
 	B[1][0]=c;
 
-	C[0][0]=d;
+	C[0][0]=d;                // creating point C
 	C[1][0]=e;
 
-	printMat(A,2,1);           // function for printing the matrix
+	printMat(A,2,1);           // function for printing the matrix A.B,C
 	printMat(B,2,1);
 	printMat(C,2,1);
 	pmf("a.dat",A,2,1);        // printing the matrix in file
@@ -54,7 +54,7 @@ int main()
         printMat(P,2,1);           // printing the matrix
         printMat(Q,2,1);           // printing the matrix
 
-        check(P,Q);
+        check(P,Q);              ////output generated
 
 	  return 0;
 
