@@ -49,19 +49,15 @@ int main()
 	P=linalg_sub(B,A,2,1);     // function for subtraction of matrices
 	Q=linalg_sub(C,B,2,1);     // function for subtraction of matrices
 
-	printf("Directional vector of two sides: \n");
+        printf("Directional vector of two sides: \n");
 
-	printMat(P,2,1);           // printing the matrix
-	printMat(Q,2,1);           // printing the matrix
+        printMat(P,2,1);           // printing the matrix
+        printMat(Q,2,1);           // printing the matrix
 
-	if((P[0][0]==Q[0][0])&&(P[1][0]==Q[1][0]))
-	{
-		printf("The three points are collinear");
-	}
-	else
-	{
-		printf("The given points are collinear");
-	}
-	
-	return 0;
+        check(P,Q);
+
+	  return 0;
+
+
+
 }

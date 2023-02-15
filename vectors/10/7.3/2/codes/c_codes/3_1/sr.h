@@ -1,4 +1,3 @@
-
 double **createMat1(int m,int n);
 double *createMat(int m); // function for creating an array
 void pmf(char *str, double **a,int m,int n); //function for printing matrix in file
@@ -6,6 +5,7 @@ void readMat(double **a,int m,int n);
 double s(int a,int b,int c,int d,int e);
 void printMat(double **p,int m,int n);
 double **linalg_sub(double **a, double **b, int m, int n);
+void check(double **P,double **Q);
 
 
 double **linalg_sub(double **a, double **b, int m, int n)
@@ -28,16 +28,16 @@ return c;
 
 void printMat(double **p,int m,int n)
 {
-	int i,j;
-	for(i=0;i<m;i++)
-	{
-		for(j=0;j<n;j++)
-		{
+ int i,j;
+ for(i=0;i<m;i++)
+ {
+  for(j=0;j<n;j++)
+  {
 
-			printf("%lf\n",p[i][j]);
-			
-		}
-	}
+   printf("%lf\n",p[i][j]);
+   
+  }
+ }
 }
 
 
@@ -48,10 +48,10 @@ int i,j;
 
 for(i=0;i<m;i++)
 {
-	for(j=0;j<n;j++)
-	{
-		scanf("%lf",&a[i][j]);
-	}
+ for(j=0;j<n;j++)
+ {
+  scanf("%lf",&a[i][j]);
+ }
 
 }
 }
@@ -59,16 +59,16 @@ for(i=0;i<m;i++)
 
 double s(int a,int b,int c,int d,int e)
 {
-	
+ 
 
-	return 2*d-b;
+ return 2*d-b;
 }
 
 
 int solve(int a,int b,int c)  //Function for solving algebraic expression of having one variqble.
 {
 
-	return (c-b)/a;
+ return (c-b)/a;
 }
 
 //Defining the function for matrix creation
@@ -111,4 +111,17 @@ for(j=0;j<n;j++)
 fprintf(fp,"%lf\n",a[i][j]);
 }
 }
+}
+
+void check(double **P,double **Q)
+{
+
+ if((P[0][0]==Q[0][0])&&(P[1][0]==Q[1][0]))
+ {
+  printf("The three points are collinear");
+ }
+ else
+ {
+  printf("The given points are collinear");
+ }
 }
