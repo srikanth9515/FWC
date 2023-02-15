@@ -5,8 +5,6 @@ This is code for finding the third coordinte in a straight line
 Code is free any one can use 
 https://github.com/srikanth9515/FWC/blob/main/LICENSE.md
   */
-
-
 #include<stdio.h>
 #include<stdlib.h>
 #include<math.h>
@@ -24,18 +22,17 @@ int main()
  B=createMat1(2,1);          //Creating the coordinates of the parallelogram
  C=createMat1(2,1);         //Creating the coordinates of the parallelogram
  printf("Enter the coordinates in the order acccording to problem\n");
- scanf("%lf%lf%lf%lf%lf",&a,&b,&c,&d,&e);
+ scanf("%lf%lf%lf%lf%lf",&a,&b,&c,&d,&e);//Reading inputs
  x=s(a,b,c,d,e);            // function for finding the values of x and y
- A[0][0]=a;
- A[1][0]=b;
+ A[0][0]=a;               
+ A[1][0]=b;               
 
- B[0][0]=c;              // function for finding the values of x and y
- B[1][0]=d;
+ B[0][0]=c;              
+ B[1][0]=d;             
 
- C[0][0]=e;              // function for finding the values of x and y
- C[1][0]=x;
-
- printMat(A,2,1);           // function for printing the matrix
+ C[0][0]=e;               
+ C[1][0]=x;              
+ printMat(A,2,1);           // function for printing the matrix A,B,C
  printMat(B,2,1);
  printMat(C,2,1);
  pmf("a.dat",A,2,1);         // printing the matrix in file
@@ -49,6 +46,6 @@ int main()
 
  printMat(P,2,1);           // printing the matrix
  printMat(Q,2,1);           // printing the matrix
- check(P,Q);
+ check(P,Q);              //output generated
  return 0;
 }
