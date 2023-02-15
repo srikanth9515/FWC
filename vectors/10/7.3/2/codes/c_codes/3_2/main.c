@@ -13,7 +13,7 @@ https://github.com/srikanth9515/FWC/blob/main/LICENSE.md
 #include<stdlib.h>
 #include<math.h>
 #include<string.h>
-#include"gvv.h"
+#include"sr.h"
 
 //main function
 
