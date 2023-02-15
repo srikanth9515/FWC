@@ -18,19 +18,19 @@ int main()
  double **P,**Q;             
  double a,b,c,d,e;           //points on line based on problem excluding k
  int x; 
- A=createMat1(2,1);          //Creating the coordinates of the parallelogram
- B=createMat1(2,1);          //Creating the coordinates of the parallelogram
- C=createMat1(2,1);         //Creating the coordinates of the parallelogram
+ A=createMat1(2,1);          //Creating the coordinates(7,-2) of the parallelogram
+ B=createMat1(2,1);          //Creating the coordinates  (5,1) of the parallelogram
+ C=createMat1(2,1);         //Creating the coordinates  (3 , k=4) of the parallelogram
  printf("Enter the coordinates in the order acccording to problem\n");
  scanf("%lf%lf%lf%lf%lf",&a,&b,&c,&d,&e);//Reading inputs
  x=s(a,b,c,d,e);            // function for finding the values of x and y
- A[0][0]=a;               
+ A[0][0]=a;               // creating point A
  A[1][0]=b;               
 
- B[0][0]=c;              
+ B[0][0]=c;              //creating point B
  B[1][0]=d;             
 
- C[0][0]=e;               
+ C[0][0]=e;               //creating point C
  C[1][0]=x;              
  printMat(A,2,1);           // function for printing the matrix A,B,C
  printMat(B,2,1);
