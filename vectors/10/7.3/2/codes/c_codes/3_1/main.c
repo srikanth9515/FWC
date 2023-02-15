@@ -17,12 +17,12 @@ int main()
 {
 
  double **A,**B,**C;         // Points on a Line
- double **P,**Q;
+ double **P,**Q;             // points of 
  double a,b,c,d,e;           //points on line based on problem excluding k
  int x; 
  A=createMat1(2,1);          //Creating the coordinates of the parallelogram
- B=createMat1(2,1);
- C=createMat1(2,1);
+ B=createMat1(2,1);          //Creating the coordinates of the parallelogram
+ C=createMat1(2,1);         //Creating the coordinates of the parallelogram
  printf("Enter the coordinates in the order acccording to problem\n");
  scanf("%lf%lf%lf%lf%lf",&a,&b,&c,&d,&e);
  x=s(a,b,c,d,e);             // function for finding the values of x and y
