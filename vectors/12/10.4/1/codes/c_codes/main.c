@@ -23,9 +23,9 @@ int main()
 	c=createMat(n);
 	
         printf("Enter the 1 st vector : ");
-        readMat(a,3);		   //Reading the vector a
+        readMat(a,3);		   //Reading the vector a(1,-7,7)
         printf("Enter the 2nd vector : ");
-        readMat(b,3);         	   //Reading the vector b
+        readMat(b,3);         	   //Reading the vector b(3,-2,2)
 
 	d=cross(a,b,c);           //Function for finding cross product
 	printf("Cross product is : \n");
