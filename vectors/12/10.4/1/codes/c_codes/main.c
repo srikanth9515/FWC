@@ -13,7 +13,7 @@ https://github.com/srikanth9515/FWC/blob/main/LICENSE.md
 #include<stdlib.h>
 #include<malloc.h>
 #include<math.h>
-#include"gvv.h"
+#include"sr.h"
 //main function
 int main()
 {

@@ -6,15 +6,11 @@ Code is free any one can use
 https://github.com/srikanth9515/FWC/blob/main/LICENSE.md
   */
 
-
-
-
-
 #include<stdio.h>
 #include<stdlib.h>
 #include<math.h>
 #include<string.h>
-#include"gvv.h"
+#include"sr.h"
 
 int main()
 {
@@ -28,15 +24,15 @@ int main()
  C=createMat1(2,1);
  printf("Enter the coordinates in the order acccording to problem\n");
  scanf("%lf%lf%lf%lf%lf",&a,&b,&c,&d,&e);
- x=s(a,b,c,d,e);             // function for finding the values of x and y
- A[0][0]=a;
- A[1][0]=b;
+ x=s(a,b,c,d,e);            // function for finding the values of x and y
+ A[0][0]=a;                 //The cordinate values
+ A[1][0]=b;                 // The cordinate values
 
- B[0][0]=c;
- B[1][0]=d;
+ B[0][0]=c;                 // The cordinate values
+ B[1][0]=d;                 // The cordinate values
 
- C[0][0]=e;
- C[1][0]=x;
+ C[0][0]=e;                 // The cordinate values
+
 
  printMat(A,2,1);           // function for printing the matrix
  printMat(B,2,1);
