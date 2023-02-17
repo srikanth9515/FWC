@@ -1,14 +1,22 @@
 
+/* Code by : S SRIKANTH REDDY FWC220107
+  Date : Feb 17 2023
+Released under : Dr. G. V. V. Sharma sir
+This is code for doing doing the cross product and doing the norm for the samee
+Code is free any one can use 
+https://github.com/srikanth9515/FWC/blob/main/LICENSE.md
+  */
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<math.h>
 #include"sr.h"
 int main()
 {
-	double **m;          //double pointer for 2d matrix
-	int s=2;             //size of array
+	double **m;                //double pointer for 2d matrix
+	int s=2;                   //size of array
 	int i,j,n1=1;
-	m=createMat1(2,1);  // created a 2*1 array
+	m=createMat1(2,1);        // created a 2*1 array
 	m[0][0]=1;
 	m[1][0]=-2;
 	printf("The vector m is :\n");//printing m value
@@ -29,7 +37,6 @@ int main()
 	A=createMat1(2,1);    // creating a 2*1 array
 	A[0][0]=-3;         
 	A[1][0]=0;
-
 
 printf("Omat is :\n");        //printing omat values
 for(i=0;i<s;i++)
@@ -58,7 +65,6 @@ for(i=0;i<s;i++)
 	pmf("n.dat",n,2,1);
 	pmf("omat.dat",omat,2,2);
 	pmf("A.dat",A,2,1);
-
 
 
 	return 0;
