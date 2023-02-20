@@ -1,7 +1,8 @@
 /* Code by : S SRIKANTH REDDY FWC220107
   Date : Feb 20 2023
 Released under : Dr. G. V. V. Sharma sir
-This is code for Find the equations of the lines, which cut-off intercepts on the axes whose sum and product are 1 and -6,resspectively.
+This is code for Find the equations of the lines, which cut-off intercepts on the axes
+whose sum and product are 1 and -6,resspectively.
 Code is free any one can use 
 https://github.com/srikanth9515/FWC/blob/main/LICENSE.md
   */
