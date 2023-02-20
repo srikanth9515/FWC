@@ -37,6 +37,10 @@ fprintf(fp,"%lf\n",a[i][j]);
 	}
 }
 }
+
+//End function for reading matrix from file
+
+
 //Defining the function for matrix creation
 double **createMat(int m,int n)
 {
@@ -118,7 +122,7 @@ double norm=0.0;
  {
 norm = norm + a[i][0]*a[i][0];
 }
-return sqrt(norm);
+return norm;
 
 }
 //End function for norm

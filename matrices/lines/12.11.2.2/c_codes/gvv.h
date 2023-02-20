@@ -15,7 +15,20 @@ void pmf(char *str, double **a,int r,int c);
 void pmf1(char *str,double r); 
 //End function declaration
 
+void check(double **a);
 
+void check(double **a)
+{
+	if(a[0][0]==0)
+	{
+		printf("perpendicular");
+	}
+	else
+	{
+		printf("not perpendicular");
+
+	}
+}
 void pmf1(char *str,double r)  
 {
 FILE *fp;

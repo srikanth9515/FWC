@@ -30,6 +30,21 @@ fprintf(fp,"%lf\n",a[i][j]);
 	}
 }
 }
+
+//Finding directional vector with slope
+double **dirvec(int slope ,int M,int N)
+{
+double **m;
+m=createMat1(M,N);
+m[0][0]=1;
+m[1][0]=slope;
+
+return m;
+
+}
+
+
+
 //Defining the function for matrix creation
 double **createMat1(int m,int n)
 {

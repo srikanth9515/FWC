@@ -1,3 +1,4 @@
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<math.h>
@@ -8,9 +9,7 @@ int main()
 	double **n;  
 	int r=2;
 	int c=1;
-	n=createMat(r,c);  // creating the matrix the normal vector of line
-	n[0][0]=15;
-	n[1][0]=8;
+	n=loadtxt("n.dat",2,1);
 	double const1=-34;
 	double const2=31;
 	float d;  // distance between lines
