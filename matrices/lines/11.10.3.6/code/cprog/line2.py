@@ -16,16 +16,9 @@ def line_dir_pt(m,A,k1,k2):
   return x_AB
 
 #Input parameters
-A=  np.array(([-2,-1/2]))     
-D=np.array(([1,2]))
-
-#Direction vector
-m=np.loadtxt("n.dat");   #use normal vector here                                                           
-z=np.array(([0,1],[-1,0]))                           
-n=z@m                                     
-print(n)
-print(m@A)
-print(m@D)
+A = np.loadtxt('a.dat',dtype='float') 
+D = np.loadtxt('d.dat',dtype='float') 
+m = np.loadtxt('n.dat',dtype='float')
 
 ##Generating the line 
 k1=-0.5
