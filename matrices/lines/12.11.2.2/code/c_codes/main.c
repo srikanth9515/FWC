@@ -1,3 +1,14 @@
+
+
+/* Code by : S SRIKANTH REDDY FWC220107
+  Date : Feb 20 2023
+Released under : Dr. G. V. V. Sharma sir
+This is code for Show that the line through the points (1, -1, 2), (3, 4, -2) 
+is perpendicular to the line through the points (0, 3, 2) and (3, 5, 6).nd -6,resspectively.
+Code is free any one can use 
+https://github.com/srikanth9515/FWC/blob/main/LICENSE.md
+  */
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<math.h>
@@ -7,8 +18,8 @@ int main()
 
 double **a,**b,**c,**d;//craeting a matrix for a,b,c
 double **e,**f;//creatix a matrix for e,f
-double **g;
-double **h;
+double **g; // matrix for transpose 
+double **h;//matrix for storing result
 a=createMat(3,1);//matrix a
 b=createMat(3,1);//matrix b
 c=createMat(3,1);//matrix c
