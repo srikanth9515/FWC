@@ -1,3 +1,11 @@
+/* Code by : S SRIKANTH REDDY FWC220107
+  Date : Feb 20 2023
+Released under : Dr. G. V. V. Sharma sir
+This is code for vector equation of plane
+Code is free any one can use 
+https://github.com/srikanth9515/FWC/blob/main/LICENSE.md
+  */
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<math.h>
