@@ -1,6 +1,6 @@
 
 /* Code by : S SRIKANTH REDDY FWC220107
-  Date : Feb 20 2023
+  Date : Feb 21 2023
 Released under : Dr. G. V. V. Sharma sir
 This is code for finding the directional cosine of third vector which is perpendicular to both the given vectors
 Code is free any one can use 
