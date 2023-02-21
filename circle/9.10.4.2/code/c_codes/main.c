@@ -42,7 +42,7 @@ int main()
 	x1=linalg_norm(d1,2);  // function for finding norm
 	y1=linalg_norm(d2,2);
 	z1=linalg_norm(d3,2);
-	w1=linalg_norm(d4,2)a
+	w1=linalg_norm(d4,2);
 	printf("\n");
 	printf("x1=%lf\n",x1);
 	printf("y1=%lf\n",y1);
