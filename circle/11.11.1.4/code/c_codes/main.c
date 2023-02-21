@@ -1,3 +1,13 @@
+
+/* Code by : S SRIKANTH REDDY FWC220107
+  Date : Feb 21 2023
+Released under : Dr. G. V. V. Sharma sir
+This is code for Find the equation of the circle with centre (1,1) and radius 2.
+Code is free any one can use 
+https://github.com/srikanth9515/FWC/blob/main/LICENSE.md
+  */
+
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<math.h>
