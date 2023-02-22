@@ -1,3 +1,13 @@
+
+/* Code by : S SRIKANTH REDDY FWC220107
+  Date : Feb 23 2023
+Released under : Dr. G. V. V. Sharma sir
+This is code for checking whether the trinagle is isoceles or not
+Code is free any one can use 
+https://github.com/srikanth9515/FWC/blob/main/LICENSE.md
+  */
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include<math.h>
