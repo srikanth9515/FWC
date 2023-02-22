@@ -53,6 +53,10 @@ int main()
     printf("\n");
     printf("%lf\n",n3);
     check(n1,n2,n3);  // function for checking whether the condition is true or not
+    pmf("a.dat",A,2);
+    pmf("b.dat",B,2);
+    pmf("c.dat",C,2);
+
     return 0;
 }
 

@@ -14,6 +14,7 @@ void check(double n1,double n2,double n3);
 void print(int *A,int n);
 int *createMat(int m);
 void readMat(int *p, int m);
+void pmf(char *str, int *a,int len); //function for printing matrix in file
 
 
 void print(int *A,int n)
@@ -23,6 +24,17 @@ void print(int *A,int n)
 	{
 		printf("%d",A[i]);
 	}
+}
+void pmf(char *str, int *a,int len)  //function for printing matrix in file
+{
+int i;
+FILE *fp;
+
+fp = fopen(str,"w");
+for (i = 0; i < len; i++)
+{
+fprintf(fp,"%d\n",a[i]);
+}
 }
 
 void check(double n1,double n2,double n3)
