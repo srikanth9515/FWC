@@ -1,4 +1,4 @@
-gcc -o main main.c -lm
-./main
+gcc -o main1 main1.c -lm
+./main1
 python3 main.py
 
