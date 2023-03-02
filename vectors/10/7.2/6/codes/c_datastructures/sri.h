@@ -6,6 +6,10 @@ typedef struct Node {
     struct Node* next;
 } Node;
 
+
+
+
+
 Node* createNode(int value, int row, int col); 
 void insert_node(Node **head, int row, int col, int val);
 Node* createMatrix(int numRows, int numCols);
@@ -13,8 +17,28 @@ void print(Node *head);
 Node *sub(Node *a, Node *b);
 Node *transpose_matrix(Node *head);
 double Norm(Node* head, int numRows, int numCols);
-void check(double d1,double d2,double d3);
+void check(int d1,int d2);
+Node* assign(int numRows, int numCols,int *array);
+int *s(int a,int b,int c,int d,int e,int f);
+void save(Node *head,char *str,int r,int c);
 
+
+
+
+
+
+
+
+int *s(int a,int b,int c,int d,int e,int f)
+{
+ int *x;
+ x=(int *)malloc(sizeof(int));
+ int i;
+ x[0]=c-a+e;
+ x[1]=b+b-a;
+
+ return x;
+}
 void pmf(char *str, double a)  //function for printing matrix in file
 {
 FILE *fp;
@@ -66,8 +90,9 @@ Node* createMatrix(int numRows, int numCols) {
         // Loop through each column in the current row
         for (int j = 0; j < numCols; j++) {
             int value;
-            printf("Enter the value at position (%d,%d): ", i, j);
-            scanf("%d", &value);
+            //printf("Enter the value at position (%d,%d): ", i, j);
+            value=0;
+
 
             // If the value is not 0, create a new node and add it to the matrix
             if (value != 0) {
@@ -97,6 +122,58 @@ Node* createMatrix(int numRows, int numCols) {
     return head;
 }
 
+Node* assign(int numRows, int numCols,int *array)
+{
+    Node* head = NULL;
+    Node* currentRow = NULL;
+
+    // Loop through each row
+    for (int i = 0; i < numRows; i++) 
+    {
+        Node* newRow = NULL;
+        Node* currentCol = NULL;
+
+        // Loop through each column in the current row
+        for (int j = 0; j < numCols; j++)
+	{
+            int value;
+	    int index=0;
+            //printf("Enter the value at position (%d,%d): ", i, j);
+            //scanf("%d", &value);
+	    value=array[i];
+	    
+
+
+            // If the value is not 0, create a new node and add it to the matrix
+            if (value != 0)
+	    {
+                Node* newNode = createNode(value, i, j);
+                if (newRow == NULL) {
+                    newRow = newNode;
+                    currentCol = newNode;
+                } 
+		else
+		{
+                    currentCol->next = newNode;
+                    currentCol = newNode;
+                }
+            }
+        }
+
+        // If the current row is not empty, add it to the matrix
+        if (newRow != NULL) {
+            if (head == NULL) {
+                head = newRow;
+                currentRow = newRow;
+            } else {
+                currentRow->next = newRow;
+                currentRow = newRow;
+            }
+        }
+    }
+
+    return head;
+}
 
 
 
@@ -214,48 +291,34 @@ double Norm(Node* head, int numRows, int numCols)
 }
 
 
-void check(double d1,double d2,double d3)
+void check(int d1,int d2)
 {
-	if(d1==d2 || d1 == d3)
+	if(d1!=d2)
 	{
-		printf("The triangle is Isoceles triangle ");
+		printf("The parallelogram is satisfied ");
 	}
 	else
 	{
-		printf("The triangle is not Isoceles triangle ");
+		printf("The parallelogram is not satisfied ");
 	}
 }
 
 
-void save(Node *head, const char *filename) 
+void save(Node *head,char *str,int r,int c)
 {
-    FILE *file = fopen(filename, "wb");
-    if (file == NULL) {
-        printf("Error opening file!\n");
-        exit(1);
-    }
-    // write the number of rows and columns in the matrix to the file
-    int numRows = head->row + 1;
-    int numCols = head->col + 1;
-    fwrite(&numRows, sizeof(int), 1, file);
-    fwrite(&numCols, sizeof(int), 1, file);
-    // write the number of non-zero elements in the matrix to the file
-    int count = 0;
-    Node *current = head;
-    while (current != NULL) {
-        count++;
-        current = current->next;
-    }
-    fwrite(&count, sizeof(int), 1, file);
-    // write the row, column, and value of each non-zero element to the file
-    current = head;
-    while (current != NULL) 
-    {
-        fwrite(&(current->row), sizeof(int), 1, file);
-        fwrite(&(current->col), sizeof(int), 1, file);
-        fwrite(&(current->value), sizeof(int), 1, file);
-        current = current->next;
-    }
-    fclose(file);
+	FILE *fp;
+	fp = fopen(str,"w");
+        Node* current = head;
+	int i,j;
+	while(current!=NULL)
+	{
+	//for(i=0;i<r;i++)
+	//{
+		for(j=0;j<c;j++)
+		{
+			fprintf(fp,"%d\n",current->value);
+		}
+	//}
+            current = current->next;
+	}
 }
-
