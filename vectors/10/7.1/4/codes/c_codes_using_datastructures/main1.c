@@ -15,13 +15,13 @@ https://github.com/srikanth9515/FWC/blob/main/LICENSE.md
 int main() {
     // create matrix A
     Node *a = NULL;  // declaring the node for point A
-    Node *b = NULL;  
-    Node *c = NULL;  
-    Node *d = NULL;  
-    Node *e= NULL;   
-    Node *f = NULL; 
-    Node *g = NULL;
-    double d1,d2,d3;
+    Node *b = NULL;  // declaring the node for point B
+    Node *c = NULL;  // declaring the node for point C
+    Node *d = NULL;  // declaring the node for point D
+    Node *e= NULL;   // declarin the node for A-B
+    Node *f = NULL; //   declarin the node for B-C
+    Node *g = NULL; //    declarin the node for C-A
+    double d1,d2,d3;//Declearing the legth of triangle
     printf("Enter the first point \n");
     a=createMatrix(2,1);  // function for creating matrix using linked list
     printf("Enter the second point \n");
@@ -38,14 +38,14 @@ int main() {
     print(f);
     print(g);
     d1=Norm(e,2,1);  // function for finding norm of a linked list
-    d2=Norm(f,2,1);
-    d3=Norm(g,2,1);
+    d2=Norm(f,2,1);  // function for finding norm of a linked list
+    d3=Norm(g,2,1); // function for finding norm of a linked list
     printf("%lf\n",d1);
     printf("%lf\n",d2);
     printf("%lf\n",d3);
     check(d1,d2,d3);   // checking whether the condition is true or not
-    save(a,"a.dat",2,1);
-    save(b,"b.dat",2,1);
-    save(c,"c.dat",2,1);
+    save(a,"a.dat",2,1); //saving the matrix in dat file
+    save(b,"b.dat",2,1);  //saving the matrix in dat file
+    save(c,"c.dat",2,1);  //saving the matrix in dat file
     return 0;
 }
