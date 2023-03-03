@@ -9,7 +9,7 @@ https://github.com/srikanth9515/FWC/blob/main/LICENSE.md
   */
 
 
->>>>>>> 7bb7acd959a3825323c009e7b1d4ccdcb1c6a46a
+>>>>>>> 
 #include <stdio.h>
 #include <stdlib.h>
 #include<math.h>
@@ -34,7 +34,7 @@ int main() {
     Node *f = NULL; //   declarin the node for B-C
     Node *g = NULL; //    declarin the node for C-A
     double d1,d2,d3;//Declearing the legth of triangle
->>>>>>> 7bb7acd959a3825323c009e7b1d4ccdcb1c6a46a
+>>>>>>> 
     printf("Enter the first point \n");
     a=createMatrix(2,1);  // function for creating matrix using linked list
     printf("Enter the second point \n");
@@ -49,7 +49,7 @@ int main() {
     f=sub(b,c);
 =======
     f=sub(b,c);   
->>>>>>> 7bb7acd959a3825323c009e7b1d4ccdcb1c6a46a
+>>>>>>> 
     g=sub(c,a);
     print(e);
     print(f);
@@ -61,7 +61,7 @@ int main() {
 =======
     d2=Norm(f,2,1);  // function for finding norm of a linked list
     d3=Norm(g,2,1); // function for finding norm of a linked list
->>>>>>> 7bb7acd959a3825323c009e7b1d4ccdcb1c6a46a
+>>>>>>> 
     printf("%lf\n",d1);
     printf("%lf\n",d2);
     printf("%lf\n",d3);
@@ -72,6 +72,6 @@ int main() {
     save(a,"a.dat",2,1); //saving the matrix in dat file
     save(b,"b.dat",2,1);  //saving the matrix in dat file
     save(c,"c.dat",2,1);  //saving the matrix in dat file
->>>>>>> 7bb7acd959a3825323c009e7b1d4ccdcb1c6a46a
+>>>>>>> 
     return 0;
 }
