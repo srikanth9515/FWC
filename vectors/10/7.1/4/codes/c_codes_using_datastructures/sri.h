@@ -211,7 +211,7 @@ void print(Node *head) {
         }
         printf("\n");
     }
->>>>>>> 7bb7acd959a3825323c009e7b1d4ccdcb1c6a46a
+>>>>>>> 
 }
 
 
