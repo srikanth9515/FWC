@@ -42,7 +42,7 @@ void insert_node(Node **head, int row, int col, int val) {
     new_node->col = col;
     new_node->value = val;
     new_node->next = NULL;
->>>>>>> 7bb7acd959a3825323c009e7b1d4ccdcb1c6a46a
+>>>>>>> 
 
     if (*head == NULL) {
         *head = new_node;
@@ -211,7 +211,7 @@ void print(Node *head) {
         }
         printf("\n");
     }
->>>>>>> 7bb7acd959a3825323c009e7b1d4ccdcb1c6a46a
+>>>>>>> 
 }
 
 
@@ -318,7 +318,7 @@ Node *sub(Node *a, Node *b) {
         b = b->next;
     }
 
->>>>>>> 7bb7acd959a3825323c009e7b1d4ccdcb1c6a46a
+>>>>>>> 
     return result;
 }
 
