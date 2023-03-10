@@ -12,6 +12,6 @@ module helloworldfpga(
     
     always @(*)
     begin
-   F=((!X)|Y); 
+   F=((X)&(Y)|!(Y)&(Z)); 
     end
     endmodule
