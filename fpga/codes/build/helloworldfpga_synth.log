@@ -27,7 +27,7 @@
 1. Executing Verilog-2005 frontend: /data/data/com.termux/files/home/fpga/codes/helloworldfpga.v
 Parsing Verilog input from `/data/data/com.termux/files/home/fpga/codes/helloworldfpga.v' to AST representation.
 Generating RTLIL representation for module `\helloworldfpga'.
-Warning: wire '\F' is assigned in a block at /data/data/com.termux/files/home/fpga/codes/helloworldfpga.v:15.4-15.24.
+Warning: wire '\F' is assigned in a block at /data/data/com.termux/files/home/fpga/codes/helloworldfpga.v:15.5-15.19.
 Successfully finished Verilog frontend.
 
 -- Running command `tcl /data/data/com.termux/files/home/symbiflow/quicklogic-arch-defs/share/quicklogic/synth.tcl' --
@@ -833,7 +833,7 @@ Generating RTLIL representation for module `\$lut'.
 Successfully finished Verilog frontend.
 
 4.54.3. Continuing TECHMAP pass.
-Using template $paramod\$lut\WIDTH=3\LUT=8'11001010 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=3\LUT=8'10110000 for cells of type $lut.
 No more expansions possible.
 <suppressed ~14 debug messages>
 Removed 0 unused cells and 2 unused wires.
@@ -1002,7 +1002,7 @@ Successfully finished Verilog frontend.
 Using template $paramod$ed30829c13b3acb9519b3f008c9df903da206e61\inpad for cells of type inpad.
 Using template $paramod$4da62a2f3593426548f45892aaeb7356ad46a6a4\inpad for cells of type inpad.
 Using template $paramod$3494bf91dff70d828c5f5312272dede938de1112\inpad for cells of type inpad.
-Using template $paramod$73295daa79cd8f21300ad173a8fb0822f56672dc\LUT3 for cells of type LUT3.
+Using template $paramod$5fff4eed3dfe46da722c8abfad4e43b106987cbf\LUT3 for cells of type LUT3.
 Using template $paramod$5b9e7b43709c63157e375124a8cadf61254db805\outpad for cells of type outpad.
 No more expansions possible.
 <suppressed ~78 debug messages>
@@ -1049,6 +1049,6 @@ Removed 0 unused cells and 11 unused wires.
 Dumping module `\helloworldfpga'.
 
 Warnings: 9 unique messages, 12 total
-End of script. Logfile hash: 34c39a6130, CPU: user 5.54s system 0.13s, MEM: 260.51 MB peak
+End of script. Logfile hash: fd1f0ddcb6, CPU: user 5.66s system 0.16s, MEM: 260.20 MB peak
 Yosys 0.9+2406 (git sha1 ca763e6d5, gcc 10.2.1-6 -fPIC -Os)
-Time spent: 69% 18x read_verilog (3 sec), 7% 21x opt_clean (0 sec), ...
+Time spent: 67% 18x read_verilog (3 sec), 8% 21x opt_clean (0 sec), ...

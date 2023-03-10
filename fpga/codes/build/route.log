@@ -18,7 +18,7 @@ Architecture file: /data/data/com.termux/files/home/symbiflow/quicklogic-arch-de
 Circuit name: helloworldfpga
 
 # Loading Architecture Description
-# Loading Architecture Description took 0.94 seconds (max_rss 27.7 MiB, delta_rss +24.0 MiB)
+# Loading Architecture Description took 0.92 seconds (max_rss 27.7 MiB, delta_rss +24.0 MiB)
 # Building complex block graph
 # Building complex block graph took 0.26 seconds (max_rss 34.5 MiB, delta_rss +6.8 MiB)
 # Load circuit
@@ -51,7 +51,7 @@ Circuit Statistics:
     VCC       :       1
   Nets  : 10
     Avg Fanout:     2.0
-    Max Fanout:     6.0
+    Max Fanout:     5.0
     Min Fanout:     1.0
   Netlist Clocks: 0
 # Build Timing Graph
@@ -185,7 +185,7 @@ RoutingArch.Fs: 3
 Begin loading packed FPGA netlist file.
 Netlist generated from file 'helloworldfpga.net'.
 Detected 2 constant generators (to see names run with higher pack verbosity)
-Finished loading packed FPGA netlist file (took 0.012803 seconds).
+Finished loading packed FPGA netlist file (took 0.012692 seconds).
 # Load Packing took 0.02 seconds (max_rss 34.8 MiB, delta_rss +0.3 MiB)
 Warning 1: Netlist contains 0 global net to non-global architecture pin connections
 Warning 2: Logic block #5 ($false) has only 1 output pin '$false.GND0_GND[0]'. It may be a constant generator.
@@ -300,17 +300,17 @@ Device Utilization: 0.01 (target 1.00)
 ## Loading routing resource graph
 
 
-## Loading routing resource graph took 1.32 seconds (max_rss 342.6 MiB, delta_rss +307.7 MiB)
+## Loading routing resource graph took 1.32 seconds (max_rss 342.5 MiB, delta_rss +307.6 MiB)
   RR Graph Nodes: 1396446
   RR Graph Edges: 2337988
-# Create Device took 4.27 seconds (max_rss 390.3 MiB, delta_rss +355.3 MiB)
+# Create Device took 4.36 seconds (max_rss 390.2 MiB, delta_rss +355.3 MiB)
 
 # Load Placement
 Reading helloworldfpga.place.
 
 Successfully read helloworldfpga.place.
 
-# Load Placement took 0.00 seconds (max_rss 390.3 MiB, delta_rss +0.0 MiB)
+# Load Placement took 0.00 seconds (max_rss 390.2 MiB, delta_rss +0.0 MiB)
 
 # Computing router lookahead map
 ## Computing wire lookahead
@@ -318,62 +318,64 @@ Warning 4: Unable to find any sample location for segment CHANX type 'generic' (
 Warning 5: Unable to find any sample location for segment CHANY type 'generic' (length 1)
 Warning 6: Unable to find any sample location for segment CHANX type 'pad' (length 1)
 Warning 7: Unable to find any sample location for segment CHANY type 'pad' (length 1)
-## Computing wire lookahead took 71.39 seconds (max_rss 390.3 MiB, delta_rss +0.0 MiB)
+## Computing wire lookahead took 69.38 seconds (max_rss 390.2 MiB, delta_rss +0.0 MiB)
 ## Computing src/opin lookahead
-## Computing src/opin lookahead took 0.00 seconds (max_rss 390.3 MiB, delta_rss +0.0 MiB)
-# Computing router lookahead map took 71.39 seconds (max_rss 390.3 MiB, delta_rss +0.0 MiB)
+## Computing src/opin lookahead took 0.00 seconds (max_rss 390.2 MiB, delta_rss +0.0 MiB)
+# Computing router lookahead map took 69.38 seconds (max_rss 390.2 MiB, delta_rss +0.0 MiB)
 # Routing
   RR Graph Nodes: 1396446
   RR Graph Edges: 2337988
 Confirming router algorithm: TIMING_DRIVEN.
 ## Initializing router criticalities
 Initial Net Connection Criticality Histogram:
-[        0:      0.1) 11 ( 68.8%) |************************************************
-[      0.1:      0.2)  0 (  0.0%) |
-[      0.2:      0.3)  0 (  0.0%) |
-[      0.3:      0.4)  0 (  0.0%) |
-[      0.4:      0.5)  0 (  0.0%) |
-[      0.5:      0.6)  0 (  0.0%) |
-[      0.6:      0.7)  0 (  0.0%) |
-[      0.7:      0.8)  0 (  0.0%) |
-[      0.8:      0.9)  0 (  0.0%) |
-[      0.9:        1)  5 ( 31.2%) |**********************
-## Initializing router criticalities took 0.00 seconds (max_rss 448.3 MiB, delta_rss +0.0 MiB)
+[        0:      0.1) 10 ( 62.5%) |*************************************************
+[      0.1:      0.2) 0 (  0.0%) |
+[      0.2:      0.3) 0 (  0.0%) |
+[      0.3:      0.4) 0 (  0.0%) |
+[      0.4:      0.5) 0 (  0.0%) |
+[      0.5:      0.6) 0 (  0.0%) |
+[      0.6:      0.7) 0 (  0.0%) |
+[      0.7:      0.8) 0 (  0.0%) |
+[      0.8:      0.9) 0 (  0.0%) |
+[      0.9:        1) 6 ( 37.5%) |*****************************
+## Initializing router criticalities took 0.00 seconds (max_rss 448.2 MiB, delta_rss +0.0 MiB)
 ---- ------ ------- ---- ------- ------- ------- ----------------- --------------- -------- ---------- ---------- ---------- ---------- --------
 Iter   Time    pres  BBs    Heap  Re-Rtd  Re-Rtd Overused RR Nodes      Wirelength      CPD       sTNS       sWNS       hTNS       hWNS Est Succ
       (sec)     fac Updt    push    Nets   Conns                                       (ns)       (ns)       (ns)       (ns)       (ns)     Iter
 ---- ------ ------- ---- ------- ------- ------- ----------------- --------------- -------- ---------- ---------- ---------- ---------- --------
-   1    1.2     0.0    0 1128006       6      16      86 ( 0.006%)    1012 ( 0.1%)   40.303     -40.30    -40.303      0.000      0.000      N/A
-   2    0.9     4.0    0  785432       3       4      71 ( 0.005%)    1008 ( 0.1%)   40.303     -40.30    -40.303      0.000      0.000      N/A
-   3    0.2     5.2    0  158007       1       1       0 ( 0.000%)    1018 ( 0.1%)   40.303     -40.30    -40.303      0.000      0.000      N/A
+   1    1.4     0.0    0 1253923       6      16      89 ( 0.006%)    1012 ( 0.1%)   40.060     -40.06    -40.060      0.000      0.000      N/A
+   2    1.0     4.0    0  894043       4      10      84 ( 0.006%)    1008 ( 0.1%)   40.060     -40.06    -40.060      0.000      0.000      N/A
+   3    1.2     5.2    0 1047654       3       5       6 ( 0.000%)    1023 ( 0.1%)   40.284     -40.28    -40.284      0.000      0.000      N/A
+   4    0.9     6.8    0  784260       3       9      81 ( 0.006%)    1008 ( 0.1%)   40.060     -40.06    -40.060      0.000      0.000      N/A
+   5    0.8     8.8    0  691272       1       3       0 ( 0.000%)    1018 ( 0.1%)   40.399     -40.40    -40.399      0.000      0.000      N/A
 Restoring best routing
-Critical path: 40.3034 ns
-Successfully routed after 3 routing iterations.
+Critical path: 40.3987 ns
+Successfully routed after 5 routing iterations.
 Final Net Connection Criticality Histogram:
-[        0:      0.1) 11 ( 68.8%) |************************************************
-[      0.1:      0.2)  0 (  0.0%) |
-[      0.2:      0.3)  0 (  0.0%) |
-[      0.3:      0.4)  0 (  0.0%) |
-[      0.4:      0.5)  0 (  0.0%) |
-[      0.5:      0.6)  0 (  0.0%) |
-[      0.6:      0.7)  0 (  0.0%) |
-[      0.7:      0.8)  0 (  0.0%) |
-[      0.8:      0.9)  0 (  0.0%) |
-[      0.9:        1)  5 ( 31.2%) |**********************
-Router Stats: total_nets_routed: 10 total_connections_routed: 21 total_heap_pushes: 2071445 total_heap_pops: 1911788
-# Routing took 4.84 seconds (max_rss 448.3 MiB, delta_rss +58.0 MiB)
+[        0:      0.1) 10 ( 62.5%) |*************************************************
+[      0.1:      0.2) 0 (  0.0%) |
+[      0.2:      0.3) 0 (  0.0%) |
+[      0.3:      0.4) 0 (  0.0%) |
+[      0.4:      0.5) 0 (  0.0%) |
+[      0.5:      0.6) 0 (  0.0%) |
+[      0.6:      0.7) 0 (  0.0%) |
+[      0.7:      0.8) 0 (  0.0%) |
+[      0.8:      0.9) 0 (  0.0%) |
+[      0.9:        1) 6 ( 37.5%) |*****************************
+Router Stats: total_nets_routed: 17 total_connections_routed: 43 total_heap_pushes: 4671152 total_heap_pops: 4327830
+# Routing took 7.95 seconds (max_rss 448.2 MiB, delta_rss +58.0 MiB)
 
 Checking to ensure routing is legal...
 Completed routing consistency check successfully.
 
-Serial number (magic cookie) for the routing is: -10293590
+Serial number (magic cookie) for the routing is: -10267132
 Circuit successfully routed with a channel width factor of 100.
 
-Incr Slack updates 4 in 3.6729e-05 sec
-Full Max Req/Worst Slack updates 1 in 4.769e-06 sec
-Incr Max Req/Worst Slack updates 3 in 9.885e-06 sec
-Incr Criticality updates 2 in 9e-06 sec
-Full Criticality updates 2 in 9.077e-06 sec
+Incr Slack updates 6 in 5.6769e-05 sec
+Full Max Req/Worst Slack updates 2 in 9.115e-06 sec
+Incr Max Req/Worst Slack updates 4 in 1.3462e-05 sec
+Incr Criticality updates 1 in 4.461e-06 sec
+Full Criticality updates 5 in 2.2231e-05 sec
 
 Average number of bends per net: 130.833  Maximum # of bends: 161
 
@@ -385,7 +387,7 @@ Wire length results (in units of 1 clb segments)...
 
 Wire length results in terms of physical segments...
 	Total wiring segments used: 938, average wire segments per net: 156.333
-	Maximum segments used by a net: 186
+	Maximum segments used by a net: 176
 	Total local nets with reserved CLB opins: 0
 
 Routing channel utilization histogram:
@@ -406,12 +408,12 @@ X - Directed channels:   j max occ ave occ capacity
                          0       2   1.410        2
                          1       0   0.000      221
                          2       0   0.000        0
-                         3      41   4.590      635
+                         3      41   4.205      635
                          4       0   0.000      623
                          5      10   0.256      658
                          6       0   0.000      623
                          7       7   0.359      623
-                         8      11   0.615      623
+                         8      12   1.000      623
                          9       7   0.179      623
                         10      11   0.462      665
                         11      75   2.231      623
@@ -451,12 +453,12 @@ Y - Directed channels:   i max occ ave occ capacity
                          9       0   0.000      761
                         10       0   0.000      757
                         11       0   0.000      775
-                        12      40   1.257      757
-                        13       9   0.257      761
+                        12      40   1.857      757
+                        13       0   0.000      761
                         14       0   0.000      761
                         15       0   0.000      761
-                        16      40   1.857      761
-                        17      11   0.314      761
+                        16      40   1.571      761
+                        17       9   0.257      761
                         18       0   0.000      761
                         19       0   0.000      816
                         20      12   1.971      761
@@ -524,9 +526,9 @@ Final hold slack histogram:
 [  3.8e-08:  3.8e-08) 0 (  0.0%) |
 [  3.8e-08:  3.8e-08) 0 (  0.0%) |
 
-Final critical path delay (least slack): 40.3034 ns, Fmax: 24.8118 MHz
-Final setup Worst Negative Slack (sWNS): -40.3034 ns
-Final setup Total Negative Slack (sTNS): -40.3034 ns
+Final critical path delay (least slack): 40.3987 ns, Fmax: 24.7533 MHz
+Final setup Worst Negative Slack (sWNS): -40.3987 ns
+Final setup Total Negative Slack (sTNS): -40.3987 ns
 
 Final setup slack histogram:
 [   -4e-08:   -4e-08) 1 (100.0%) |**************************************************
@@ -543,11 +545,11 @@ Final setup slack histogram:
 Final geomean non-virtual intra-domain period: nan ns (nan MHz)
 Final fanout-weighted geomean non-virtual intra-domain period: nan ns (nan MHz)
 
-Incr Slack updates 1 in 8.807e-06 sec
-Full Max Req/Worst Slack updates 1 in 4.807e-06 sec
+Incr Slack updates 1 in 1.2346e-05 sec
+Full Max Req/Worst Slack updates 1 in 4.885e-06 sec
 Incr Max Req/Worst Slack updates 0 in 0 sec
 Incr Criticality updates 0 in 0 sec
-Full Criticality updates 1 in 4.616e-06 sec
-Flow timing analysis took 0.000684039 seconds (0.000560578 STA, 0.000123461 slack) (5 full updates: 0 setup, 0 hold, 5 combined).
+Full Criticality updates 1 in 3.5231e-05 sec
+Flow timing analysis took 0.000931192 seconds (0.00071827 STA, 0.000212922 slack) (7 full updates: 0 setup, 0 hold, 7 combined).
 VPR succeeded
-The entire flow of VPR took 81.92 seconds (max_rss 448.3 MiB)
+The entire flow of VPR took 83.09 seconds (max_rss 448.2 MiB)

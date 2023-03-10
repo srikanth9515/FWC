@@ -15,12 +15,12 @@ input external delay                                                        0.00
 Z.inpad[0] (.input)                                                         0.000     0.000
 $iopadmap$helloworldfpga.Z.I_PAD_$inp[0] (BIDIR_CELL)                       0.000     0.000
 $iopadmap$helloworldfpga.Z.I_DAT[0] (BIDIR_CELL)                           10.153    10.153
-F_LUT3_O.t_frag.XAB[0] (T_FRAG)                                             7.126    17.279
-F_LUT3_O.t_frag.XZ[0] (T_FRAG)                                              0.909    18.188
-$iopadmap$helloworldfpga.F.O_DAT[0] (BIDIR_CELL)                           10.070    28.258
-$iopadmap$helloworldfpga.F.O_PAD_$out[0] (BIDIR_CELL)                       9.726    37.984
-out:F.outpad[0] (.output)                                                   0.000    37.984
-data arrival time                                                                    37.984
+F_LUT3_O.t_frag.XSL[0] (T_FRAG)                                             7.050    17.203
+F_LUT3_O.t_frag.XZ[0] (T_FRAG)                                              1.041    18.244
+$iopadmap$helloworldfpga.F.O_DAT[0] (BIDIR_CELL)                           10.070    28.314
+$iopadmap$helloworldfpga.F.O_PAD_$out[0] (BIDIR_CELL)                       9.726    38.040
+out:F.outpad[0] (.output)                                                   0.000    38.040
+data arrival time                                                                    38.040
 
 clock virtual_io_clock (rise edge)                                          0.000     0.000
 clock source latency                                                        0.000     0.000
@@ -29,9 +29,9 @@ output external delay                                                       0.00
 data required time                                                                    0.000
 -------------------------------------------------------------------------------------------
 data required time                                                                   -0.000
-data arrival time                                                                    37.984
+data arrival time                                                                    38.040
 -------------------------------------------------------------------------------------------
-slack (MET)                                                                          37.984
+slack (MET)                                                                          38.040
 
 
 #End of timing report

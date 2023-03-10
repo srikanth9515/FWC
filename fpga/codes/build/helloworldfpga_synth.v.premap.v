@@ -54,12 +54,12 @@ module helloworldfpga(X, Y, Z, F);
   (* module_not_derived = 32'd1 *)
   (* src = "/data/data/com.termux/files/home/symbiflow/bin/../share/yosys/quicklogic/pp3_lut_map.v:36.63-36.121" *)
   LUT3 #(
-    .EQN("(~I0*I1*~I2)+(I0*I1*~I2)+(I0*~I1*I2)+(~I0*I1*I2)"),
-    .INIT(9'h0d8)
+    .EQN("(~I0*~I1*~I2)+(~I0*~I1*I2)+(~I0*I1*I2)"),
+    .INIT(9'h0a2)
   ) F_LUT3_O (
     .I0(_2_),
-    .I1(_1_),
-    .I2(_3_),
+    .I1(_3_),
+    .I2(_1_),
     .O(_0_)
   );
 endmodule

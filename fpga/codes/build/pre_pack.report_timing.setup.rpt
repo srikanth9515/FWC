@@ -15,12 +15,12 @@ input external delay                                                        0.00
 Y.inpad[0] (.input)                                                         0.000     0.000
 $iopadmap$helloworldfpga.Y.I_PAD_$inp[0] (BIDIR_CELL)                       0.000     0.000
 $iopadmap$helloworldfpga.Y.I_DAT[0] (BIDIR_CELL)                           10.958    10.958
-F_LUT3_O.t_frag.XA2[0] (T_FRAG)                                             0.000    10.958
-F_LUT3_O.t_frag.XZ[0] (T_FRAG)                                              1.605    12.564
-$iopadmap$helloworldfpga.F.O_DAT[0] (BIDIR_CELL)                            0.000    12.564
-$iopadmap$helloworldfpga.F.O_PAD_$out[0] (BIDIR_CELL)                       9.809    22.373
-out:F.outpad[0] (.output)                                                   0.000    22.373
-data arrival time                                                                    22.373
+F_LUT3_O.t_frag.XB1[0] (T_FRAG)                                             0.000    10.958
+F_LUT3_O.t_frag.XZ[0] (T_FRAG)                                              1.581    12.539
+$iopadmap$helloworldfpga.F.O_DAT[0] (BIDIR_CELL)                            0.000    12.539
+$iopadmap$helloworldfpga.F.O_PAD_$out[0] (BIDIR_CELL)                       9.809    22.348
+out:F.outpad[0] (.output)                                                   0.000    22.348
+data arrival time                                                                    22.348
 
 clock virtual_io_clock (rise edge)                                          0.000     0.000
 clock source latency                                                        0.000     0.000
@@ -29,9 +29,9 @@ output external delay                                                       0.00
 data required time                                                                    0.000
 -------------------------------------------------------------------------------------------
 data required time                                                                    0.000
-data arrival time                                                                   -22.373
+data arrival time                                                                   -22.348
 -------------------------------------------------------------------------------------------
-slack (VIOLATED)                                                                    -22.373
+slack (VIOLATED)                                                                    -22.348
 
 
 #End of timing report

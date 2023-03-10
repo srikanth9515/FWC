@@ -57,7 +57,7 @@ module helloworldfpga(X, Y, Z, F);
     .OSEL(1'h1),
     .WPD(1'h0)
   ) _2_ (
-    .I_DAT(\F_LUT3_O.XSL ),
+    .I_DAT(\F_LUT3_O.XAB ),
     .I_EN(1'h1),
     .\I_PAD_$inp (X),
     .O_DAT(),
@@ -73,7 +73,7 @@ module helloworldfpga(X, Y, Z, F);
     .OSEL(1'h1),
     .WPD(1'h0)
   ) _3_ (
-    .I_DAT(\F_LUT3_O.XA2 ),
+    .I_DAT(\F_LUT3_O.XA1 ),
     .I_EN(1'h1),
     .\I_PAD_$inp (Y),
     .O_DAT(),
@@ -89,7 +89,7 @@ module helloworldfpga(X, Y, Z, F);
     .OSEL(1'h1),
     .WPD(1'h0)
   ) _4_ (
-    .I_DAT(\F_LUT3_O.XAB ),
+    .I_DAT(\F_LUT3_O.XSL ),
     .I_EN(1'h1),
     .\I_PAD_$inp (Z),
     .O_DAT(),
@@ -101,23 +101,23 @@ module helloworldfpga(X, Y, Z, F);
   T_FRAG #(
     .XAS1(1'h0),
     .XAS2(1'h0),
-    .XBS1(1'h1),
-    .XBS2(1'h1)
+    .XBS1(1'h0),
+    .XBS2(1'h0)
   ) \F_LUT3_O.t_frag  (
     .TBS(1'h1),
-    .XA1(1'h0),
-    .XA2(\F_LUT3_O.XA2 ),
+    .XA1(\F_LUT3_O.XA1 ),
+    .XA2(1'h0),
     .XAB(\F_LUT3_O.XAB ),
-    .XB1(\F_LUT3_O.XA2 ),
-    .XB2(1'h0),
+    .XB1(\F_LUT3_O.XA1 ),
+    .XB2(\F_LUT3_O.XA1 ),
     .XSL(\F_LUT3_O.XSL ),
     .XZ(_0_)
   );
-  assign \F_LUT3_O.XB2  = 1'h0;
-  assign \F_LUT3_O.XA1  = 1'h0;
+  assign \F_LUT3_O.XB2  = \F_LUT3_O.XA1 ;
   assign \F_LUT3_O.I2  = 1'h0;
   assign \F_LUT3_O.I1  = 1'h0;
   assign \F_LUT3_O.I0  = 1'h0;
   assign \F_LUT3_O.O  = 1'h0;
-  assign \F_LUT3_O.XB1  = \F_LUT3_O.XA2 ;
+  assign \F_LUT3_O.XA2  = 1'h0;
+  assign \F_LUT3_O.XB1  = \F_LUT3_O.XA1 ;
 endmodule

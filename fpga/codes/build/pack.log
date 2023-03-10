@@ -18,11 +18,11 @@ Architecture file: /data/data/com.termux/files/home/symbiflow/quicklogic-arch-de
 Circuit name: helloworldfpga
 
 # Loading Architecture Description
-# Loading Architecture Description took 0.93 seconds (max_rss 27.8 MiB, delta_rss +24.0 MiB)
+# Loading Architecture Description took 0.96 seconds (max_rss 27.4 MiB, delta_rss +23.2 MiB)
 # Building complex block graph
-# Building complex block graph took 0.26 seconds (max_rss 34.6 MiB, delta_rss +6.8 MiB)
+# Building complex block graph took 0.26 seconds (max_rss 34.3 MiB, delta_rss +6.8 MiB)
 # Load circuit
-# Load circuit took 0.00 seconds (max_rss 34.6 MiB, delta_rss +0.0 MiB)
+# Load circuit took 0.00 seconds (max_rss 34.3 MiB, delta_rss +0.0 MiB)
 # Clean circuit
 Absorbed 7 LUT buffers
 Inferred    3 additional primitive pins as constant generators since they have no combinationally connected inputs
@@ -36,11 +36,11 @@ Swept output(s)     : 0 (0 dangling, 0 constant)
 Swept net(s)        : 1
 Swept block(s)      : 1
 Constant Pins Marked: 3
-# Clean circuit took 0.00 seconds (max_rss 34.6 MiB, delta_rss +0.0 MiB)
+# Clean circuit took 0.00 seconds (max_rss 34.3 MiB, delta_rss +0.0 MiB)
 # Compress circuit
-# Compress circuit took 0.00 seconds (max_rss 34.6 MiB, delta_rss +0.0 MiB)
+# Compress circuit took 0.00 seconds (max_rss 34.3 MiB, delta_rss +0.0 MiB)
 # Verify circuit
-# Verify circuit took 0.00 seconds (max_rss 34.6 MiB, delta_rss +0.0 MiB)
+# Verify circuit took 0.00 seconds (max_rss 34.3 MiB, delta_rss +0.0 MiB)
 Circuit Statistics:
   Blocks: 11
     .input    :       3
@@ -51,14 +51,14 @@ Circuit Statistics:
     VCC       :       1
   Nets  : 10
     Avg Fanout:     2.0
-    Max Fanout:     6.0
+    Max Fanout:     5.0
     Min Fanout:     1.0
   Netlist Clocks: 0
 # Build Timing Graph
   Timing Graph Nodes: 30
   Timing Graph Edges: 35
   Timing Graph Levels: 8
-# Build Timing Graph took 0.00 seconds (max_rss 34.6 MiB, delta_rss +0.0 MiB)
+# Build Timing Graph took 0.00 seconds (max_rss 34.3 MiB, delta_rss +0.0 MiB)
 Netlist contains 0 clocks
 # Load Timing Constraints
 
@@ -69,7 +69,7 @@ Setting default timing constraints:
 Timing constraints created 1 clocks
   Constrained Clock 'virtual_io_clock' (Virtual Clock)
 
-# Load Timing Constraints took 0.00 seconds (max_rss 34.6 MiB, delta_rss +0.0 MiB)
+# Load Timing Constraints took 0.00 seconds (max_rss 34.3 MiB, delta_rss +0.0 MiB)
 Timing analysis: ON
 Circuit netlist file: helloworldfpga.net
 Circuit placement file: helloworldfpga.place
@@ -124,8 +124,8 @@ Not enough resources expand FPGA size to (39 x 35)
 Complex block 0: 'F_LUT3_O.t_frag' (PB-LOGIC) .
 Complex block 1: '$iopadmap$helloworldfpga.F' (PB-BIDIR) .
 Complex block 2: 'Y' (PB-BIDIR) .
-Complex block 3: 'X' (PB-BIDIR) .
-Complex block 4: 'Z' (PB-BIDIR) .
+Complex block 3: 'Z' (PB-BIDIR) .
+Complex block 4: 'X' (PB-BIDIR) .
 Complex block 5: '$false' (PB-SYN_GND) .
 Complex block 6: '$true' (PB-SYN_VCC) .
 	EMPTY: # blocks: 0, average # input + clock pins used: 0, average # output pins used: 0
@@ -140,11 +140,11 @@ Complex block 6: '$true' (PB-SYN_VCC) .
 	PB-SYN_GND: # blocks: 1, average # input + clock pins used: 0, average # output pins used: 1
 	PB-ASSP: # blocks: 0, average # input + clock pins used: 0, average # output pins used: 0
 Absorbed logical nets 4 out of 10 nets, 6 nets not absorbed.
-Incr Slack updates 1 in 1.05e-05 sec
-Full Max Req/Worst Slack updates 1 in 5e-06 sec
+Incr Slack updates 1 in 7.5e-06 sec
+Full Max Req/Worst Slack updates 1 in 5.269e-06 sec
 Incr Max Req/Worst Slack updates 0 in 0 sec
 Incr Criticality updates 0 in 0 sec
-Full Criticality updates 1 in 5.154e-06 sec
+Full Criticality updates 1 in 4.962e-06 sec
 FPGA sized to 39 x 35 (ql-eos-s3)
 Device Utilization: 0.01 (target 1.00)
 	Block Utilization: 0.00 Type: PB-LOGIC
@@ -155,13 +155,13 @@ Device Utilization: 0.01 (target 1.00)
 
 Netlist conversion complete.
 
-# Packing took 0.07 seconds (max_rss 34.6 MiB, delta_rss +0.0 MiB)
+# Packing took 0.08 seconds (max_rss 34.7 MiB, delta_rss +0.4 MiB)
 # Load Packing
 Begin loading packed FPGA netlist file.
 Netlist generated from file 'helloworldfpga.net'.
 Detected 2 constant generators (to see names run with higher pack verbosity)
-Finished loading packed FPGA netlist file (took 0.013027 seconds).
-# Load Packing took 0.02 seconds (max_rss 34.9 MiB, delta_rss +0.4 MiB)
+Finished loading packed FPGA netlist file (took 0.013114 seconds).
+# Load Packing took 0.02 seconds (max_rss 34.8 MiB, delta_rss +0.1 MiB)
 Warning 7: Netlist contains 0 global net to non-global architecture pin connections
 Warning 8: Logic block #5 ($false) has only 1 output pin '$false.GND0_GND[0]'. It may be a constant generator.
 Warning 9: Logic block #6 ($true) has only 1 output pin '$true.VCC0_VCC[0]'. It may be a constant generator.
@@ -271,16 +271,16 @@ Device Utilization: 0.01 (target 1.00)
 	Physical Tile TL-SYN_GND:
 	Block Utilization: 1.00 Logical Block: PB-SYN_GND
 
-## Build Device Grid took 0.02 seconds (max_rss 35.1 MiB, delta_rss +0.0 MiB)
+## Build Device Grid took 0.02 seconds (max_rss 34.9 MiB, delta_rss +0.0 MiB)
 ## Loading routing resource graph
 
 
-## Loading routing resource graph took 1.36 seconds (max_rss 342.6 MiB, delta_rss +307.5 MiB)
+## Loading routing resource graph took 1.81 seconds (max_rss 342.6 MiB, delta_rss +307.7 MiB)
   RR Graph Nodes: 1396446
   RR Graph Edges: 2337988
-# Create Device took 4.31 seconds (max_rss 390.3 MiB, delta_rss +355.2 MiB)
+# Create Device took 4.58 seconds (max_rss 390.3 MiB, delta_rss +355.4 MiB)
 
 
-Flow timing analysis took 7.9731e-05 seconds (5.3769e-05 STA, 2.5962e-05 slack) (1 full updates: 1 setup, 0 hold, 0 combined).
+Flow timing analysis took 7.8116e-05 seconds (5.45e-05 STA, 2.3616e-05 slack) (1 full updates: 1 setup, 0 hold, 0 combined).
 VPR succeeded
-The entire flow of VPR took 5.67 seconds (max_rss 390.3 MiB)
+The entire flow of VPR took 5.98 seconds (max_rss 390.3 MiB)

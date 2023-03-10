@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
-<block name="helloworldfpga.net" instance="FPGA_packed_netlist[0]" architecture_id="SHA256:ff45ae019adfd8ddc9651aa485da7d1cc80afac7f587a182516f1773344b8923" atom_netlist_id="SHA256:790122273bc5724d8be475b002e921cfeb2460f28c5ade8d391554c11e2c529d">
+<block name="helloworldfpga.net" instance="FPGA_packed_netlist[0]" architecture_id="SHA256:ff45ae019adfd8ddc9651aa485da7d1cc80afac7f587a182516f1773344b8923" atom_netlist_id="SHA256:f54eada6dd934281136ae662dbff75b2574dc7d371190435e8162dbf98fd887e">
 	<inputs>X Y Z</inputs>
 	<outputs>out:F</outputs>
 	<clocks></clocks>
 	<block name="F_LUT3_O.t_frag" instance="PB-LOGIC[0]" mode="default">
 		<inputs>
 			<port name="FAKE_CONST">open</port>
-			<port name="LOGIC0_BA1">$false</port>
-			<port name="LOGIC0_BA2">F_LUT3_O.XB1</port>
+			<port name="LOGIC0_BA1">F_LUT3_O.XB2</port>
+			<port name="LOGIC0_BA2">$false</port>
 			<port name="LOGIC0_BAB">F_LUT3_O.XAB</port>
-			<port name="LOGIC0_BB1">F_LUT3_O.XB1</port>
-			<port name="LOGIC0_BB2">$false</port>
+			<port name="LOGIC0_BB1">F_LUT3_O.XB2</port>
+			<port name="LOGIC0_BB2">F_LUT3_O.XB2</port>
 			<port name="LOGIC0_BSL">F_LUT3_O.XSL</port>
 			<port name="LOGIC0_F1">open</port>
 			<port name="LOGIC0_F2">open</port>
@@ -151,8 +151,8 @@
 								<attribute name="module_not_derived">00000000000000000000000000000001</attribute>
 							</attributes>
 							<parameters>
-								<parameter name="XBS2">1</parameter>
-								<parameter name="XBS1">1</parameter>
+								<parameter name="XBS2">0</parameter>
+								<parameter name="XBS1">0</parameter>
 								<parameter name="XAS2">0</parameter>
 								<parameter name="XAS1">0</parameter>
 							</parameters>
@@ -333,7 +333,7 @@
 						<port name="O_EN">INPUT.IE[0]-&gt;bidir-O_EN</port>
 					</inputs>
 					<outputs>
-						<port name="I_DAT">F_LUT3_O.XB1</port>
+						<port name="I_DAT">F_LUT3_O.XB2</port>
 						<port name="O_PAD_$out">open</port>
 					</outputs>
 					<clocks />
@@ -350,93 +350,7 @@
 			</block>
 		</block>
 	</block>
-	<block name="X" instance="PB-BIDIR[3]" mode="default">
-		<inputs>
-			<port name="BIDIR0_IE">$false</port>
-			<port name="BIDIR0_INEN">$true</port>
-			<port name="BIDIR0_IQC">open</port>
-			<port name="BIDIR0_IQE">open</port>
-			<port name="BIDIR0_IQIN">open</port>
-			<port name="BIDIR0_IQR">open</port>
-			<port name="BIDIR0_OQE">open</port>
-			<port name="BIDIR0_OQI">open</port>
-		</inputs>
-		<outputs>
-			<port name="BIDIR0_IQZ">open</port>
-			<port name="BIDIR0_IZ">BIDIR[0].IZ[0]-&gt;BIDIR[0].IZ_to_PB-BIDIR.BIDIR0_IZ</port>
-		</outputs>
-		<clocks />
-		<block name="X" instance="BIDIR[0]" mode="INPUT">
-			<inputs>
-				<port name="IE">PB-BIDIR.BIDIR0_IE[0]-&gt;PB-BIDIR.BIDIR0_IE_to_BIDIR[0].IE</port>
-				<port name="INEN">PB-BIDIR.BIDIR0_INEN[0]-&gt;PB-BIDIR.BIDIR0_INEN_to_BIDIR[0].INEN</port>
-				<port name="IQE">open</port>
-				<port name="IQIN">open</port>
-				<port name="IQR">open</port>
-				<port name="OQE">open</port>
-				<port name="OQI">open</port>
-			</inputs>
-			<outputs>
-				<port name="IQZ">open</port>
-				<port name="IZ">INPUT[0].IZ[0]-&gt;BIDIR-IZ</port>
-			</outputs>
-			<clocks>
-				<port name="IQC">open</port>
-			</clocks>
-			<block name="X" instance="INPUT[0]" mode="default">
-				<inputs>
-					<port name="IE">BIDIR.IE[0]-&gt;INPUT-IE</port>
-					<port name="INEN">BIDIR.INEN[0]-&gt;INPUT-INEN</port>
-					<port name="IQE">open</port>
-					<port name="IQIN">open</port>
-					<port name="IQR">open</port>
-					<port name="OQE">open</port>
-					<port name="OQI">open</port>
-				</inputs>
-				<outputs>
-					<port name="IQZ">open</port>
-					<port name="IZ">bidir[0].I_DAT[0]-&gt;INPUT-IZ</port>
-				</outputs>
-				<clocks>
-					<port name="IQC">open</port>
-				</clocks>
-				<block name="$iopadmap$helloworldfpga.X" instance="bidir[0]">
-					<attributes>
-						<attribute name="src">"/data/data/com.termux/files/home/symbiflow/quicklogic-arch-defs/share/techmaps/quicklogic/pp3/techmap/cells_map.v:43.9-50.8"</attribute>
-						<attribute name="module_not_derived">00000000000000000000000000000001</attribute>
-					</attributes>
-					<parameters>
-						<parameter name="OSEL">1</parameter>
-						<parameter name="WPD">0</parameter>
-						<parameter name="FIXHOLD">0</parameter>
-						<parameter name="ESEL">1</parameter>
-						<parameter name="DS">0</parameter>
-					</parameters>
-					<inputs>
-						<port name="I_EN">INPUT.INEN[0]-&gt;bidir-I_EN</port>
-						<port name="I_PAD_$inp">inpad[0].inpad[0]-&gt;bidir-I_PAD_$inp</port>
-						<port name="O_DAT">open</port>
-						<port name="O_EN">INPUT.IE[0]-&gt;bidir-O_EN</port>
-					</inputs>
-					<outputs>
-						<port name="I_DAT">F_LUT3_O.XSL</port>
-						<port name="O_PAD_$out">open</port>
-					</outputs>
-					<clocks />
-				</block>
-				<block name="X" instance="inpad[0]">
-					<attributes />
-					<parameters />
-					<inputs />
-					<outputs>
-						<port name="inpad">X</port>
-					</outputs>
-					<clocks />
-				</block>
-			</block>
-		</block>
-	</block>
-	<block name="Z" instance="PB-BIDIR[4]" mode="default">
+	<block name="Z" instance="PB-BIDIR[3]" mode="default">
 		<inputs>
 			<port name="BIDIR0_IE">$false</port>
 			<port name="BIDIR0_INEN">$true</port>
@@ -505,7 +419,7 @@
 						<port name="O_EN">INPUT.IE[0]-&gt;bidir-O_EN</port>
 					</inputs>
 					<outputs>
-						<port name="I_DAT">F_LUT3_O.XAB</port>
+						<port name="I_DAT">F_LUT3_O.XSL</port>
 						<port name="O_PAD_$out">open</port>
 					</outputs>
 					<clocks />
@@ -516,6 +430,92 @@
 					<inputs />
 					<outputs>
 						<port name="inpad">Z</port>
+					</outputs>
+					<clocks />
+				</block>
+			</block>
+		</block>
+	</block>
+	<block name="X" instance="PB-BIDIR[4]" mode="default">
+		<inputs>
+			<port name="BIDIR0_IE">$false</port>
+			<port name="BIDIR0_INEN">$true</port>
+			<port name="BIDIR0_IQC">open</port>
+			<port name="BIDIR0_IQE">open</port>
+			<port name="BIDIR0_IQIN">open</port>
+			<port name="BIDIR0_IQR">open</port>
+			<port name="BIDIR0_OQE">open</port>
+			<port name="BIDIR0_OQI">open</port>
+		</inputs>
+		<outputs>
+			<port name="BIDIR0_IQZ">open</port>
+			<port name="BIDIR0_IZ">BIDIR[0].IZ[0]-&gt;BIDIR[0].IZ_to_PB-BIDIR.BIDIR0_IZ</port>
+		</outputs>
+		<clocks />
+		<block name="X" instance="BIDIR[0]" mode="INPUT">
+			<inputs>
+				<port name="IE">PB-BIDIR.BIDIR0_IE[0]-&gt;PB-BIDIR.BIDIR0_IE_to_BIDIR[0].IE</port>
+				<port name="INEN">PB-BIDIR.BIDIR0_INEN[0]-&gt;PB-BIDIR.BIDIR0_INEN_to_BIDIR[0].INEN</port>
+				<port name="IQE">open</port>
+				<port name="IQIN">open</port>
+				<port name="IQR">open</port>
+				<port name="OQE">open</port>
+				<port name="OQI">open</port>
+			</inputs>
+			<outputs>
+				<port name="IQZ">open</port>
+				<port name="IZ">INPUT[0].IZ[0]-&gt;BIDIR-IZ</port>
+			</outputs>
+			<clocks>
+				<port name="IQC">open</port>
+			</clocks>
+			<block name="X" instance="INPUT[0]" mode="default">
+				<inputs>
+					<port name="IE">BIDIR.IE[0]-&gt;INPUT-IE</port>
+					<port name="INEN">BIDIR.INEN[0]-&gt;INPUT-INEN</port>
+					<port name="IQE">open</port>
+					<port name="IQIN">open</port>
+					<port name="IQR">open</port>
+					<port name="OQE">open</port>
+					<port name="OQI">open</port>
+				</inputs>
+				<outputs>
+					<port name="IQZ">open</port>
+					<port name="IZ">bidir[0].I_DAT[0]-&gt;INPUT-IZ</port>
+				</outputs>
+				<clocks>
+					<port name="IQC">open</port>
+				</clocks>
+				<block name="$iopadmap$helloworldfpga.X" instance="bidir[0]">
+					<attributes>
+						<attribute name="src">"/data/data/com.termux/files/home/symbiflow/quicklogic-arch-defs/share/techmaps/quicklogic/pp3/techmap/cells_map.v:43.9-50.8"</attribute>
+						<attribute name="module_not_derived">00000000000000000000000000000001</attribute>
+					</attributes>
+					<parameters>
+						<parameter name="OSEL">1</parameter>
+						<parameter name="WPD">0</parameter>
+						<parameter name="FIXHOLD">0</parameter>
+						<parameter name="ESEL">1</parameter>
+						<parameter name="DS">0</parameter>
+					</parameters>
+					<inputs>
+						<port name="I_EN">INPUT.INEN[0]-&gt;bidir-I_EN</port>
+						<port name="I_PAD_$inp">inpad[0].inpad[0]-&gt;bidir-I_PAD_$inp</port>
+						<port name="O_DAT">open</port>
+						<port name="O_EN">INPUT.IE[0]-&gt;bidir-O_EN</port>
+					</inputs>
+					<outputs>
+						<port name="I_DAT">F_LUT3_O.XAB</port>
+						<port name="O_PAD_$out">open</port>
+					</outputs>
+					<clocks />
+				</block>
+				<block name="X" instance="inpad[0]">
+					<attributes />
+					<parameters />
+					<inputs />
+					<outputs>
+						<port name="inpad">X</port>
 					</outputs>
 					<clocks />
 				</block>
