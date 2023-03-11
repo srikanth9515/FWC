@@ -1,0 +1,214 @@
+\def\mytitle{IMPLEMENTATION OF BOOLEAN LOGIC IN FPGA}
+\def\myauthor{S .SRIKANTH REDDY}
+\def\contact{ssrikanthreddy03@gmail.com}
+\def\mymodule{Future Wireless Communication (FWC)}
+\documentclass[10pt, a4paper]{article}
+\usepackage[a4paper,outer=1.5cm,inner=1.5cm,top=1.75cm,bottom=1.5cm]{geometry}
+\twocolumn
+\usepackage{circuitikz}
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+%colour our links, remove weird boxes
+\usepackage[colorlinks,linkcolor={black},citecolor={blue!80!black},urlcolor={blue!80!black}]{hyperref}
+%Stop indentation on new paragraphs
+\usepackage[parfill]{parskip}
+%% Arial-like font
+\usepackage{lmodern}
+\renewcommand*\familydefault{\sfdefault}
+%Napier logo top right
+\usepackage{watermark}
+%Lorem Ipusm dolor please don't leave any in you final report ;)
+\usepackage{karnaugh-map} 
+\usepackage{tabularx}
+\usepackage{lipsum}
+\usepackage{xcolor}
+\usepackage{listings}
+%give us the Capital H that we all know and love
+\usepackage{float}
+%tone down the line spacing after section titles
+\usepackage{titlesec}
+%Cool maths printing
+\usepackage{amsmath}
+%PseudoCode
+\usepackage{algorithm2e}
+\usepackage{circuitikz}
+\usetikzlibrary{calc}
+
+\titlespacing{\subsection}{0pt}{\parskip}{-3pt}
+\titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
+\titlespacing{\paragraph}{0pt}{\parskip}{\parskip}
+\newcommand{\figuremacro}[5]{
+    \begin{figure}[#1]
+        \centering
+        \includegraphics[width=#5\columnwidth]{#2}
+        \caption[#3]{\textbf{#3}#4}
+        \label{fig:#2}
+    \end{figure}
+}
+
+\lstset{
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+
+
+
+\thiswatermark{\centering \put(181,-119.0){\includegraphics[scale=0.13]{iith_logo3}} }
+\title{\mytitle}
+\author{\myauthor\hspace{1em}\\\contact\\FWC220107\hspace{6.5em}IITH\hspace{0.5em}\mymodule\hspace{6em}ASSIGNMENT}
+   \begin{document}
+ \maketitle
+ \begin{abstract}
+     %Replace the lipsum command with actual text 
+  Q(19)2016 GATE: In the Digital Circuit given below,F is. 
+ \end{abstract}
+	  	
+\begin{tikzpicture}
+ 
+
+ 
+% Logic ports
+\node[nand port] (a) at (2,1){};
+\node[nand port] (b) at (2,4){};
+\node[nand port] (c) at (4,0){};
+\node[nand port] (d) at (6,3){};
+
+ 
+% Connection
+
+ 
+\draw (a.in 2) -| (b.in 2);
+\draw (b.out) -| (d.in 1);
+ 
+\draw (a.out) -|  (c.in 1);
+\draw (c.out) -| (d.in 2);
+\draw (d.out) -- ++(1,0) node[near end,above]{F};
+ 
+\draw (b.in 1) -- ++(-1.5,0)node[left](In1){X};
+\draw (b.in 2) -- ++(-1.5,0)node[left](In3){Y};
+\draw (c.in 2) -- ++(-1.5,0)node[left](In3){Z};
+% Jump crossing element
+1
+\end{tikzpicture}
+\begin{center}
+Fig. 1
+\end{center}
+
+	\section{Components}
+  \begin{tabularx}{0.4\textwidth} { 
+  | >{\centering\arraybackslash}X 
+  | >{\centering\arraybackslash}X 
+  | >{\centering\arraybackslash}X | }
+\hline
+ \textbf{Components}& \textbf{Values} & \textbf{Quantity}\\
+\hline
+Vaman &  & 1 \\  
+\hline
+JumperWires& M-F & 5 \\ 
+\hline
+Breadboard &  & 1 \\
+\hline
+USB-C cable&  & 1 \\
+\hline
+\end{tabularx}
+   
+\section{Setup}
+\begin{enumerate}
+\item Connect the Vaman to the Laptop through USB.
+\item There is a button and an LED to the left of the USB port on the Vaman.There is another button to the right of the LED.
+\item Press the right button first and immediately press the left button.The LED will be blinking green.The Vaman is now in bootloader mode.
+\end{enumerate}
+\subsection{Steps for implementation}
+\begin{enumerate}
+\item Login to termux-ubuntu on the android device and execute the following commands:\\
+Make sure that the required installation and tool builds of pygmy-sdk had done prior executing below commands
+\begin{lstlisting}
+proot-distro login debian
+cd  /data/data/com.termux/files/home/
+mkdir fpga
+svn co https://github.com/velicharlagokulkumar/FWC_module1/trunk/fpga/codes
+cd codes
+ql_symbiflow -compile -src /data/data/com.termux/files/home/fpga/codes -d ql-eos-s3 -P PU64 -v helloworldfpga.v -t helloworldfpga -p quickfeather.pcf -dump binary
+\end{lstlisting}
+This will generate \textbf{helloworldfpga.bin} file in codes directory transfer this bin file to laptop by executing the following command
+\begin{lstlisting}
+scp /data/data/com.termux/files/home/fpga/codes/helloworldfpga.bin username_of_pc@IP_address:/home/username
+\end{lstlisting}
+Make sure that the appropriate username,IP address of the Laptop is given in the above command.
+\item Now execute the following commands on the Laptop terminal\\
+Make sure that required installation of programmer application had done prior executing below command
+\begin{lstlisting}
+python3 /home/username/TinyFPGA-Programmer-Application/tinyfpga-programmer-gui.py --port /dev/ttyACM0 --appfpga /home/username/helloworldfpga.bin --mode fpga
+\end{lstlisting}
+\item After finishing the process of flashing with the programmer application press the button to the right of the USB port to reset. Vaman is now flashed with our source code
+\end{enumerate}
+\section{Implementation}
+   	\paragraph{}
+The truth table  for Fig. 1 is available in Table-1
+Using Boolean logic, output F in Table 1 can be expressed in terms of the inputs X, Y, Z as F=(XY+!YZ).................(2.1)
+\paragraph{Karnugh Map :}
+The expression in (2.1) can be minimized using the K-map in Fig 2. In Fig.2 ,the implicants in boxes 0,1,2,3 result in X'
+The implicants in boxes 2,3,6,7 result in Y
+Thus, after minimization using Fig. 2, (2.1) can
+be expressed as
+F=XY+!YZ........(2.2).
+Verify the truth table for F in TABLE 1.    
+\\section{karnaugh map}
+Using the boolean logic output F can be expressed in terms of the inputs X,Y,Z with the help of the following Kmap.
+\\
+\\
+\\
+     \begin{karnaugh-map}[4][2][1][$YZ$][$X$]
+        \minterms{2,6,7}
+        \maxterms{2,6}
+        \maxterms{0,1,3,4,5}
+        \implicant{2}{6}
+        \implicant{7}{6}
+    \end{karnaugh-map}
+	 
+\begin{center}
+    \begin{tabular}{|l|c|c|c|c|c|c|c|c|} \hline 
+  \textbf{X}& \textbf{Y} & \textbf{Z} &\textbf{F(XY+!YZ)} \\
+ \hline
+ 0&0&0&0\\ \hline
+0&0&1&0 \\ \hline
+0&1&0&1\\ \hline
+0&1&1&0  \\ \hline
+1&0&0&0\\ \hline
+1&0&1&0\\ \hline
+1&1&0&1\\ \hline
+1&1&1&1\\ \hline
+\end{tabular}   
+\end{center}
+%\caption{\label{•}abel{table:dummytable} }
+%\end{table}
+%\begin{center}
+Fig. 2
+%\end{center}
+2,4,6 GPIO Pins of J3 Bank in Vaman Board are configured as input pins and the required Logic for X,Y,Z are drawn from 5V (Digital '1'),GND (Digital '0'). Built in led will glow based on F satisfying the Table-1\\
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Input variables}&\textbf{IO PIN}&\textbf{QFN}\\
+\hline
+X & IO2&6\\  
+\hline
+Y & IO4 &3\\ 
+\hline
+Z & IO6 &62\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Output variable}&\textbf{IO PIN}&\textbf{QFN}\\
+\hline
+F & IO18 &38\\  
+\hline
+\end{tabular}
+\end{center}
+\begin{center}
+\fbox{\parbox{8.5cm}{\url{https://github.com/srikanth9515/FWC/tree/main/fpga/codes}}}
+\end{center}
+\end{document}
