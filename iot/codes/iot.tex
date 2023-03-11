@@ -1,0 +1,306 @@
+\def\mytitle{IMPLEMENTATION OF BOOLEAN LOGIC IN VAMAN ESP}
+\def\myauthor{S.SRIKANTH REDDY}
+\def\contact{ssrikanthreddy03@gmail.com}
+\def\mymodule{Future Wireless Communication (FWC)}
+\documentclass[10pt, a4paper]{article}
+\usepackage[a4paper,outer=1.5cm,inner=1.5cm,top=1.75cm,bottom=1.5cm]{geometry}
+\twocolumn
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+\usepackage[colorlinks,linkcolor={black},citecolor={blue!80!black},urlcolor={blue!80!black}]{hyperref}
+\usepackage[parfill]{parskip}
+\usepackage{lmodern}
+\usepackage{tikz}
+%\documentclass[tikz, border=2mm]{standalone}
+\usepackage{karnaugh-map}
+%\documentclass{article}
+\usepackage{tabularx}
+\usepackage{circuitikz}
+\usetikzlibrary{calc}
+\usepackage{enumitem}
+
+\renewcommand*\familydefault{\sfdefault}
+\usepackage{watermark}
+\usepackage{lipsum}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{titlesec}
+       \usepackage[latin1]{inputenc}
+       \usepackage{color}
+       \usepackage{array}
+       \usepackage{longtable}
+       \usepackage{calc}
+       \usepackage{multirow}
+       \usepackage{hhline}
+       \usepackage{ifthen}
+
+\titlespacing{\subsection}{1pt}{\parskip}{3pt}
+\titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
+\titlespacing{\paragraph}{0pt}{\parskip}{\parskip}
+\newcommand{\figuremacro}[5]{
+    \begin{figure}[#1]
+        \centering
+        \includegraphics[width=#5\columnwidth]{#2}
+        \caption[#3]{\textbf{#3}#4}
+        \label{fig:#2}
+    \end{figure}
+}
+
+\lstset{
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+
+\def\ifundefined#1{\expandafter\ifx\csname#1\endcsname\relax}
+\ifundefined{inputGnumericTable}
+\def\gnumericTableEnd{\end{document}}
+\else
+   \def\gnumericTableEnd{}
+\fi
+\providecommand{\gnumericmathit}[1]{#1} 
+\providecommand{\gnumericPB}[1]%
+{\let\gnumericTemp=\\#1\let\\=\gnumericTemp\hspace{0pt}}
+ \ifundefined{gnumericTableWidthDefined}
+        \newlength{\gnumericTableWidth}
+        \newlength{\gnumericTableWidthComplete}
+        \newlength{\gnumericMultiRowLength}
+        \global\def\gnumericTableWidthDefined{}
+ \fi
+ \ifthenelse{\isundefined{\languageshorthands}}{}{\languageshorthands{english}}
+\providecommand\gnumbox{\makebox[0pt]}
+\setlength{\bigstrutjot}{\jot}
+\setlength{\extrarowheight}{\doublerulesep}
+\setlongtables
+
+\setlength\gnumericTableWidth{%
+	98pt+%
+	118pt+%
+0pt}
+\def\gumericNumCols{2}
+\setlength\gnumericTableWidthComplete{\gnumericTableWidth+%
+         \tabcolsep*\gumericNumCols*2+\arrayrulewidth*\gumericNumCols}
+\ifthenelse{\lengthtest{\gnumericTableWidthComplete > \linewidth}}%
+         {\def\gnumericScale{1*\ratio{\linewidth-%
+                        \tabcolsep*\gumericNumCols*2-%
+                        \arrayrulewidth*\gumericNumCols}%
+{\gnumericTableWidth}}}%
+{\def\gnumericScale{1}}
+
+\ifthenelse{\isundefined{\gnumericColA}}{\newlength{\gnumericColA}}{}\settowidth{\gnumericColA}{\begin{tabular}{@{}p{98pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColB}}{\newlength{\gnumericColB}}{}\settowidth{\gnumericColB}{\begin{tabular}{@{}p{118pt*\gnumericScale}@{}}x\end{tabular}}
+
+\thiswatermark{\centering \put(181,-119.0){\includegraphics[scale=0.13]{iith_logo3}} }
+\title{\mytitle}
+\author{\myauthor\hspace{1em}\\\contact\\FWC220107\hspace{6.5em}IITH\hspace{0.5em}\mymodule\hspace{6em}ASSIGNMENT}
+\begin{document}
+	\maketitle
+	\tableofcontents
+	 \begin{abstract}
+     %Replace the lipsum command with actual text 
+  Q(19)2016 GATE: In the Digital Circuit given below,F is. 
+ \end{abstract}
+	  	
+\begin{tikzpicture}
+ 
+
+ 
+% Logic ports
+\node[nand port] (a) at (2,1){};
+\node[nand port] (b) at (2,4){};
+\node[nand port] (c) at (4,0){};
+\node[nand port] (d) at (6,3){};
+
+ 
+% Connection
+
+ 
+\draw (a.in 2) -| (b.in 2);
+\draw (b.out) -| (d.in 1);
+ 
+\draw (a.out) -|  (c.in 1);
+\draw (c.out) -| (d.in 2);
+\draw (d.out) -- ++(1,0) node[near end,above]{F};
+ 
+\draw (b.in 1) -- ++(-1.5,0)node[left](In1){X};
+\draw (b.in 2) -- ++(-1.5,0)node[left](In3){Y};
+\draw (c.in 2) -- ++(-1.5,0)node[left](In3){Z};
+% Jump crossing element
+1
+\end{tikzpicture}
+\begin{center}
+Fig. 1
+\end{center}
+
+	\section{Components}
+  \begin{tabularx}{0.48\textwidth} { 
+  | >{\centering\arraybackslash}X 
+  | >{\centering\arraybackslash}X 
+  | >{\centering\arraybackslash}X | }
+\hline
+ \textbf{Components}& \textbf{Values} & \textbf{Quantity}\\
+\hline
+Vaman Board&  & 1 \\  
+\hline
+JumperWires& M-F& 5 \\ 
+\hline
+Breadboard &  & 1 \\
+\hline
+USB-C Cable &  & 1 \\
+\hline
+USB-UART &  & 1 \\
+\hline
+\end{tabularx}
+   \section{Implementation}
+   	\paragraph{}
+The truth table  for Fig. 1 is available in Table-1
+Using Boolean logic, output F in Table 1 can be expressed in terms of the inputs X, Y, Z as F=(XY+!YZ).........(2.1)
+\begin{center}
+	    \begin{tabular}{|l|c|c|c|c|c|c|c|c|} \hline 
+  \textbf{X}& \textbf{Y} & \textbf{Z} &\textbf{F(XY+!YZ)} \\
+ \hline
+ 0&0&0&0\\ \hline
+0&0&1&0 \\ \hline
+0&1&0&1\\ \hline
+0&1&1&0  \\ \hline
+1&0&0&0\\ \hline
+1&0&1&0\\ \hline
+1&1&0&1\\ \hline
+1&1&1&1\\ \hline
+\end{tabular}   
+ \end{center}
+\begin{center}
+Table-1 
+  \end{center}
+\begin{center}
+          \begin{karnaugh-map}[4][2][1][$YZ$][$X$]
+        \minterms{2,6,7}
+        \maxterms{2,6}
+        \maxterms{0,1,3,4,5}
+        \implicant{2}{6}
+        \implicant{7}{6}
+    \end{karnaugh-map}
+\end{center}
+\begin{center}
+Fig. 2
+\end{center}
+    \paragraph{Karnugh Map :}
+The expression in (2.1) can be minimized using the K-map in Fig 2. In Fig.2 ,the implicants in boxes 0,1,2,3 result in X'
+The implicants in boxes 2,3,6,7 result in Y
+Thus, after minimization using Fig. 2, (2.1) can
+be expressed as
+F=XY+........(2.2).
+The code below realizes the Boolean logic for F in (2.2)  using 5V,GND of Vaman Board.\\
+2,4,6 GPIO Pins of Vaman Board are configured as input pins and the required Logic for X,Y,Z are drawn from 5V (Digital '1'),GND (Digital '0'). Built in led will glow based on F satisfying the Table-1
+\subsection{The steps for implementation:}
+\begin{enumerate}
+\item Connect the USB-UART pins to the Vaman ESP32 pins according to Table 
+
+\begin{tabular}[c]{%
+	b{\gnumericColA}%
+	b{\gnumericColB}%
+	}
+\hhline{|-|-}
+	 \multicolumn{1}{|p{\gnumericColA}|}%
+	{\gnumericPB{\centering}\gnumbox{{\color[rgb]{0.79,0.13,0.12} VAMAN LC PINS}}}
+	&\multicolumn{1}{p{\gnumericColB}|}%
+	{\gnumericPB{\centering}\gnumbox{{\color[rgb]{0.79,0.13,0.12} UART PINS}}}
+\\
+\hhline{|--|}
+	 \multicolumn{1}{|p{\gnumericColA}|}%
+	{\gnumericPB{\centering}\gnumbox{GND}}
+	&\multicolumn{1}{p{\gnumericColB}|}%
+	{\gnumericPB{\centering}\gnumbox{GND}}
+\\
+\hhline{|--|}
+	 \multicolumn{1}{|p{\gnumericColA}|}%
+	{\gnumericPB{\centering}\gnumbox{ENB}}
+	&\multicolumn{1}{p{\gnumericColB}|}%
+	{\gnumericPB{\centering}\gnumbox{ENB}}
+\\
+\hhline{|--|}
+	 \multicolumn{1}{|p{\gnumericColA}|}%
+	{\gnumericPB{\centering}\gnumbox{TXD0}}
+	&\multicolumn{1}{p{\gnumericColB}|}%
+	{\gnumericPB{\centering}\gnumbox{RXD}}
+\\
+\hhline{|--|}
+	 \multicolumn{1}{|p{\gnumericColA}|}%
+	{\gnumericPB{\centering}\gnumbox{RXD0}}
+	&\multicolumn{1}{p{\gnumericColB}|}%
+	{\gnumericPB{\centering}\gnumbox{TXD}}
+\\
+\hhline{|--|}
+	 \multicolumn{1}{|p{\gnumericColA}|}%
+	{\gnumericPB{\centering}\gnumbox{0}}
+	&\multicolumn{1}{p{\gnumericColB}|}%
+	{\gnumericPB{\centering}\gnumbox{IO0}}
+\\
+\hhline{|--|}
+	 \multicolumn{1}{|p{\gnumericColA}|}%
+	{\gnumericPB{\centering}\gnumbox{5V}}
+	&\multicolumn{1}{p{\gnumericColB}|}%
+	{\gnumericPB{\centering}\gnumbox{5V}}
+\\
+\hhline{|-|-|}
+\end{tabular}
+ \item Flash the following setup code through USB-UART using laptop
+\begin{center}
+\fbox{\parbox{8cm}{\url{https://github.com/srikanth9515/FWC/blob/main/iot/codes/src/main.cpp}}}
+\end{center}
+\begin{center}
+\end{center}
+\begin{lstlisting}
+svn co https://github.com/srikanth9515/FWC/tree/main/iot/codes/setup
+cd  setup
+pio run
+pio run -t upload
+\end{lstlisting}
+
+after entering your wifi username and password (in quotes below)
+\begin{lstlisting}
+#define STASSID "..." // Add your network credentials
+#define STAPSK  "..."
+\end{lstlisting}
+in src/main.cpp file
+\item You can notice that vaman will be connnected to the network credentials provided above.Connect your laptop to the same network ,You should be able to find the ip address of your vaman-esp on laptop using 
+\begin{lstlisting}
+ifconfig
+nmap -sn 192.168.6.1/24
+\end{lstlisting}
+where your computer's ip address is the output of ifconfig and given by 192.168.6.x
+\item Login to termux-ubuntu on the android device and execute the following commands:
+\begin{lstlisting}
+proot-distro login debian
+cd  /data/data/com.termux/files/home/
+mkdir iot
+svn co https://github.com/srikanth9515/FWC/tree/main/iot/codes
+cd codes
+\end{lstlisting}
+\item Assuming that the username is srikath9515 and password is srikanth, flash the following code wirelessly
+\begin{center}
+\fbox{\parbox{8cm}{\url{https://github.com/srikanth9515/FWC/blob/main/iot/codes/src/main.cpp}}}
+\end{center}
+through 
+\begin{lstlisting}
+pio run 
+pio run -t nobuild -t upload --upload-port ip_addres_of_esp
+\end{lstlisting}
+where you may replace the above ip address with the ip address of your vaman-esp.
+\end{enumerate}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
