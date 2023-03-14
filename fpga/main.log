@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.12.9)  11 MAR 2023 18:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.12.9)  14 MAR 2023 11:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -992,16 +992,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 151--169
 
  []
 
-<iith_logo3.png, id=23, 1116.17pt x 1045.9075pt>
-File: iith_logo3.png Graphic file (type png)
-<use iith_logo3.png>
-Package pdftex.def Info: iith_logo3.png  used on input line 170.
+<./images/iith_logo3.png, id=23, 1116.17pt x 1045.9075pt>
+File: ./images/iith_logo3.png Graphic file (type png)
+<use ./images/iith_logo3.png>
+Package pdftex.def Info: ./images/iith_logo3.png  used on input line 170.
 (pdftex.def)             Requested size: 145.1072pt x 135.97275pt.
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 
- <./iith_logo3.png>]
+ <./images/iith_logo3.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 187--190
 
  []
@@ -1030,7 +1030,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 214.
  ) 
 Here is how much of TeX's memory you used:
  32281 strings out of 481239
- 728594 string characters out of 5920377
+ 728630 string characters out of 5920377
  1300085 words of memory out of 5000000
  47034 multiletter control sequences out of 15000+600000
  579858 words of font info for 55 fonts, out of 8000000 for 9000
@@ -1044,7 +1044,7 @@ mf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lms
 s17.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/
 fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10
 .pfb>
-Output written on main.pdf (2 pages, 162529 bytes).
+Output written on main.pdf (2 pages, 162636 bytes).
 PDF statistics:
  95 PDF objects out of 1000 (max. 8388607)
  81 compressed objects within 1 object stream

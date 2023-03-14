@@ -127,7 +127,7 @@ Make sure that the required installation and tool builds of pygmy-sdk had done p
 proot-distro login debian
 cd  /data/data/com.termux/files/home/
 mkdir fpga
-svn co https://github.com/velicharlagokulkumar/FWC_module1/trunk/fpga/codes
+svn cohttps://github.com/srikanth9515/FWC/tree/main/fpga/codes
 cd codes
 ql_symbiflow -compile -src /data/data/com.termux/files/home/fpga/codes -d ql-eos-s3 -P PU64 -v helloworldfpga.v -t helloworldfpga -p quickfeather.pcf -dump binary
 \end{lstlisting}
