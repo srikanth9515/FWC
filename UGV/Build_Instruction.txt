@@ -1,7 +1,7 @@
 
 # To copy repository
 svn co svn co https://github.com/srikanth9515/FWC/tree/main/UGV
-cd ugv_integ
+cd UGV
 
 # To build ESP32 firmware
 cd esp32_pwmctrl
