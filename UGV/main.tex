@@ -1,4 +1,4 @@
-\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\documentclass[journal,15pt,twocolumn,tikz, border=5mm]{IEEEtran}
 \usepackage[utf8]{inputenc}
 \usepackage{kvmap}
 \usepackage{graphics} 
@@ -13,10 +13,10 @@
 \usepackage{cite}
 \usepackage{cases}
 \usepackage{subfig}
-
 \usepackage{longtable}
 \usepackage{multirow}
-
+\usepackage{rotating}
+\usetikzlibrary{positioning}
 \usepackage{enumitem}
 \usepackage{mathtools}
 \usepackage{steinmetz}
@@ -28,7 +28,7 @@
 \usepackage{graphicx}
 \usepackage{tkz-euclide}
 \usepackage{float}
-
+\usepackage[dvipsnames]{xcolor}
 \usetikzlibrary{calc,math}
 \usepackage{listings}
     \usepackage{color}                                            %%
@@ -41,6 +41,12 @@
     \usepackage{lscape}     
 \usepackage{multicol}
 \usepackage{chngcntr}
+
+\usetikzlibrary{positioning, fit, calc}   
+\usepackage{xcolor}  
+\tikzset{block/.style={draw, thick, text width=1cm , minimum height=3cm, align=center},   
+line/.style={-latex}     
+}  
 
 \DeclareMathOperator*{\Res}{Res}
 
@@ -63,8 +69,6 @@ breaklines=true,
 columns=fullflexible
 }
 \begin{document}
-
-
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{problem}{Problem}
 \newtheorem{proposition}{Proposition}[section]
@@ -72,7 +76,6 @@ columns=fullflexible
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{example}{Example}[section]
 \newtheorem{definition}[problem]{Definition}
-
 \newcommand{\BEQA}{\begin{eqnarray}}
 \newcommand{\EEQA}{\end{eqnarray}}
 \newcommand{\define}{\stackrel{\triangle}{=}}
@@ -139,19 +142,21 @@ columns=fullflexible
 
 \section*{Contents}
 \begin{enumerate}
-\item \textbf{Components} \hspace{4cm} 1\\
-\item \textbf{Circuit Connections} \hspace{2.6cm} 1\\
-\item \textbf{L293 Motor Driver} \hspace{2.7cm} 1\\
-\item \textbf{WIFI Car Connections }\hspace{2.0cm} 1\\
-\item \textbf{Seven Segment}\hspace{3.6cm} 1\\
+\item \textbf{Components} \hspace{4.1cm} 1\\
+\item \textbf{Circuit Connections} \hspace{2.9cm} 1\\
+\item \textbf{L293 Motor Driver} \hspace{3.0cm} 1\\
+\item \textbf{WIFI Car Connections }\hspace{2.4cm} 1\\
+\item \textbf{UART Connections }\hspace{3.0cm} 1\\
+\item \textbf{Seven Segment}\hspace{3.8cm} 1\\
+\item \textbf{Seven Segment Connections}\hspace{1.8cm} 1\\
 \item \textbf{Working}\hspace{4.8cm} 1 \\
 	\begin{enumerate}
 	\item \textbf{Hardware Level}
 	\item \textbf{Code}
 	\end{enumerate}
 \item \textbf{Execution} \hspace{4.45cm} 2 \\
-\item \textbf{Execution For WIFI UGV} \hspace{1.4cm} 1 \\
-\item \textbf{Components and Specifications} \hspace{0.5cm} 1 \\
+\item \textbf{Execution For WIFI UGV} \hspace{1.9cm} 1 \\
+\item \textbf{Components and Specifications} \hspace{1.2cm} 1 \\
 \end{enumerate}
 \section{Components}
 \
@@ -219,9 +224,7 @@ EN & - & MA1 & MOTOR A1\\
 \hline
 VCC & 5V & MA2 & MOTOR A2\\
 \hline
-\hline
 B2 & PYGMY 23 & MB1 & MOTOR B1\\
-\hline
 \hline
 B1 & PYGMY 22 & MB2 & MOTOR B2\\
 \hline
@@ -256,36 +259,217 @@ GND & GND\\
 \end{tabular}\\
 \
 \centerline{Table 4.0}
+
+\section{UART Connections}
+\raggedright
+Connect the USB-UART pins to the Vaman ESP32 pins according to Table.\\
+\vspace{0.25cm}
+\centering
+\begin{tabular}{|c|c|}
+\hline
+Vaman LC PINS & UART PINS\\
+\hline
+GND & GND\\
+\hline
+ENB & ENB\\
+\hline
+TXD0 & RXD\\
+\hline
+O & IO 0\\
+\hline
+5V & 5V\\
+\hline
+\end{tabular}\\
+\
+\centerline{Table 5.0}
+
 \section{SevenSegment}
 All codes used in this document are available at the following link.
+
 \begin{lstlisting}
   https://github.com/gadepall/ugv/tree/main/codes/sevenseg
 \end{lstlisting}
 
-\section{Working}
 
+
+\section{Seven Segment Connections}
+\raggedright
+Seven Segment to the Vaman board according to the given connection given in the table\\
+\vspace{0.25cm}
+\centering
+\begin{tabular}{|c|c|}
+\hline
+VAMAN PINS & SEVEN SEGMENT PINS\\
+\hline
+IO -32 & a\\
+\hline
+IO-33 & b\\
+\hline
+IO-25 & c\\
+\hline
+IO-26 & d\\
+\hline
+IO-27 & e\\
+\hline
+IO-14 & f\\
+\hline
+IO-12 & g\\
+\hline
+\end{tabular}\\
+\vspace{0.2cm}
+%\section{VAMAN BOARD}
+
+\includegraphics[width=0.5\textwidth]{BOARD1.jpg}
+\centerline{Figure 1 - VAMAN BOARD}
+%\centerline{Table 6.0}
+\section{Working}
 \raggedright
 \subsection{Hardware Level: }
-
 On the hardware level there are three key points: SPI, Wishbone Interfacing and Address Mapping.\\
 \vspace{0.2cm}
-
 On the Vaman Board, we have an EOS S3 and ESP32. The Communication between these two happens via SPI i.e, \textbf{Serial Peripheral Interface}. And this is facilitated only when all the 4 jumpers on the board are closed. \\
-
 \vspace{0.25cm}
-
 The EOS S3 has an ARM M4 Core, a FPGA unit and 512 KB of SRAM along with a AHB. The SRAM is divided into 4 banks. Banks 0-2 are accessible only by the ARM M4. Bank 3 is accessible by any master connected to \textbf{Always-ON Bus}. FPGA a slave on that AON Bus. \\
 The same can be observed from the figure below.\\
 
-\vspace{0.5cm}
-\includegraphics[width=0.5\textwidth]{eos.jpg}
-\centerline{Figure 1 - EOS S3 Architecture}
-\
+\begin{tikzpicture}
+%Controller
+\node [draw,
+ fill=yellow,
+ minimum width=2cm,
+ minimum height=1cm,
+ text width=2cm,align=center
+]  (controller) {M4-F FPU  MPU 80MHZ};
 
+\node [draw,
+ fill=brown,
+ minimum width=2cm,
+ minimum height=0.5cm,
+  below right=2cm and 4cm   of controller,
+  text width=2cm,align=center
+]  (controller1) {SRAM 0 \\ 32 X 8 X4};
+
+\node [draw,
+ fill=brown,
+ minimum width=2cm,
+ minimum height=0.5cm,
+  below right=3cm and 4cm   of controller,
+  text width=2cm,align=center
+]  (controller2) {SRAM 1 \\ 32 X 8 X4};
+
+\node [draw,
+ fill=brown,
+ minimum width=2cm,
+ minimum height=0.5cm,
+  below right=4cm and 4cm   of controller,
+  text width=2cm,align=center
+]  (controller3) {SRAM 2 \\ 32 X 8 X4};
+
+\node [draw,
+ fill=yellow,
+ minimum width=2cm,
+ minimum height=0.5cm,
+  below right=6cm and 4cm   of controller,
+  text width=2cm,align=center
+]  (controller4) {SRAM 3 \\ 32 X 8 X4};
+
+\node [draw,
+ fill=green,
+ minimum width=0.1cm,
+ minimum height=0.5cm,
+  below right=11cm and -3cm   of controller,
+  text width=1.2cm,align=center
+]  (controller5) {SPL 5 \\
+20MHZ};
+
+\node [draw,
+ fill=green,
+ minimum width=0.1cm,
+ minimum height=0.9cm,
+  below right=11cm and -1.3cm   of controller,
+  text width=0.7cm,align=center
+]  (controller6) {TLC};
+
+\node [draw,
+ fill=green,
+ minimum width=0.1cm,
+ minimum height=0.9cm,
+  below right=11cm and -0.2cm   of controller,
+  text width=0.8cm,align=center
+]  (controller8) {DMA};
+
+\node [draw,
+ fill=blue,
+ minimum width=2cm,
+ minimum height=1cm,
+  below right=15cm and 1cm of controller,
+  text width=0.8cm,align=center
+]  (controller9) {FPGA};
+
+% System H(s)
+\node [draw,
+ fill=yellow, 
+ minimum width=1cm, 
+ minimum height=7cm,
+ below right=-1.2cm and 1.5cm   of controller
+] (system) {\begin{turn}{90} 
+AHB-M4 \\
+32bit @ 80MHZ
+\end{turn}};
+
+% Sensor block
+\node [draw,
+ fill=pink, 
+ minimum width=1cm, 
+ minimum height=7cm, 
+ below right= 7cm and 1.5cm of controller
+]  (sensor) {{\begin{turn}{90} 
+AHB-AON \\
+32bit @ 10MHZ
+\end{turn}}};
+
+\draw[-stealth] (controller.east) -- (system.west) 
+ node[midway ,right]{};
+ \draw[-stealth] (system.east) -- (controller1.west) 
+ node[midway ,right]{};
+ \draw[-stealth] (system.east) -- (controller2.west) 
+ node[midway ,right]{};
+  \draw[-stealth] (system.east) -- (controller3.west) 
+ node[midway ,right]{};
+  \draw[-stealth] (system.east) -- (controller4.west) 
+ node[midway ,right]{};
+ \draw[-stealth] (sensor.east) -- (controller4.west) 
+ node[midway ,right]{};
+
+ \draw[-stealth] (controller8.east) -- (sensor.west) 
+ node[midway ,right]{};
+
+ \draw[-stealth] (sensor.south) -- (controller9.north) 
+ node[midway ,right]{};
+\draw[stealth-stealth] (system.south) -- (sensor.north) 
+ node[midway,above]{};
+\end{tikzpicture}
+\vspace{0.5cm}
+%\includegraphics[width=0.5\textwidth]{eos3.jpg}
+\centerline{Figure 2 - EOS S3 Architecture}
+\
 Now, the communication between ARM M4 Core and the FPGA unit takes place via the AHB Bus. For this to happen, we implement \textbf{Wishbone slave interface} on the FPGA. Without this Wishbone slave interface the communication with FPGA registers is not possible. The master requests from the ARM4 Core on the AHB are converted to wishbone signals and hence reach FPGA. \\
 \vspace{0.25cm}
+\begin{tikzpicture}  
+\node[block, fill=orange] (d)  {Wish
+bone
+Bus};  
+\node[block, left=of d, fill= orange ] (e)  {AHB Slave};  
+\node[draw, fill=pink, fill opacity=0.3,inner xsep=4mm,inner  
+     ysep=4mm,fit=(d)(e),label={90:AHB-to-Wishbone Bridge}](f){}; 
+\node[block, left=of f, fill= none ] (g) {EOS System}; 
+\node[block, right=of f, fill= none ] (h)  {FPGA Fabric};  
+\draw[line] (e)-- (d);  
+\draw[line] (g)--(e); 
+\draw[line] (d)--(h);
+  
+\end{tikzpicture}  
 
-\includegraphics[width=0.5\textwidth]{wishbone.jpg}
 \centerline{Figure 2 - Wishbone Slave Interface}
 \
 
@@ -360,6 +544,7 @@ scp AL4S3B_FPGA_Top.bin username@IPaddress:
 9. Connect usb cable to vaman board and Flash eos s3 soc, using
 \begin{lstlisting}
 sudo python3 <Type path to tiny fpga programmer application> --port /dev/ttyACM0  --appfpga AL4S3B_FPGA_Top.bin --m4app m4_pwmctrl.bin --mode m4-fpga --reset
+
 \end{lstlisting} 
 
 10. Install the \textbf{Dabble app} on the Mobile from the \textbf{Playstore}. Connect it to the \textbf{ESP32} on the Vaman Board using \textbf{Bluetooth}. Change the controls to \textbf{Joystick mode} to navigate the UGV.\\
@@ -373,7 +558,7 @@ https://github.com/srikanth9515/FWC/tree/main/WIFI_UGV
 
 2. Build the ESP32 firmware
 \begin{lstlisting}
-cd esp32_pwmctrl
+CD WIFI_UGV
 pio run
 \end{lstlisting} 
 
@@ -387,7 +572,7 @@ pio run -t upload
 const char* ssid = "srikanth";         /*Enter Your SSID*/ 
 const char* password = "srikanth123"; /*Enter Your Password*
 \end{lstlisting} 
-5. Install the \textbf{APK app} on the Mobile from the \textbf{Playstore}. Connect it to the \textbf{ESP32} on the Vaman Board using \textbf{Wifi}. Change the controls to \textbf{Joystick mode} to navigate the UGV.\\
+5. Install the \textbf{wifi ugv Toy car APK app} on the Mobile from the \textbf{Playstore}. Connect it to the \textbf{ESP32} on the Vaman Board using \textbf{Wifi}. Change the controls to \textbf{Joystick mode} to navigate the UGV.\\
 
 \section{Components and Specifications}
 \includegraphics[width=0.5\textwidth]{ugv gallery.png}
