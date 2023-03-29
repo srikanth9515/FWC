@@ -1,6 +1,6 @@
 
 # To copy repository
-svn co svn co https://github.com/srikanth9515/FWC/tree/main/UGV
+ svn co https://github.com/srikanth9515/FWC/tree/main/UGV
 cd UGV
 
 # To build ESP32 firmware
