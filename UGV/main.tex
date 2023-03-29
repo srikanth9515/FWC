@@ -129,8 +129,11 @@ columns=fullflexible
 \vspace{3cm}
 
 \title{ WIFI , BLUETOOTH WITH SEVEN SEGMENT UGV }
-
-\author{S SRIKANTH REDDY}
+\def\myauthor{\textbf{Future Wireless Communication-IITH}}
+%{\includegraphics[scale=0.13]{iith_logo3}} 
+\def\mymodule{S SRIKANTH REDDY}
+\author{\myauthor\hspace{1em}\\\contact\\FWC220107 \hspace{6.5em}\hspace{0.5em}\mymodule\hspace{6em}}
+%\def{Future Wireless Communication (FWC)}
 \maketitle
 \newpage
 \bigskip
@@ -320,10 +323,10 @@ IO-12 & g\\
 \end{tabular}\\
 \vspace{0.2cm}
 %\section{VAMAN BOARD}
-
+\centerline{Table 6.0}
 \includegraphics[width=0.5\textwidth]{BOARD1.jpg}
 \centerline{Figure 1 - VAMAN BOARD}
-%\centerline{Table 6.0}
+
 \section{Working}
 \raggedright
 \subsection{Hardware Level: }
@@ -575,14 +578,11 @@ const char* ssid = "srikanth";         /*Enter Your SSID*/
 const char* password = "srikanth123"; /*Enter Your Password*
 \end{lstlisting} 
 5. Install the \textbf{wifi ugv Toy car APK app} on the Mobile from the \textbf{Playstore}. Connect it to the \textbf{ESP32} on the Vaman Board using \textbf{Wifi}. Change the controls to \textbf{Joystick mode} to navigate the UGV.\\
-
 \section{Components and Specifications}
 \includegraphics[width=0.5\textwidth]{ugv gallery.png}
 \centerline{Figure 3 - DC motors}
-
 \includegraphics[width=0.5\textwidth]{ugv gallery.png}
 \centerline{Figure 4 - UGV frame/chassis}
-
 \includegraphics[width=0.5\textwidth]{battery.png}
 \centerline{Figure 5 - Batteries}
 Assemble the Chassis using the provided nuts/screws, Wheels, and parts
@@ -592,18 +592,16 @@ Assemble the Chassis using the provided nuts/screws, Wheels, and parts
 \includegraphics[width=0.5\textwidth]{f5.png}
 \includegraphics[width=0.5\textwidth]{f6.png}
 \centerline{Figure 6 - Assembling the UGV kit}
-◦ Fix the Vaman controller and ESP32 on the chassis.
-◦ Fix the Dual motor driver IC along with a small breadboard on the chassis.
-◦ Fix the Li-Po battery on the chassis and insert AA batteries in the battery holder.
-
+◦ Fix the Vaman controller and ESP32 on the chassis.\\
+◦ Fix the Dual motor driver IC along with a small breadboard on the chassis.\\
+◦ Fix the Li-Po battery on the chassis and insert AA batteries in the battery holder.\\
 \includegraphics[width=0.5\textwidth]{car.jpg}
-\centerline{Figure 7 -  Connections UGV }
-Connect the battery supply and turn on the power to various equipment.
-◦ Download the “dabble” application from the play store on an Android phone.
-◦ Using dabble application, connect to the ESP32 on the UGV kit using Bluetooth connection.
-◦ Control the navigation of the UGV kit using the GUI controls on the dabble application.
-
-
+\includegraphics[width=0.5\textwidth]{car2.jpg}
+\centerline{Figure 7 -  Connections UGV }\\
+*Connect the battery supply and turn on the power to various equipment.\\
+*Download the “dabble” application from the play store on an Android phone.\\
+*Using dabble application, connect to the ESP32 on the UGV kit using Bluetooth connection.\\
+* Control the navigation of the UGV kit using the GUI controls on the dabble application.
 \section{Seven Segment Display Output For WIFI}
 \includegraphics[width=0.5\textwidth]{remote.jpg}
 \centerline{Figure 8 -   Seven segment Display with UGV }
