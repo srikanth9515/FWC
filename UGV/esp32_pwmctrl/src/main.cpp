@@ -86,7 +86,8 @@ void loop()
 	write_buff[1] = (uint8_t)GamePad.isSquarePressed();	
 	//Serial.write(write_buff[1]); 
 	write_buff[2] = (uint8_t)GamePad.isTrianglePressed();	
-	write_buff[3] = (uint8_t)GamePad.isCirclePressed();	
+	write_buff[3] = (uint8_t)GamePad.isCirclePressed();
+	write_buff[4] = (uint8_t)GamePad.isStartPressed();	
 	pwm_val[0] = joystick_pwm_map(GamePad.getXaxisData());
 	pwm_val[1] = joystick_pwm_map(GamePad.getYaxisData());
 	if(shape_button_status != previous_status || pwm_val[0] != previous_val[0] || pwm_val[1] != previous_val[1])
@@ -118,6 +119,10 @@ else if((pwm_val[0]>=-255)&&(pwm_val[0]<=0)&&write_buff[1])
 {
 sevenseg(1,0,0,1,1,0,0); //4
 Serial.println("4");
+}
+else if(write_buff[4])
+{
+Serial.println("0");
 }
 
 
@@ -165,6 +170,8 @@ else if((pwm_val[1]<=50)||(pwm_val[1]>=-255)&&(pwm_val[0]>=-120)||(pwm_val[0]<=1
 	}
 
 }
+
+
 
 
 
